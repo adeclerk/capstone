@@ -1,0 +1,10 @@
+Tabbed interface shouldn't take up too much space
+
+!! I forgot preferences
+
+What will the client box do?
+will this aggregate inbox & files specific to a client?
+
+Should a different tab be the hometab? maybe inbox?
+
+Should Sam OBrian have his own separate site or should it just be an employee one with more privilages/options?
