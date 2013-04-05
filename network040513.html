@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Network Setup</title>
+</head>
+
+<body>
+<h1>Setting up a Network</h1>
+<ul>
+  <li>Composed of:
+    <ul>
+      <li>Router</li>
+      <li>HTTP Server (2)</li>
+      <li>LDAP Server</li>
+      <li>VPN Server</li>
+      <li>FTP Server</li>
+      <li>mySQL Server</li>
+      <li>Mail Server</li>
+    </ul>
+  </li>
+  <li>Design rationale:
+    <ul>
+      <li>Cost Effectiveness
+        <ul>
+          <li>Linux based network
+            <ul>
+              <li>Hardware is the only cost</li>
+              <li>Minimal hardware required                  </li>
+              <li>Allows budget to cover backup hardware</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Redundancy
+        <ul>
+          <li>every service runs on own server
+            <ul>
+              <li>If one service or server fails, the network's integrity is preserved</li>
+              <li>Failed servers can be swapped out easily</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Server Functions
+    <ul>
+      <li>Router
+        <ul>
+          <li>Runs clearOS</li>
+          <li>Could be swapped out for hardware based router running clearOS</li>
+          <li>Easy to configure
+            <ul>
+              <li>No outsourcing required, just a 'tech savvy' employee.</li>
+            </ul>
+          </li>
+          <li>Acts as a primitive firewall</li>
+          <li>Acts as a DNS</li>
+        </ul>
+      </li>
+      <li>HTTP Servers
+        <ul>
+          <li>Serve the public and internal websites</li>
+          <li>One for Intranet, one for Internet</li>
+        </ul>
+      </li>
+      <li>LDAP Server
+        <ul>
+          <li>Unifies login between network services</li>
+          <li>Holds employee info
+            <ul>
+              <li>e.g. Username, email etc. </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>VPN Server
+        <ul>
+          <li>Allows workers to access the network remotely + securely</li>
+          <li>Allows workers to use the network as if they were physically connected to it</li>
+        </ul>
+      </li>
+      <li>FTP Server
+        <ul>
+          <li>tentative</li>
+          <li>Holds employee's files.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Intranet
+    <ul>
+      <li>Looking into groupware solutions</li>
+      <li>Groupware:
+        <ul>
+          <li>Software that allows multiple people to collaborate</li>
+          <li>Usually bundles services such as email, calendar, contacts, customer relationship management, etc.</li>
+        </ul>
+      </li>
+      <li>Horde
+        <ul>
+          <li>Mature, Enterprise level groupware</li>
+          <li>Benefits:
+            <ul>
+              <li>FREE</li>
+              <li>Well Tested</li>
+              <li>Widely deployed on enterprise networks</li>
+              <li>Unifies network services</li>
+            </ul>
+          </li>
+          <li>Costs:
+            <ul>
+              <li>Hard to configure</li>
+              <li>May require outsourcing for additional configuration (after we're done)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Custom Groupware
+        <ul>
+          <li>May need to code up custom groupware to fit Sam's needs </li>
+          <li>More flexible than Horde, can tailor suit the solution to LLTIC</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>
