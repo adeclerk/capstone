@@ -159,7 +159,13 @@ class EmployeeTable
   
   public function printEmployees()
   {
-  	
+  	$result = $this->dbConnection->getConnection()->query("SELECT * FROM `employees`");
+    	while($row = $result->fetch_row())
+     	 {
+		$employee = new Employee;
+		$employees->set($row);
+		$employee->print();
+    	 }
   }
 }
 
