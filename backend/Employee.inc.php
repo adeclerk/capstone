@@ -20,16 +20,16 @@ class Employee
   }
   public function set(array $row)
   {
-    $this->id = $row[0];
-    $this->firstName = $row[1];
-    $this->lastName = $row[2];
-    $this->email = $row[3];
-    $this->password = $row[4];
-    $this->hireDate = $row[5];
-    $this->salary = $row[6];
-    $this->isAdmin = $row[7];
-    $this->username = $row[8];
-    $this->phone = $row[9];
+    $this->id = $row['id'];
+    $this->firstName = $row['firstName'];
+    $this->lastName = $row['lastName'];
+    $this->email = $row['email'];
+    $this->password = $row['password'];
+    $this->hireDate = $row['hireDate'];
+    $this->salary = $row['salary'];
+    $this->isAdmin = $row['isAdmin'];
+    $this->username = $row['username'];
+    $this->phone = $row['phone'];
     $this->init = True;
   }
 
@@ -97,10 +97,10 @@ class Employee
     return $this->init;
   }
   
-  public function print()
+  public function printRecord()
   {
     print "<tr><td>"
-            .$this->id . "</td><td>"
+      .$this->id . "</td><td>"
             . $this->firstName . "</td><td>"
             . $this->lastName . "</td><td>"
             . $this->email . "</td><td>"

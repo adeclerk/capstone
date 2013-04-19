@@ -133,7 +133,7 @@ class EmployeeTable
      	 {
 		$employee = new Employee;
 		$employees->set($row);
-		$employee->print();
+		$employee->printRecord();
     	 }
     	 print "</table>";
   }
