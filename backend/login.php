@@ -5,8 +5,9 @@
 
 <body>
   <?php
+$session = new Session;
 error_reporting(E_ALL);
-include 'LlticDbConnection.inc.php';
+require once 'Session.inc.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
