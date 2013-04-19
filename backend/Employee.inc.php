@@ -41,12 +41,47 @@ class Employee
       return -1;
   }
 
+  public function getFirstName()
+  {
+    return $this->firstName;
+  }
+  
+  public function getLastName()
+  {
+    return $this->lastName;
+  }
+  
+  public function getEmail()
+  {
+    return $this->email;
+  }
+  
+  public function getHireDate()
+  {
+    return $this->hireDate;
+  }
+  
+  public function getSalary()
+  {
+   return $this->salary; 
+  }
+  
+  public function isAdmin()
+  {
+    return $this->isAdmin;
+  }
+  
   public function getUsername()
   {
     if($this->init == True)
       return $this->username;
     else
       return -1;
+  }
+  
+  public function getPhone()
+  {
+    return $this->phone;
   }
 
   public function getPassword()
