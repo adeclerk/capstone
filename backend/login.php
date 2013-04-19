@@ -5,10 +5,10 @@
 
 <body>
   <?php
-$session = new Session;
+
 error_reporting(E_ALL);
 require once 'Session.inc.php';
-
+$session = new Session;
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
     $employeeData = new EmployeeTable;
