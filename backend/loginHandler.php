@@ -1,5 +1,6 @@
 <?php
 include 'LlticDbConnection.inc.php';
+include 'Session.inc.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
     $employeeData = new EmployeeTable;
