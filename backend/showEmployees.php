@@ -6,6 +6,10 @@
   <?php
     include 'LlticDbConnection.inc.php';
 
+    $connection = EmployeeTable;
+    $connection->printEmployees();
+
+
    ?>
 </body>
 
