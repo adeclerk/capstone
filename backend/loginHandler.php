@@ -1,5 +1,5 @@
 <?php
-include 'LlticDbConnection.inc.php';
+
 include 'Session.inc.php';
 
 $session = new Session;
