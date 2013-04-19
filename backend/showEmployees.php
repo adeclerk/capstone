@@ -6,8 +6,10 @@
   <?php
     include 'LlticDbConnection.inc.php';
 
-    $connection = EmployeeTable;
-    $connection->printEmployees();
+    $connection = new LlticDbConnection;
+    $result = $connection->query("SELECT * FROM `employees`");
+    $row = $result->fetch_assoc();
+    print $row['id'];
 
 
    ?>
