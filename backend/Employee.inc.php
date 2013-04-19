@@ -96,6 +96,20 @@ class Employee
   {
     return $this->init;
   }
+  
+  public function print()
+  {
+    print "<tr><td>"
+            .$this->id . "</td><td>"
+            . $this->firstName . "</td><td>"
+            . $this->lastName . "</td><td>"
+            . $this->email . "</td><td>"
+            . $this->hireDate . "</td><td>"
+            . $this->salary . "</td><td>"
+            . $this->isAdmin . "</td><td>"
+            . $this->username . "</td><td>"
+            . $this->phone . "</td><td></tr>";
+  }
 }
 
 ?>
