@@ -1,6 +1,8 @@
 <?php
 include 'LlticDbConnection.inc.php';
 include 'Session.inc.php';
+
+$session = new Session;
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
     $employeeData = new EmployeeTable;
@@ -17,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     if($user->getPassword() == md5("ewokllticsalt:".$_POST['password']))
       {
       print "LOGIN SUCCESSFUL";
+      $_SESSION['username'] = $user->getUsername();
+      $_SESSION['isAdmin'] = $user->isAdmin();
       }
     else
       {
