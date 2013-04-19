@@ -3,6 +3,7 @@ include 'Employee.inc.php';
 class LlticDbConnection
 {
   private $connection;
+  private $isOpen;
 
   public function __construct()
   {
@@ -26,6 +27,17 @@ class LlticDbConnection
   public function getConnection()
   {
     return $this->connection;
+  }
+  
+  public function close()
+  {
+  	$this->connection->close();
+  	$this->isOpen = False;
+  }
+  
+  public function isOpen()
+  {
+  	return $this->isOpen;
   }
 }
 
