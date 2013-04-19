@@ -1,5 +1,5 @@
 <?php
-include 'Employee.inc.php';
+
 class LlticDbConnection
 {
   private $connection;
@@ -41,102 +41,6 @@ class LlticDbConnection
   }
 }
 
-class EmployeeTable
-{
-  private $dbConnection;
-  public function __construct()
-  {
-    $this->dbConnection = new LlticDbConnection;
-  }
-
-  public function __destruct()
-  {
-    unset($this->dbConnection);
-  }
-
-  public function findByUsername($username)
-  {
-    $result = $this->dbConnection->getConnection()->query("SELECT * FROM `employees`");
-    
-    $index = 0;
-    while($row = $result->fetch_assoc())
-      {
-	$employees[$index] = new Employee;
-	$employees[$index]->set($row);
-	$index++;
-      }
-
-    $curCount = 0;
-    $userFound = False;
-    $user;
-    while($curCount < $index)
-      {
-	
-	if($employees[$curCount]->getUsername() == $username)
-	  {
-	    $userFound = True;
-	    $user = $employees[$curCount];
-	  }
-	$curCount++;
-      }
-
-    if($userFound)
-      {
-	return $user;
-      }
-    else
-      {
-	return -1;
-      }
-  }
-
-  public function hasUser($username)
-  {
-    $result = $this->dbConnection->getConnection()->query("SELECT * FROM `employees`");
-    
-    $index = 0;
-    while($row = $result->fetch_assoc())
-      {
-	$employees[$index] = new Employee;
-	$employees[$index]->set($row);
-	$index++;
-      }
-
-    $curCount = 0;
-    $userFound = False;
-    while($curCount < $index)
-      {
-	
-	if($employees[$curCount]->getUsername() == $_POST['username'])
-	  {
-	    $userFound = True;
-	    $where = $curCount;
-	  }
-	$curCount++;
-      }
-
-    if($userFound)
-      {
-	return True;
-      }
-    else
-      {
-	return False;
-      }
-  }
-  
-  public function printEmployees()
-  {
-  	$result = $this->dbConnection->getConnection()->query("SELECT * FROM `employees`");
-  	print "<table>";
-    	while($row = $result->fetch_assoc())
-     	 {
-		$employee = new Employee;
-		$employees->set($row);
-		$employee->printRecord();
-    	 }
-    	 print "</table>";
-  }
 }
 
 ?>

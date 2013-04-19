@@ -90,9 +90,9 @@ class Session
 
   private function clean()
   {
-    $sqlQuery = "DELETE FROM `sessions` WHERE DATE_ADD(`last_accessed`, INTERVAL ".(int) $expire." SECOND) < NOW()"; 
-    $this->dbcon->getConnection()->query($sqlQuery);
-    return $this->dbcon->getConnection()->affected_rows;
+    //   $sqlQuery = "DELETE FROM `sessions` WHERE DATE_ADD(`last_accessed`, INTERVAL ".(int) $expire." SECOND) < NOW()"; 
+    //$this->dbcon->getConnection()->query($sqlQuery);
+    //return $this->dbcon->getConnection()->affected_rows;
   }
 }
 
