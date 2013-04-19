@@ -156,6 +156,11 @@ class EmployeeTable
 	return False;
       }
   }
+  
+  public function printEmployees()
+  {
+  	
+  }
 }
 
 ?>
