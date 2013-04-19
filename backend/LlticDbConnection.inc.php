@@ -59,7 +59,7 @@ class EmployeeTable
     $result = $this->dbConnection->getConnection()->query("SELECT * FROM `employees`");
     
     $index = 0;
-    while($row = $result->fetch_row())
+    while($row = $result->fetch_assoc())
       {
 	$employees[$index] = new Employee;
 	$employees[$index]->set($row);
@@ -95,7 +95,7 @@ class EmployeeTable
     $result = $this->dbConnection->getConnection()->query("SELECT * FROM `employees`");
     
     $index = 0;
-    while($row = $result->fetch_row())
+    while($row = $result->fetch_assoc())
       {
 	$employees[$index] = new Employee;
 	$employees[$index]->set($row);
@@ -129,7 +129,7 @@ class EmployeeTable
   {
   	$result = $this->dbConnection->getConnection()->query("SELECT * FROM `employees`");
   	print "<table>";
-    	while($row = $result->fetch_row())
+    	while($row = $result->fetch_assoc())
      	 {
 		$employee = new Employee;
 		$employees->set($row);
