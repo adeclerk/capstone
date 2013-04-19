@@ -1,5 +1,5 @@
 <?php
-require once 'LlticDbConnection.inc.php';
+require_once 'LlticDbConnection.inc.php';
 
 class Session
 {
