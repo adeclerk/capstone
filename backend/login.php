@@ -7,7 +7,7 @@
   <?php
 
 error_reporting(E_ALL);
-require 'LlticDbConnection.inc.php';
+include 'LlticDbConnection.inc.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
