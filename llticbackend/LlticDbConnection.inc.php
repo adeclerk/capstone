@@ -43,7 +43,6 @@ class userTable
   {
     $sql = "SELECT * FROM `users`";
     $result = $this->dbc->qry($sql);
-   
     $index = 0;
     $users[$index] = array();
     while($row = $result->fetch_assoc())
