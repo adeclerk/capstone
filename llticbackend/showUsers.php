@@ -5,6 +5,11 @@ require ('LlticDbConnection.inc.php');
 $database = new LlticDbConnection();
 	$result = $database->users->getAllUsers();
 
-	print $result[0]->id . " : " .$result[0]->username;
+	$index = 0;
+	while($result[$index])
+	{
+		print $result[$index]->getId() . " : " . $result[$index]->getUsername() . " : " . $result[$index]->getPassword() . " : " . $result[$index]->getAdmin() . " <br />";
+		
+	}
 
 ?>
