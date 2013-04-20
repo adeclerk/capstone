@@ -6,7 +6,7 @@ class userTable
    * Database connection. 
    */
   private $dbc;
-  private $contents = array();
+  private $contents;
   private $contentsPtr = -1;
   private $contentsCnt = 0;
   /**
@@ -61,6 +61,7 @@ class userTable
   		$this->contentsPtr++;
   		return $contents;
   	}
+  }
 	
 }
 class LlticDbConnection
