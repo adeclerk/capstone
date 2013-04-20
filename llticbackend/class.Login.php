@@ -8,23 +8,14 @@ class Login
 
   public function __construct()
   {
-    $this->database = new LlticDbConnection();
+   // $this->database = new LlticDbConnection();
   }
 
   public function __destruct()
   {
-    $this->database->close();
+   // $this->database->close();
   }
-  
-  public function loginUser($username, $password)
-  {
 
-  }
-  
-  public function logoutUser()
-  {
-  	
-  }
   
 }
 
