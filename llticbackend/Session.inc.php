@@ -40,7 +40,7 @@ class Session implements SessionHandlerInterface
  
   private function open($path,$name)
   {
-    $this->dbcon = new LlticDbConnection;
+    $this->dbcon = new LlticDbConnection();
   }
 
   private function close()
