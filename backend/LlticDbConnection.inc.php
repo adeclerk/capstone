@@ -24,7 +24,7 @@ class userTable
   public function loadAllUsers()
   {
     $sql = "SELECT * FROM `users`";
-    $result = $this->dbc->getConnection()->query($sql);
+    $result = $this->dbc->qry($sql);
     
     $users = array();
     $index = 0;
@@ -39,7 +39,7 @@ class userTable
   public function getAllUsers()
   {
     $sql = "SELECT * FROM `users`";
-    $result = $this->dbc->getConnection()->query($sql);
+    $result = $this->dbc->qry($sql);
     
     $users = array();
     $index = 0;
@@ -83,6 +83,11 @@ class LlticDbConnection
     return $this->connection;
   }
   
+  public function qry($query)
+  {
+   return $this->connection->query($query);
+  }
+
   public function close()
   {
   	$this->connection->close();
