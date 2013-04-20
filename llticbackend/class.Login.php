@@ -1,20 +1,30 @@
 <?php
+require('LlticDbConnection.inc.php');
 
-class LoginUser
+class Login
 {
   private $dbcon;
 
 
   public function __construct()
   {
-   // $this->database = new LlticDbConnection();
+    $this->dbcon = new LlticDbConnection();
   }
 
   public function __destruct()
   {
-   // $this->database->close();
+    $this->dbcon->close();
   }
+  
+  public function loginUser($username, $password)
+  {
 
+  }
+  
+  public function logoutUser()
+  {
+  	
+  }
   
 }
 
