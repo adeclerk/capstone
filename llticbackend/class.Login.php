@@ -1,7 +1,6 @@
 <?php
 session_start();
 require_once ('LlticDbConnection.inc.php');
-require_once ('User.inc.php');
 class Login
 {
   private $database;
