@@ -12,7 +12,6 @@ class Login
 
   public function __construct()
   {
-  	session_start();
     $this->database = new LlticDbConnection();
   }
 
@@ -29,10 +28,11 @@ class Login
   		print "Invalid Username.";
   		exit();
   	}
-  	$record = $userFound->fetch_assoc();
-  	if($record['password'] == hashPassword($password))
+
+  	if($userFound->getPassword() == hashPassword($password))
   	{
   		//$_SESSION['username'] = $record['username'];
+  		print "SUCCESS";
   	}
   	else
   	{
@@ -42,7 +42,7 @@ class Login
   
   public function logout()
   {
-  	session_desroy();
+  	
   }
   
 }
