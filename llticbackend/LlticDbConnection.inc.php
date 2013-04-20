@@ -1,5 +1,5 @@
 <?php
-require ('User.inc.php');
+require_once ('User.inc.php');
 class userTable
 {
   /** 
