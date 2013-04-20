@@ -59,7 +59,7 @@ class userTable
   	{
   		$this->loadAllUsers();
   		$this->contentsPtr++;
-  		return $this->contents[0];
+  		return $this->contents;
   	}
   	else if($this->contentsPtr == $this->contentsCount)
   	{
