@@ -8,9 +8,9 @@ $database = new LlticDbConnection();
 	//$index = 0;
  // $user = $database->users->getUser();
   	$user = $database->users->getAllUsers();
-  	$index = 0;
+  	//$index = 0;
 
-  			print "$user[0]->getId() : $user[0]->getUsername() : $user[0]->getPassword() : $user[0]->getAdmin() <br />";
+  	//		print "$user[0]->getId() : $user[0]->getUsername() : $user[0]->getPassword() : $user[0]->getAdmin() <br />";
   	
   //	$user = $result;
   	//print $user->getId() . " : " . $user->getUsername() . " : " . $user->getPassword() . " : " . $user->getAdmin() . " <br />";
