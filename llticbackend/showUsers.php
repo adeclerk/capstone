@@ -14,5 +14,7 @@ $database = new LlticDbConnection();
 	}
 */
 	$result = $database->users->findUser("samobrin");
+	if(!$result)
+		print "FALSE";
 	print $result;
 ?>
