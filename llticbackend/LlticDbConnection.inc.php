@@ -44,10 +44,10 @@ class userTable
     $sql = "SELECT * FROM `users`";
     $result = $this->dbc->qry($sql);
     $index = 0;
-    $users[$index] = array();
+    $users = array();
     while($row = $result->fetch_assoc())
       {
-	$users[$index][] = new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin']);
+	array_push($users,(new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin'])));
 	$index++;
       }
     return $users;
