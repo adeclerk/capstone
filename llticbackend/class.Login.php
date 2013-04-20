@@ -1,6 +1,10 @@
 <?php
 session_start();
 require ('LlticDbConnection.inc.php');
+function hashPass($pass)
+{
+	return md5("ewokllticsalt:".$pass);
+}
 class Login
 {
   private $database;

@@ -1,9 +1,5 @@
 <?php
 
-function hashPass($pass)
-{
- return md5("ewokllticsalt:".$pass);
-}
 
 class UserRecord
 {
