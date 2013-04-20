@@ -13,6 +13,6 @@ $database = new LlticDbConnection();
   		print $user[$i]->getId() . " : " . $user[$i]->getUsername() . " : " . $user[$i]->getPassword() . " : " . $user[$i]->getAdminStatus() . " <br />";
 	}
 */
-	$result = $database->users->findUser("samobrien");
+	$result = $database->users->findUser("samobrin");
 	print $result;
 ?>
