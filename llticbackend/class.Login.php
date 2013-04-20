@@ -20,12 +20,12 @@ class Login
     $this->database->__destruct();
   }
   
-  public function login($username, $password)
+  public function loginUser($username, $password)
   {
 
   }
   
-  public function logout()
+  public function logoutUser()
   {
   	
   }
