@@ -7,13 +7,13 @@ $database = new LlticDbConnection();
 //	print $result->getId();
 	//$index = 0;
  // $user = $database->users->getUser();
-  	$user = $database->users->getAllUsers();
+  	$user = $database->users->getUser();
   	//$index = 0;
 
   	//		print "$user[0]->getId() : $user[0]->getUsername() : $user[0]->getPassword() : $user[0]->getAdmin() <br />";
   	
   //	$user = $result;
-  	//print $user->getId() . " : " . $user->getUsername() . " : " . $user->getPassword() . " : " . $user->getAdmin() . " <br />";
+  	print $user->getId() . " : " . $user->getUsername() . " : " . $user->getPassword() . " : " . $user->getAdmin() . " <br />";
   
 
 ?>
