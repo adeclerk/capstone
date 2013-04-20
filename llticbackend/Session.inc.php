@@ -8,7 +8,13 @@ class Session
   
   public function __construct()
   {
-    session_set_save_handler($this,true);
+      session_set_save_handler(
+      array(&$this, 'open'),
+      array(&$this, 'close'),
+      array(&$this, 'read'),
+      array(&$this, 'write'),
+      array(&$this, 'destroy'),
+      array(&$this, 'clean'));
  
     session_start();
   }
