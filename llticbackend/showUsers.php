@@ -8,7 +8,7 @@ $database = new LlticDbConnection();
 	//$index = 0;
  // $user = $database->users->getUser();
   	$result = $database->users->getAllUsers();
-  	$user = $result[0];
+  	$user = $result;
   	print $user->getId() . " : " . $user->getUsername() . " : " . $user->getPassword() . " : " . $user->getAdmin() . " <br />";
   
 
