@@ -56,7 +56,8 @@ class userTable
   
   public function getUser()
   {
-	return $this->contents[$this->contentsPtr++];
+  	$this->contentsPtr++;
+	return $this->contents[$this->contentsPtr-1];
   }
 	
 }
