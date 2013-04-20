@@ -1,7 +1,7 @@
 <?php
 require ('LlticDbConnection.inc.php');
 error_reporting(E_ALL);
-class Session implements SessionHandlerInterface
+class Session
 {
   private $dbcon;
   private $isAlive = true;
