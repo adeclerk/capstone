@@ -1,5 +1,4 @@
 <?php
-session_start();
 require ('LlticDbConnection.inc.php');
 function hashPass($pass)
 {
@@ -12,12 +11,13 @@ class Login
 
   public function __construct()
   {
+  	session_start();
     $this->database = new LlticDbConnection();
   }
 
   public function __destruct()
   {
-    $this->database->__destruct();
+    //$this->database->__destruct();
   }
 
   private function findUser($username)
