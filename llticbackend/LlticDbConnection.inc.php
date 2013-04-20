@@ -63,7 +63,7 @@ class userTable
   	}
   	elseif($this->contentsPtr == $this->contentsCnt)
   	{
-  		return '';
+  		return;
   	}
   	else
   	{
