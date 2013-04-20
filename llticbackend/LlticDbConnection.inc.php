@@ -68,7 +68,7 @@ class LlticDbConnection
  		echo "Failed to connect to MySQL: " . $this->connection->connect_erro;
 		exit();
  	}
-    $users = new UserTable($this->connection);
+    $users = new userTable($this->connection);
 
   }
 
