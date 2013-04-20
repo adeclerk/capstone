@@ -22,22 +22,7 @@ class Login
   
   public function login($username, $password)
   {
-  	$userFound = $this->database->users->findUser($username);
-  	if(!$userFound)
-  	{
-  		print "Invalid Username.";
-  		exit();
-  	}
 
-  	if($userFound->getPassword() == hashPassword($password))
-  	{
-  		//$_SESSION['username'] = $record['username'];
-  		print "SUCCESS";
-  	}
-  	else
-  	{
-  		print "Invalid Password.";
-  	}
   }
   
   public function logout()
