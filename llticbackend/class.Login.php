@@ -1,6 +1,5 @@
 <?php
 require ('LlticDbConnection.inc.php');
-require_once ('User.inc.php');
 
 
 function hashPass($pass)
