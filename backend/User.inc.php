@@ -1,30 +1,29 @@
 <?php
 
-  class User
+public function hashPass($pass)
+{
+ return md5("ewokllticsalt:".$pass);
+}
+
+class UserRecord
+{
+  public function __construct($id, $uname, $pw)
   {
-    private $id;
-    private $username;
-    private $isSet = false;
+    $this->id = $id;
+    $this->username = $uname;
+    $this->password = $pw;
+  }
 
-    public function __construct()
-    {
+  public function __destruct()
+  {
+  }
 
-    }
+  public $id;
+  public $username;
+  public $password;
 
-    public function __destruct()
-    {
+}
 
-    }
 
-    public function set($id, $username)
-    {
-      $this->id = $id;
-      $this->username = $username;
-      $isSet = true;
-    }
 
-    public function isSet()
-    {
-      return $isSet;
-    }
 ?>

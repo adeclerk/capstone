@@ -1,9 +1,61 @@
 <?php
+require_once 'User.inc.php';
+class userTable
+{
+  /** 
+   * Database connection. 
+   */
+  private $dbc;
+  private $contents;
+  /**
+   * User Table Constructor
+   */
+  public function __construct($connection)
+  {
+    $this->dbc = $connection;
+  }
 
+  public function __destruct()
+  {
+
+  }
+
+
+  public function loadAllUsers()
+  {
+    $sql = "SELECT * FROM `users`";
+    $result = $this->dbc->getConnection()->query($sql);
+    
+    $users = array();
+    $index = 0;
+    while($row = $result->fetch_assoc())
+      {
+	$users[$index] = new UserRecord($row['id'],$row['username'],$row['password']);
+	$index++;
+      }
+    $this->contents = $users;
+  }
+
+  public function getAllUsers()
+  {
+    $sql = "SELECT * FROM `users`";
+    $result = $this->dbc->getConnection()->query($sql);
+    
+    $users = array();
+    $index = 0;
+    while($row = $result->fetch_assoc())
+      {
+	$users[$index] = new UserRecord($row['id'],$row['username'],$row['password']);
+	$index++;
+      }
+    return $users;
+  }
+}
 class LlticDbConnection
 {
   private $connection;
   private $isOpen;
+  public $users;
 
   public function __construct()
   {
@@ -15,7 +67,9 @@ class LlticDbConnection
     if ($this->connection->connect_errno)
        	{
  		echo "Failed to connect to MySQL: " . $this->connection->connect_erro;
+		exit();
  	}
+    $users = new UserTable($this->connection);
 
   }
 
