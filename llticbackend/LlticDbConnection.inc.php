@@ -43,8 +43,9 @@ class userTable
   {
     $sql = "SELECT * FROM `users`";
     $result = $this->dbc->qry($sql);
-    $users = array();
+   
     $index = 0;
+    $users[$index] = array();
     while($row = $result->fetch_assoc())
       {
 	$users[$index] = new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin']);
