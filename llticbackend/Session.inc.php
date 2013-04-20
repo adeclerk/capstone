@@ -1,6 +1,6 @@
 <?php
 require_once ('LlticDbConnection.inc.php');
-
+error_reporting(E_ALL);
 class Session implements SessionHandlerInterface
 {
   private $dbcon;
