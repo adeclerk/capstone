@@ -1,7 +1,7 @@
 <?php
 require_once('LlticDbConnection.inc.php');
 
-class Login
+class LoginUser
 {
   private $database;
 
