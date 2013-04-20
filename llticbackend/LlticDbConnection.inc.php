@@ -32,10 +32,10 @@ class userTable
     $index = 0;
     while($row = $result->fetch_assoc())
       {
-	$users[$index] = new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin']);
+	$this->contents[$index] = new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin']);
 	$index++;
       }
-    $this->contents = $users;
+
     $this->contentsCnt = $index+1;
   }
 
