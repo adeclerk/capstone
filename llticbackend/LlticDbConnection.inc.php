@@ -8,6 +8,7 @@ class userTable
   private $dbc;
   private $contents;
   private $contentsPtr = -1;
+  private $contentsCnt = 0;
   /**
    * User Table Constructor
    */
@@ -59,7 +60,11 @@ class userTable
   		$this->contentsPtr++;
   		return $this->contents;
   	}
-  	else 
+  	else if($this->contentsPtr == $this->contentsCount)
+  	{
+  		return False;
+  	}
+  	else
   	{
   		return $this->contents[$this->contentsPtr++];
   	}
