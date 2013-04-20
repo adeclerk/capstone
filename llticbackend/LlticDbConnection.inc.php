@@ -61,12 +61,7 @@ class userTable
   		$this->contentsPtr = 1;
   		return $this->contents[0];
 	}
-	else
-	{
-		
-		return $this->contents[$this->contentsPtr++];
-	}
-  	
+
   }
 	
 }
