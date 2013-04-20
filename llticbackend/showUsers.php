@@ -1,6 +1,6 @@
 <?php
 require ('LlticDbConnection.inc.php');
-
+require ('User.inc.php');
 
 $database = new LlticDbConnection();
 //	$result = $database->users->getAllUsers();
