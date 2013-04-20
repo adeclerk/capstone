@@ -1,6 +1,6 @@
 <?php
 require_once ('LlticDbConnection.inc.php');
-require_once ('User.inc.php');
+require ('User.inc.php');
 function hashPass($pass)
 {
 	return md5("ewokllticsalt:".$pass);
@@ -22,7 +22,22 @@ class Login
   
   public function loginUser($username, $password)
   {
+  	$userFound = $this->database->users->findUser($username);
+  	if(!$userFound)
+  	{
+  		print "Invalid Username.";
+  		exit();
+  	}
 
+  	if($userFound->getPassword() == hashPassword($password))
+  	{
+  		//$_SESSION['username'] = $record['username'];
+  		print "SUCCESS";
+  	}
+  	else
+  	{
+  		print "Invalid Password.";
+  	}
   }
   
   public function logoutUser()
