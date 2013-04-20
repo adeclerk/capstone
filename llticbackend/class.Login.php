@@ -1,5 +1,4 @@
 <?php
-require ('LlticDbConnection.inc.php');
 
 class LoginUser
 {
