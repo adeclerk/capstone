@@ -6,7 +6,7 @@ class userTable
    * Database connection. 
    */
   private $dbc;
-  private $contents;
+  private $contents = array();
   private $contentsPtr = -1;
   private $contentsCnt = 0;
   /**
