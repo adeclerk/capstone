@@ -8,8 +8,9 @@ $database = new LlticDbConnection();
 	//$index = 0;
  // $user = $database->users->getUser();
   	$user = $database->users->getAllUsers();
-	for($i = 0; $i < sizeof($array); $i++)
+	for($i = 0; $i < sizeof($user); $i++)
+	{
   		print $user[$i]->getId() . " : " . $user[$i]->getUsername() . " : " . $user[$i]->getPassword() . " : " . $user[$i]->getAdminStatus() . " <br />";
-  
+	}
 
 ?>
