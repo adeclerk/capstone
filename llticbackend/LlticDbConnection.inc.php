@@ -33,11 +33,11 @@ class userTable
     $index = 0;
     while($row = $result->fetch_assoc())
       {
-	array_push($this->contents[$index],(new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin'])));
-	$index++;
+		array_push($this->contents[$index],(new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin'])));
+		$index++;
       }
 
-    $this->contentsCnt = $index;
+    $this->contentsCnt = $index+1;
   }
 
   public function getAllUsers()
@@ -48,8 +48,8 @@ class userTable
     $users = array();
     while($row = $result->fetch_assoc())
       {
-	array_push($users,(new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin'])));
-	$index++;
+		array_push($users,(new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin'])));
+		$index++;
       }
     return $users;
   }
