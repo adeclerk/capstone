@@ -44,7 +44,7 @@ class UserRecord
   	return $this->isAdmin;
   }
 
-  public function hashPass($pass)
+  public static function hashPass($pass)
   {
   	return md5("ewokllticsalt:".$pass."");
   }

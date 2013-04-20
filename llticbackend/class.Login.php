@@ -18,7 +18,19 @@ class Login
   
   public function loginUser($username, $password)
   {
-
+	$userFound = $this->dbcon->users->findUser($username);
+	if(!$userFound)
+	{
+		print "User not found";
+		return NULL;
+	}
+	
+	if(UserRecord::hashPassword($password) != $userFound->getPassword())
+	{
+		print "Invalid password";
+	}
+	return $userFound;
+	
   }
   
   public function logoutUser()
