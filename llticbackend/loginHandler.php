@@ -1,5 +1,5 @@
 <?php
-include ('class.Login.php');
+require ('class.Login.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
   	$login = Login();
