@@ -7,7 +7,7 @@ class userTable
    */
   private $dbc;
   private $contents;
-  private $contentsPtr = -1;
+  private $contentsPtr =0;
   private $contentsCnt = 0;
   /**
    * User Table Constructor
@@ -55,21 +55,7 @@ class userTable
   
   public function getUser()
   {
-  	if($this->contentsPtr == -1)
-  	{
-  		$this->loadAllUsers();
-  		$this->contentsPtr = 1;
-  		return $this->contents[0];
-  	}
-  	elseif($this->contentsPtr == $this->contentsCnt)
-  	{
-  		return;
-  	}
-  	else
-  	{
-  		return $this->contents[$this->contentsPtr++];
-  	}
-
+	return $this->contents[$this->contentsPtr++];
   }
 	
 }
