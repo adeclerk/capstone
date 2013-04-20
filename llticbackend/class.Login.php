@@ -1,5 +1,5 @@
 <?php
-require ('LlticDbConnection.inc.php');
+require_once('LlticDbConnection.inc.php');
 
 class Login
 {
