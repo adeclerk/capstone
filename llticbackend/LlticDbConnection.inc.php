@@ -58,7 +58,7 @@ class userTable
 
   		$this->loadAllUsers();
   		$this->contentsPtr++;
-  		return $contents[0];
+  		return $this->contents[0];
   
   	
   }
