@@ -2,7 +2,7 @@
 
 class LoginUser
 {
-  private $database;
+  private $dbcon;
 
 
   public function __construct()
