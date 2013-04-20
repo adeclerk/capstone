@@ -15,7 +15,6 @@ class userTable
   public function __construct($connection)
   {
     $this->dbc = $connection;
-    $this->loadAllUsers();
   }
 
   public function __destruct()
@@ -23,7 +22,11 @@ class userTable
 
   }
 
-
+  public function findUser($username)
+  {
+  	return $this->dbc->qry("SELECT * FROM `users` WHERE username='" .$username ."'");
+  }
+  
   public function loadAllUsers()
   {
     $sql = "SELECT * FROM `users`";
@@ -56,8 +59,19 @@ class userTable
   
   public function getUser()
   {
-  	$this->contentsPtr++;
-	return $this->contents[$this->contentsPtr-1];
+  	if($this->contentsPtr == -1)
+  	{
+  		$this->contentsPtr++;
+  		return $this->contents[$this->contentsPtr];
+  	}
+  	elseif( $this->contentsPtr == $this->contentsCnt)
+  	{
+  		return false;
+  	}
+  	else
+  	{
+	return $this->contents[$this->contentsPtr++];
+  	}
   }
 	
 }

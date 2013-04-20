@@ -17,12 +17,7 @@ class Login
 
   public function __destruct()
   {
-    //$this->database->__destruct();
-  }
-
-  private function findUser($username)
-  {
-  	return $this->database->getConnection()->query("SELECT * FROM `users` WHERE username='" .$username ."'");
+    $this->database->__destruct();
   }
   
   public function login($username, $password)
