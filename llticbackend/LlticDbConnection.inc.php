@@ -48,7 +48,7 @@ class userTable
     $users[$index] = array();
     while($row = $result->fetch_assoc())
       {
-	$users[$index] = new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin']);
+	$users[$index][] = new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin']);
 	$index++;
       }
     return $users;
