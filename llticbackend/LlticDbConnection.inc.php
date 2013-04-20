@@ -24,7 +24,16 @@ class userTable
 
   public function findUser($username)
   {
-  	return $this->dbc->qry("SELECT * FROM `users` WHERE username='" .$username ."'");
+  	$result = $this->dbc->qry("SELECT * FROM `users` WHERE username='" .$username ."'");
+  	if($result->num_rows == 0)
+  	{
+  		return False;
+  	}
+  	else
+  	{	
+  		$row = $result->fetch_assoc();
+		return new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin']);
+  	}
   }
   
   public function loadAllUsers()
