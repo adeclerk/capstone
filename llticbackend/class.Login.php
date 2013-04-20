@@ -1,5 +1,6 @@
 <?php
 require_once ('LlticDbConnection.inc.php');
+require ('User.inc.php');
 function hashPass($pass)
 {
 	return md5("ewokllticsalt:".$pass);
