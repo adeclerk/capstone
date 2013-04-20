@@ -15,6 +15,7 @@ class userTable
   public function __construct($connection)
   {
     $this->dbc = $connection;
+    $this->loadAllUsers();
   }
 
   public function __destruct()
