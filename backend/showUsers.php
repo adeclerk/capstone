@@ -1,5 +1,5 @@
 <?php
-require_once("LlticDbConnection.inc.php");
+require_once('LlticDbConnection.inc.php');
 
 $database = new LlticDbConnection();
 $users = $database->users->getAllUsers();
