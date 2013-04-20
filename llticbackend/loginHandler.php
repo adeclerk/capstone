@@ -8,7 +8,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
   	print "IN";
 	$logmein = LoginUser();
-	$logmein->loginUser($_POST['username'],$_POST['password']);
-    
+	if($logmein->loginUser($_POST['username'],$_POST['password']) == NULL)
+			{
+			print 'Error invalid username or password';
+			}
   }
 ?>
