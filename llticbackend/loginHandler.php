@@ -1,5 +1,6 @@
 <?php
 //require ('Session.inc.php');
+require('LlticDbConnection.inc.php');
 require('class.Login.php');
 
 error_reporting(E_ALL);
