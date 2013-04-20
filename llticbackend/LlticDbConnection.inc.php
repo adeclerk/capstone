@@ -58,7 +58,7 @@ class userTable
 	if($this->contentsPtr == -1)
 	{
   		$this->loadAllUsers();
-  		$this->contentsPtr++;
+  		$this->contentsPtr = 1;
   		return $this->contents[0];
 	}
 	elseif($this->contentsPtr == $this->contentsCnt)
