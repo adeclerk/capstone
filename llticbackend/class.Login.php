@@ -1,6 +1,6 @@
 <?php
 require('LlticDbConnection.inc.php');
-
+require_once('User.inc.php');
 class Login
 {
   private $dbcon;
