@@ -25,7 +25,7 @@ class Login
 		return NULL;
 	}
 	
-	if(UserRecord::hashPassword($password) != $userFound->getPassword())
+	if(UserRecord::hashPass($password) != $userFound->getPassword())
 	{
 		print "Invalid password";
 	}
