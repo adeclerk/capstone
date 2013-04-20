@@ -61,7 +61,7 @@ class userTable
   		$this->contentsPtr++;
   		return $this->contents[0];
 	}
-	else if($this->contentsPtr == $this->contentsCnt)
+	elseif($this->contentsPtr == $this->contentsCnt)
 	{
 		return NULL;
 	}
