@@ -59,17 +59,9 @@ class userTable
   	{
   		$this->loadAllUsers();
   		$this->contentsPtr++;
-  		return $this->contents;
+  		return $contents;
   	}
-  	else if($this->contentsPtr == $this->contentsCount)
-  	{
-  		return False;
-  	}
-  	else
-  	{
-  		return $this->contents[$this->contentsPtr++];
-  	}
-  }
+	
 }
 class LlticDbConnection
 {

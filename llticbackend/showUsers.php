@@ -7,7 +7,7 @@ $database = new LlticDbConnection();
 
 	//$index = 0;
     $user = $database->users->getUser();
-
+	var_dump($user);
 	//	print $user->getId() . " : " . $user->getUsername() . " : " . $user->getPassword() . " : " . $user->getAdmin() . " <br />";
 	
 
