@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
   	print "IN";
 	$logmein = LoginUser();
-	//$login->loginUser($_POST['username'],$_POST['password']);
+	$logmein->loginUser($_POST['username'],$_POST['password']);
     
   }
 ?>
