@@ -1,8 +1,10 @@
 <?php
 session_start();
+require ('class.Login.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
-    login($_POST['username'],$_POST['password']);
+  	$login = Login();
+    $login->login($_POST['username'],$_POST['password']);
     
   }
 ?>
