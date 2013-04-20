@@ -22,7 +22,7 @@ class Login
   
   public function login($username, $password)
   {
-  	$userFound = $this->findUser($username);
+  	$userFound = $this->database->users->findUser($username);
   	if(!$userFound)
   	{
   		print "Invalid Username.";
@@ -31,7 +31,7 @@ class Login
   	$record = $userFound->fetch_assoc();
   	if($record['password'] == hashPassword($password))
   	{
-  		$_SESSION['username'] = $record['username'];
+  		//$_SESSION['username'] = $record['username'];
   	}
   	else
   	{
