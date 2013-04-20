@@ -27,7 +27,7 @@ class userTable
   	$result = $this->dbc->qry("SELECT * FROM `users` WHERE username='" .$username ."'");
   	if($result->num_rows == 0)
   	{
-  		return False;
+  		return NULL;
   	}
   	else
   	{	
