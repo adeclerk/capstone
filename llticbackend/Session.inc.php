@@ -1,20 +1,14 @@
 <?php
 require_once 'LlticDbConnection.inc.php';
 
-class Session
+class Session implements SessionHandlerInterface
 {
   private $dbcon;
   private $isAlive = true;
   
   public function __construct()
   {
-    session_set_save_handler(
-      array(&$this, 'open'),
-      array(&$this, 'close'),
-      array(&$this, 'read'),
-      array(&$this, 'write'),
-      array(&$this, 'destroy'),
-      array(&$this, 'clean'));
+    session_set_save_handler($this,true);
  
     session_start();
   }
@@ -44,7 +38,7 @@ class Session
     $this->alive = false;
   }
  
-  private function open()
+  private function open($path,$name)
   {
     $this->dbcon = new LlticDbConnection;
   }
@@ -59,7 +53,7 @@ class Session
   {
     $sqlQuery = "SELECT `data` FROM `sessions` WHERE id=`" .$this->dbcon->getConnection()->real_escape_string($sessionID) ."' LIMIT 1";
 
-    $result = $this->dbcon->query($sqlQuery);
+    $result = $this->dbcon->qry($sqlQuery);
     if($result->num_rows == 1)
       {
 	$fields = $result->fetch_assoc();
@@ -74,7 +68,7 @@ class Session
   private function write($sessionID, $data)
   {
     $sqlQuery = "REPLACE INTO `sessions` (`id`,`data`) VALUES('" . $this->dbcon->getConnection()->real_escape_string($sessionID) . "," . $this->dbcon->getConnection()->real_escape_string($data) . "')";
-    $this->dbcon->getConnection()->query($sqlQuery);
+    $this->dbcon->qry($sqlQuery);
 
     return $this->dbcon->getConnection()->affected_rows;
   }
@@ -82,7 +76,7 @@ class Session
   private function destroy($sessionID)
   {
     $sqlQuery = "DELETE FROM `sessions` WHERE `id`= '" . $this->dbcon->getConnection->real_escape_string($sessionID) . "'";
-    $this->dbcon->getConnection()->query($sqlQuery);
+    $this->dbcon->qry($sqlQuery);
 
     $_SESSION = array();
     return $this->dbcon->getConnection()->affected_rows;
