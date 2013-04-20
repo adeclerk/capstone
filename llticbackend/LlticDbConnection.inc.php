@@ -36,6 +36,7 @@ class userTable
 	$index++;
       }
     $this->contents = $users;
+    $this->contentsCnt = $index+1;
   }
 
   public function getAllUsers()
