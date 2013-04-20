@@ -3,12 +3,12 @@ require ('LlticDbConnection.inc.php');
 
 
 $database = new LlticDbConnection();
-	$result = $database->users->getAllUsers();
+	//$result = $database->users->getAllUsers();
 
-	$index = 0;
-	while($result[$index])
+	//$index = 0;
+	while($user = $database->users->getUser())
 	{
-		print $result[$index]->getId() . " : " . $result[$index]->getUsername() . " : " . $result[$index]->getPassword() . " : " . $result[$index]->getAdmin() . " <br />";
+		print $user->getId() . " : " . $user->getUsername() . " : " . $user->getPassword() . " : " . $user->getAdmin() . " <br />";
 		
 	}
 

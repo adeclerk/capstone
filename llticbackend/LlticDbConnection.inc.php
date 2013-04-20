@@ -7,6 +7,7 @@ class userTable
    */
   private $dbc;
   private $contents;
+  private $contentsPtr = -1;
   /**
    * User Table Constructor
    */
@@ -26,7 +27,7 @@ class userTable
     $sql = "SELECT * FROM `users`";
     $result = $this->dbc->qry($sql);
     
-    $users = array();
+
     $index = 0;
     while($row = $result->fetch_assoc())
       {
@@ -48,6 +49,20 @@ class userTable
 	$index++;
       }
     return $users;
+  }
+  
+  public function getUser()
+  {
+  	if($this->contentsPtr == 0)
+  	{
+  		$this->loadAllUsers();
+  		$this->contentsPtr++;
+  		return $this->contents;
+  	}
+  	else 
+  	{
+  		return $this->contents[$this->contentsPtr++];
+  	}
   }
 }
 class LlticDbConnection
