@@ -8,7 +8,7 @@ $database = new LlticDbConnection();
 	//$index = 0;
  // $user = $database->users->getUser();
   	$user = $database->users->getAllUsers();
-  	var_dump($user);
+  	print sizeof($user);
   	//$index = 0;
 
   		//print $user->getUsername();
