@@ -55,11 +55,20 @@ class userTable
   
   public function getUser()
   {
-
+	if($this->contentPtr == -1)
+	{
   		$this->loadAllUsers();
   		$this->contentsPtr++;
   		return $this->contents[0];
-  
+	}
+	else if($this->contentsPtr == $this->contentsCnt)
+	{
+		return False;
+	}
+	else
+	{
+		return $this->contents[$this->contentsPtr++];
+	}
   	
   }
 	
