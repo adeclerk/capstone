@@ -1,6 +1,6 @@
 <?php
 
-public function hashPass($pass)
+function hashPass($pass)
 {
  return md5("ewokllticsalt:".$pass);
 }
