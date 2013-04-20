@@ -1,10 +1,14 @@
 <?php
 require_once ('LlticDbConnection.inc.php');
 require_once ('User.inc.php');
+
+
 function hashPass($pass)
 {
 	return md5("ewokllticsalt:".$pass);
 }
+
+
 class Login
 {
   private $database;
@@ -17,7 +21,7 @@ class Login
 
   public function __destruct()
   {
-    $this->database->__destruct();
+    $this->database->close();
   }
   
   public function loginUser($username, $password)
