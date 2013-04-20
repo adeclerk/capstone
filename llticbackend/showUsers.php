@@ -3,8 +3,8 @@ require ('LlticDbConnection.inc.php');
 require ('User.inc.php');
 
 $database = new LlticDbConnection();
-  $result = $database->users->getAllUsers();
-	print $result->getId();
+  //$result = $database->users->getAllUsers();
+//	print $result->getId();
 	//$index = 0;
   //  $user = $database->users->getUser();
 //	var_dump($user);
