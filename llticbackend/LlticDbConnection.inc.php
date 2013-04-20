@@ -56,7 +56,7 @@ class userTable
   public function getUser()
   {
   	$this->loadAllUsers();
-  		return $this->contents;
+  		return $this->contents[0];
 
   }
 	
