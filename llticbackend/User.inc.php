@@ -22,7 +22,7 @@ class UserRecord
 
   public function __toString()
   {
-  	return ($this->id . " : " . $this->username . " : " . $this->password . " : " . $this->isAdmin);
+  	return ($this->id . " : " . $this->username . " : " . $this->password . " : " . $this->userLevel);
   }
   function getId()
   {
