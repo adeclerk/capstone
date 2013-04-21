@@ -7,5 +7,9 @@ if(userLoggedIn())
 	{
 		print "ERROR: You do not have permission to view this page";
 	}
+	else 
+	{
+		showUserLoggedIn();
+	}
 }
 ?>
