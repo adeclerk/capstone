@@ -46,7 +46,7 @@ class UserRecord
 
   public static function hashPass($pass)
   {
-  	return md5("ewokllticsalt:".$pass."");
+  	return md5("ewokllticsalt:$pass");
   }
 }
 
