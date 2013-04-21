@@ -94,17 +94,17 @@ class Session
   
   public function setVar($name, $value)
   {
-  	$_SESSION[$name] = $value;
+  	$_SESSION[$this->sessID][$name] = $value;
   }
   
   public function removeVar($name)
   {
-  	unset($_SESSION[$name]);
+  	unset($_SESSION[$this->sessID][$name]);
   }
   
   public function getVar($name)
   {
-  	return $_SESSION[$name];
+  	return $_SESSION[$this->sessID][$name];
   }
   
   public function getId()
