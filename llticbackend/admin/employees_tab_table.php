@@ -1,4 +1,6 @@
+<?php
 require_once('../LlticDbConnection.inc.php');
+?>
 <table style='width: 100%;'>
 	<tr>
 		<th>ID</th>
@@ -8,6 +10,7 @@ require_once('../LlticDbConnection.inc.php');
 		<th>Country</th>
 		<th>Salary</th>
 		<th>Phone</th>
+		<th></th>
 	</tr>
 	<?php 
 	$db = new LlticDbConnection();
@@ -22,6 +25,7 @@ require_once('../LlticDbConnection.inc.php');
 		print "<td>" . $row['country'] . "</td>\n\t";
 		print "<td>" . $row['salary'] . "</td>\n\t";
 		print "<td>" . $row['phone'] . "</td>\n\t";
+		print "<td><a href=''>edit</a></td>\n"
 		print "</tr>";
 	}
 	?>

@@ -41,7 +41,7 @@ margin-left: 0px;
    border-right: 1px solid;
    border-bottom: 1px solid;
    border
- width: 80%;
+
 
 }
 div.tab:hover
