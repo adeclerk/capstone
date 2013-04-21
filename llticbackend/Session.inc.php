@@ -89,6 +89,21 @@ class Session
     //$this->dbcon->getConnection()->query($sqlQuery);
     //return $this->dbcon->getConnection()->affected_rows;
   }
+  
+  public function setVar($name, $value)
+  {
+  	$_SESSION[$name] = $value;
+  }
+  
+  public function removeVar($name)
+  {
+  	unset($_SESSION[$name]);
+  }
+  
+  public function getVar($name)
+  {
+  	return $_SESSION[$name];
+  }
 }
 
 ?>

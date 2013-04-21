@@ -1,9 +1,14 @@
 <?php
-require once 'Session.inc.php';
+require_once ('Session.inc.php');
 
 class UserSession
 {
-  public function __construct(
+	private $session;
+	private $user;
+  public function __construct()
+  {
+  	$this->session = new Session();
+  }
 
 }
 

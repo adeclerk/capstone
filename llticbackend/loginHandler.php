@@ -21,7 +21,7 @@ function loguserin($username,$pass)
 		print "Login error, password incorrect";
 		return false;
 	}
-	$_SESSION['user'] = $username;
+	$session->setVar('user', $username);
 	$_SESSION['userLevel'] = $userFound->getUserLevel();
 	//$_SESSION['pass'] = UserRecord::hashPass($pass);
 
@@ -37,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 		if($_SESSION['userLevel'] == 2)
 		{
 			//showUserLoggedIn();
+			print $_SESSION['user'];
 		}
 	
 	}

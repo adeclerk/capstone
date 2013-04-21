@@ -48,6 +48,7 @@ class UserRecord
   {
   	return md5("ewokllticsalt:$pass");
   }
+  
 }
 
 

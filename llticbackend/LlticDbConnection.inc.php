@@ -66,6 +66,20 @@ class userTable
     return $users;
   }
   
+  public function getUserById($id)
+  {
+  	$users = $this->getAllUsers();
+  	
+  	for($i = 0; $i < sizeof($users); $i++)
+  	{
+  		if($users[$i]->getId() == $id)
+  		{
+  			return $users[$i];
+  		}
+  	}
+  	return '';
+  }
+  
   public function getUser()
   {
   	if($this->contentsPtr == -1)
