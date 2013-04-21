@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
-	$_SESSION['user'] = "TEST";
+	$_SESSION['user'] = $_POST['username'];
+	print $_SESSION['user'];
   }
 ?>
