@@ -1,6 +1,7 @@
 <?php
 require_once('../userin.php');
 require_once('../Session.inc.php');
+require_once('../classes/class.Template.php');
 
 $session = new Session();
 if(userLoggedIn())
@@ -11,7 +12,10 @@ if(userLoggedIn())
 	}
 	else 
 	{
-		showUserLoggedIn();
+		$main = new Template('adminMainView.php',array(
+				'title' => 'Employee Main Page',
+				'heading' => 'Employee ' . getUserLoggedIn()));
+		$main->render();
 	}
 }
 ?>
