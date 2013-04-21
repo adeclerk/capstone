@@ -44,7 +44,7 @@ class Session
     $this->alive = false;
   }
  
-  private function open($path,$name)
+  private function open()
   {
     $this->dbcon = new LlticDbConnection();
   }
