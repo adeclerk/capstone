@@ -23,6 +23,7 @@ function loguserin($username,$pass)
 	
 	$_SESSION['user'] = $username;
 	$_SESSION['pass'] = UserRecord::hashPass($pass);
+	$_SESSION['userLevel'] = $userFound->getUserLevel();
 	return true;
 	
 }
@@ -30,7 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
 	if(loguserin($_POST['username'],$_POST['password']))
 	{
-		showUserLoggedIn();
+		if($_SESSION['userLvel'] == 2)
+		{
+			showUserLoggedIn();
+		}
+		
 	}
 	else
 	{
