@@ -6,14 +6,14 @@ class UserRecord
 	private $id;
 	private $username;
 	private $password;
-	private $isAdmin;
+	private $userLevel;
 	
-  public function __construct($id, $uname, $pw, $isAdmin)
+  public function __construct($id, $uname, $pw, $userLevel)
   {
     $this->id = $id;
     $this->username = $uname;
     $this->password = $pw;
-    $this->isAdmin = $isAdmin;
+    $this->userLevel = $userLevel;
   }
 
   public function __destruct()
@@ -39,9 +39,9 @@ class UserRecord
   	return $this->password;
   }
   
-  function getAdminStatus()
+  function getUserLevel()
   {
-  	return $this->isAdmin;
+  	return $this->userLevel;
   }
 
   public static function hashPass($pass)

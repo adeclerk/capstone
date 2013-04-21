@@ -32,7 +32,7 @@ class userTable
   	else
   	{	
   		$row = $result->fetch_assoc();
-		return new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin']);
+		return new UserRecord($row['id'],$row['username'],$row['password'],$row['userLevel']);
   	}
   }
   
@@ -45,7 +45,7 @@ class userTable
     $index = 0;
     while($row = $result->fetch_assoc())
       {
-		array_push($this->contents[$index],(new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin'])));
+		array_push($this->contents[$index],(new UserRecord($row['id'],$row['username'],$row['password'],$row['userLevel'])));
 		$index++;
       }
 
@@ -60,7 +60,7 @@ class userTable
     $users = array();
     while($row = $result->fetch_assoc())
       {
-		array_push($users,(new UserRecord($row['id'],$row['username'],$row['password'],$row['isAdmin'])));
+		array_push($users,(new UserRecord($row['id'],$row['username'],$row['password'],$row['userLevel'])));
 		$index++;
       }
     return $users;
