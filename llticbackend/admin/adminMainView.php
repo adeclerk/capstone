@@ -113,7 +113,7 @@ function showTab(arg,id)
 
     <div class="tabcontent">
       <div id="clienttab">
-		include 'employees_tab_table.php';
+		<?php include 'employees_tab_table.php';?>
 
       </div>
       <div id="historytab" style="display: none;">
