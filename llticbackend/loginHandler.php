@@ -54,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
   			case 1:
   				break;
   			case 2:
+  				header("Location: http://". $_SERVER['SERVER_NAME'] . "/admin");
   				break;
   		}
   	}
