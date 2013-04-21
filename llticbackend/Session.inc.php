@@ -61,15 +61,9 @@ class Session
     $sqlQuery = "SELECT * FROM `sessions` WHERE id=`" .$this->dbcon->getConnection()->real_escape_string($sessionID) ."' LIMIT 1";
 
     $result = $this->dbcon->qry($sqlQuery);
-    if($result->num_rows == 1)
-      {
+
 	$fields = $result->fetch_assoc();
 	return $fields['data'];
-      }
-    else
-      {
-	return '';
-      }
   }
 
   private function write($sessionID, $data)
