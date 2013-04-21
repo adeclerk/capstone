@@ -52,7 +52,7 @@ class Session
   private function close()
   {
     $this->dbcon->close();
-  //  session_write_close();
+    session_write_close();
     $this->isAlive = false;
   }
 
