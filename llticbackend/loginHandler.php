@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 		{
 			//showUserLoggedIn();
 			print $_SESSION['user'];
+			print $session->getId();
 		}
 	
 	}
