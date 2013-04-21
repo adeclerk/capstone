@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 	if(loguserin($_POST['username'],$_POST['password']))
 	{
 		
-		if($_SESSION['userlevel'] == 2)
+		if($_SESSION['userlevel'] == "2")
 		{
 			showUserLoggedIn();
 		}
