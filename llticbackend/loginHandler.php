@@ -9,6 +9,7 @@ function loguserin($username,$pass)
 {
 	$db = new LlticDbConnection();
 	$userFound = $db->users->findUser($username);
+	$db->close();
 	if(!$userFound)
 	{
 		print "Login Error, user not found";
@@ -20,10 +21,9 @@ function loguserin($username,$pass)
 		print "Login error, password incorrect";
 		return false;
 	}
-	$_SESSION['userRecord']= $userFound;
 	$_SESSION['user'] = $username;
 	//$_SESSION['pass'] = UserRecord::hashPass($pass);
-	$_SESSION['userLevel'] = $userFound->getUserLevel();
+
 	return true;
 	
 }
@@ -31,11 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
 	if(loguserin($_POST['username'],$_POST['password']))
 	{
+		$user =
 		if($_SESSION['userLevel'] == 2)
 		{
 			showUserLoggedIn();
 		}
-		print S_SESSION['userRecord'];
+	
 	}
 	else
 	{
