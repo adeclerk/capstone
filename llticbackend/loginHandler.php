@@ -1,7 +1,6 @@
 <?php
 require ('Session.inc.php');
-include 'userin.php';
-require_once('class.Login.php');
+require_once('UserSession.inc.php');
 $session = new Session();
 error_reporting(E_ALL);
 
@@ -45,8 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 	
 	}
 	*/
-  	$login = new Login($session);
-  	if($login->loginUser($_POST['username'],$_POST['password']))
+	$login = new UserSession($session,$_POST['username'],$_POST['password']);
+  	if($login->autheticate())
   	{
   		print "SUCCESS";
   	}
