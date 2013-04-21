@@ -1,10 +1,10 @@
 <html>
 <head>
-<title><?= $this->title; ?></title>
+<title><?php print $this->title; ?></title>
 </head>
 
 <body>
-<h1><? $this->heading; ?></h1>
+<h1><?php print $this->heading; ?></h1>
 </body>
 
 </html>
