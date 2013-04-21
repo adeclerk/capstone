@@ -1,6 +1,5 @@
 <?php
 require ('Session.inc.php');
-require_once('LlticDbConnection.inc.php');
 include 'userin.php';
 require_once('class.Login.php');
 $session = new Session();
