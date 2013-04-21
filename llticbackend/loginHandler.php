@@ -47,7 +47,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 	$login = new UserSession($session,$_POST['username'],$_POST['password']);
   	if($login->autheticate())
   	{
-  		print "SUCCESS";
+  		switch($login->getUserRecord()->getUserLevel())
+  		{
+  			case 0:
+  				break;
+  			case 1:
+  				break;
+  			case 2:
+  				break;
+  		}
   	}
 	else
 	{
