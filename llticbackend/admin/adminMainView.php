@@ -88,7 +88,7 @@ function setTabs()
     currentTab.style.backgroundColor = "white";
     currentTab.style.borderBottom = "0px";
 
-    //lastDisplay = document.getElementById("employeetab");
+    lastDisplay = document.getElementById("employeetab");
 }
 function showTab(arg,id)
       {
