@@ -32,11 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
 	if(loguserin($_POST['username'],$_POST['password']))
 	{
-		
-		if($_SESSION['userlevel'] == "2")
-		{
+		$db = new LlticDbConnection();
+		$user = $db->users->findUser($_SESSION['user']);
+		print $user;
 			showUserLoggedIn();
-		}
+		
 	
 	}
 	else
