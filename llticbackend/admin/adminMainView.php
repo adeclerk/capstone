@@ -115,7 +115,7 @@ function showTab(arg,id)
         <div class="tab" onclick="showTab(this,'inboxtab')">Inbox</div>
         <div class="tab" onclick="showTab(this,'filestab')">Files</div>
         <div class="tab" onclick="showTab(this,'historytab')">Client History</div>
-	</div>
+
     <div class="tabcontent">
       <div id="employeetab">
 		<?php include 'employees_tab_table.php';?>
@@ -135,6 +135,6 @@ function showTab(arg,id)
 	  </table>
       </div>
       </div>
-   
+      </div>
       
 </body> </html>
