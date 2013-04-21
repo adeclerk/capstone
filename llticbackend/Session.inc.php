@@ -3,7 +3,7 @@ require_once ('LlticDbConnection.inc.php');
 error_reporting(E_ALL);
 class Session
 {
-  private $dbcon;
+  private $dbcon = NULL;
   private $isAlive = true;
   
   public function __construct()
