@@ -28,7 +28,7 @@
 		</div>
 	Admin Page
 		<div id='rightHeader'>
-			<a href='../logoutuser.php'>Logout</a>&nbsp; <?php print $this->loggedInUser; ?>
+			<a href='../logoutuser.php'>Logout</a>&nbsp; <?php print $this->user; ?>
 		</div>
 	</div>
 

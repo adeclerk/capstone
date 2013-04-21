@@ -15,7 +15,7 @@ if($session->isAuthenticated())
 		
 		$main = new Template('adminMainView.php',array(
 				'title' => 'LLTIC: Admin Main View',
-				'loggednInUser' => $session->getUser()) );
+				'user' => $session->getUser()) );
 		$main->render();
 	
 	}
