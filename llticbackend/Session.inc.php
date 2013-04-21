@@ -58,7 +58,7 @@ class Session
   private function read($sessionID)
   {
   	print "READ CALLED";
-    $sqlQuery = "SELECT * FROM `sessions` WHERE id='" .$this->dbcon->getConnection()->real_escape_string($sessionID) ."'";
+    $sqlQuery = "SELECT * FROM `sessions` WHERE `id`='" .$this->dbcon->getConnection()->real_escape_string($sessionID) ."'";
 
     $result = $this->dbcon->qry($sqlQuery);
 
@@ -77,7 +77,7 @@ class Session
 
   private function destroy($sessionID)
   {
-    $sqlQuery = "DELETE FROM `sessions` WHERE `id`= '" . $this->dbcon->getConnection->real_escape_string($sessionID) . "'";
+    $sqlQuery = "DELETE FROM `sessions` WHERE `id`= " . $this->dbcon->getConnection->real_escape_string($sessionID) . "'";
     $this->dbcon->qry($sqlQuery);
 
     $_SESSION = array();
