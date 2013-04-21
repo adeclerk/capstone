@@ -78,7 +78,7 @@ class Session
 
   private function destroy($sessionID)
   {
-    $sqlQuery = "DELETE FROM `sessions` WHERE `id`='" . $this->dbcon->getConnection->real_escape_string($sessionID) . "'";
+    $sqlQuery = "DELETE FROM `sessions` WHERE `id`='" . $sessionID . "'";
     $this->dbcon->qry($sqlQuery);
 
     $_SESSION = array();
