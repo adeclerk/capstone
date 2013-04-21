@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 		$user = $db->users->findUser($_SESSION['user']);
 		if($_SESSION['userLevel'] == 2)
 		{
-			showUserLoggedIn();
+			//showUserLoggedIn();
 		}
 	
 	}
