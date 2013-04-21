@@ -84,7 +84,7 @@ function setTabs()
 	    menuTabs.push(allElems[i]);
     }
     currentTab = menuTabs[0];
-    lastDisplay = document.getElementById("employeetab");
+    lastDisplay = menuTabs[0];
     currentTab.style.backgroundColor = "white";
     currentTab.style.borderBottom = "0px";
 }
@@ -107,7 +107,10 @@ function showTab(arg,id)
 </head>
 
 <body onload="init()">
-
+	<div id='header'>
+	LLTIC Admin Page (<?php print $this->user; ?>) &nbsp;
+	Preferences
+	</div>
     <div id="tabs">
         <div class="tab" onclick="showTab(this,'employeetab')">Employees</div>
         <div class="tab" onclick="showTab(this,'inboxtab')">Inbox</div>
