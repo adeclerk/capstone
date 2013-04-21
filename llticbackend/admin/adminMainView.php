@@ -8,13 +8,23 @@
 			text-align: left;
 			width: 100%;
 		}
+		
+		#logo
+		{
+		
+		}
 	</style>
 </head>
 
 <body>
 	<div id='header'>
-		<h1>LLTIC</h1>
-		Admin Page
+		<div id='logo'>
+	 		<b>LLTIC</b> 
+		</div>
+	Admin Page
+		<div id='rightHeader'>
+			Logout
+		</div>
 	</div>
 
 </body>
