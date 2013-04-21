@@ -111,11 +111,11 @@ function showTab(arg,id)
 	Preferences
 	</div>
     <div id="tabs">
-        <div class="tab" onclick="showTab(this,'employeetab')">Clients</div>
+        <div class="tab" onclick="showTab(this,'employeetab')">Employees</div>
         <div class="tab" onclick="showTab(this,'inboxtab')">Inbox</div>
         <div class="tab" onclick="showTab(this,'filestab')">Files</div>
         <div class="tab" onclick="showTab(this,'historytab')">Client History</div>
-
+	</div>
     <div class="tabcontent">
       <div id="employeetab">
 		<?php include 'employees_tab_table.php';?>
@@ -135,6 +135,6 @@ function showTab(arg,id)
 	  </table>
       </div>
       </div>
-      </div>
+   
       
 </body> </html>
