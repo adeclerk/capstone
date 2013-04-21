@@ -6,5 +6,6 @@ function showUserLoggedIn()
 }
 
 require_once('Session.inc.php');
+$session = new Session();
 print $_SESSION['user'];
 ?>
