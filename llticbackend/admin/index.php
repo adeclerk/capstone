@@ -14,7 +14,7 @@ if(userLoggedIn())
 	{
 		$main = new Template('adminMainView.php',array(
 				'title' => 'Employee Main Page',
-				'heading' => 'Employee ' . getUserLoggedIn()));
+				'heading' => 'Employee '));
 		$main->render();
 	}
 }
