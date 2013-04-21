@@ -32,7 +32,7 @@ class userTable
   	else
   	{	
   		$row = $result->fetch_assoc();
-		return new UserRecord($row['id'],$row['username'],$row['password'],$row['userLevel']);
+		return new UserRecord($row['id'],$row['username'],$row['password'],$row['userlevel']);
   	}
   }
   
