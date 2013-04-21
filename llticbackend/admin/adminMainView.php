@@ -84,9 +84,11 @@ function setTabs()
 	    menuTabs.push(allElems[i]);
     }
     currentTab = menuTabs[0];
-    lastDisplay = menuTabs[0];
+    
     currentTab.style.backgroundColor = "white";
     currentTab.style.borderBottom = "0px";
+
+    //lastDisplay = document.getElementById("employeetab");
 }
 function showTab(arg,id)
       {
