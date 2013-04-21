@@ -1,5 +1,6 @@
 <?php
 require_once('../UserSession.inc.php');
+require_once('../User.inc.php');
 require_once('../classes/class.Template.php');
 
 $session = new UserSession();
@@ -11,6 +12,7 @@ if($session->isAuthenticated())
 	}
 	else 
 	{
+		
 		$main = new Template('adminMainView.php',array(
 				'title' => 'LLTIC: Admin Main View',
 				'loggednInUser' => $session->getUserRecord()->getUsername()) );
