@@ -18,7 +18,10 @@ class Template
 	
 	public function render()
 	{
-		include $this->file;
+		    ob_start();
+    require $this->template;
+    $content = ob_get_clean();
+    return $content;
 	}
 }
 
