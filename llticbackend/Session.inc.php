@@ -57,13 +57,12 @@ class Session
 
   private function read($sessionID)
   {
-  	print "READ CALLED";
     $sqlQuery = "SELECT * FROM `sessions` WHERE `id`='" . $sessionID ."'";
 
     $result = $this->dbcon->qry($sqlQuery);
 
 	$fields = $result->fetch_assoc();
-	print $fields['data'];
+	
 	return $fields['data'];
   }
 
