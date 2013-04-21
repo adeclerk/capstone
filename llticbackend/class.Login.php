@@ -7,10 +7,17 @@ class Login
   private $dbcon;
   private $session;
 
-  public function __construct()
+  public function __construct($session = NULL)
   {
-  	$this->session = new Session();
-    $this->dbcon = new LlticDbConnection();
+  	if($session == NULL)
+  	{
+  		$this->session = new Session();
+  	}
+  	else
+  	{
+  		$this->session = $session;
+  	}
+    	$this->dbcon = new LlticDbConnection();
   }
 
   public function __destruct()
@@ -25,17 +32,18 @@ class Login
 	if(!$userFound)
 	{
 		print "User not found";
-		return NULL;
+		return false;
 	}
 	
 	if(UserRecord::hashPass($password) != $userFound->getPassword())
 	{
 		print "Invalid password";
+		return false;
 	}
 	$_SESSION['uid'] = $userFound->getId();
 	$_SESSION['user'] = $userFound->getUsername();
 	$_SESSION['userLevel'] = $userFound->getUserLevel();
-	
+	return true;
   }
   
   public function logoutUser()
