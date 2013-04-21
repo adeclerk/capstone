@@ -3,6 +3,6 @@ require_once('UserSession.inc.php');
 $session = new UserSession();
 $session->deauthorize();
 
-header("Location: ". $_SERVER['HTTP_REFERER']);
+header("Location: http://". $_SERVER['SERVER_NAME']);
 
 ?>
