@@ -107,10 +107,7 @@ function showTab(arg,id)
 </head>
 
 <body onload="init()">
-	<div id='header'>
-	LLTIC Admin Page (<?php print $this->user; ?>) &nbsp;
-	Preferences
-	</div>
+
     <div id="tabs">
         <div class="tab" onclick="showTab(this,'employeetab')">Employees</div>
         <div class="tab" onclick="showTab(this,'inboxtab')">Inbox</div>
