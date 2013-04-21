@@ -51,8 +51,6 @@ class Session
 
   private function close()
   {
-    
-    session_write_close();
     $this->dbcon->close();
     $this->isAlive = false;
   }
