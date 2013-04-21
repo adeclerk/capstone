@@ -1,19 +1,18 @@
 <?php
-require_once('../userin.php');
-require_once('../Session.inc.php');
+require_once('../UserSession.inc.php');
 require_once('../classes/class.Template.php');
 
-$session = new Session();
-if(userLoggedIn())
+$session = new UserSession();
+if($session->isAuthenticated())
 {
-	if(getUserLoggedInLevel() != 2)
+	if($session->getAuthLevel() != 2)
 	{
 		print "ERROR: You do not have permission to view this page";
 	}
 	else 
 	{
 		$main = new Template('adminMainView.php',array(
-				'title' => 'Employee Main Page',
+				'title' => 'LLTIC: Admin Main View',
 				'heading' => 'Employee') );
 		$main->render();
 	}

@@ -11,9 +11,9 @@ class UserSession
 	private $loggedIn = false;
 	
 	private $user = NULL;
-	private $uname;
-	private $pw;
-  public function __construct($session = NULL,$username,$password)
+	private $uname	= NULL;
+	private $pw	= NULL;
+  public function __construct($session = NULL,$username = NULL,$password = NULL)
   {
   	if($session == NULL)
   	{
@@ -23,8 +23,21 @@ class UserSession
   	{
   		$this->session = $session;
   	}
-  	$this->uname = $username;
-  	$this->pw = $password;
+  	
+  	if($username == NULL && $password == NULL)
+  	{
+  		if(isset($_SESSION['uid']))
+  		{
+  			$db = new LlticDbConnection();
+			$this->user = $db->users->getUserById($_SESSION['uid']);
+			$this->loggedIn = true;
+  		}
+  	}
+  	else
+  	{
+  		$this->uname = $username;
+  		$this->pw = $password;
+  	}
   }
   
   public function __destruct()
@@ -34,9 +47,16 @@ class UserSession
 
   public function autheticate()
   {
+  	if($this->loggedIn)
+  		return true;
+  	
   	$this->login = new Login($this->session);
-  	$this->user = new UserRecord($_SESSION['uid'], $this->uname,
+  	
+  	if(!$this->user)
+  	{
+  		$this->user = new UserRecord($_SESSION['uid'], $this->uname,
   			UserRecord::hashPass($this->pw), $_SESSION['userLevel']);
+  	}
   	
   	if(	$this->login->loginUser($this->uname, $this->pw) )
   	{
@@ -54,6 +74,7 @@ class UserSession
   		$this->loggedIn = false;
   	}
   }
+    
   public function getUserRecord()
   {
   	return $this->user;

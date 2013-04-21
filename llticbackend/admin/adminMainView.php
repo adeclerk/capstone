@@ -1,10 +1,22 @@
 <html>
 <head>
-<title><?php print $this->title; ?></title>
+	<title><?php print $this->title; ?></title>
+
+	<style type="text/css">
+		#header
+		{
+			text-align: left;
+			width: 100%;
+		}
+	</style>
 </head>
 
 <body>
-<h1><?php print $this->heading; ?></h1>
+	<div id='header'>
+		<h1>LLTIC</h1>
+		Admin Page
+	</div>
+
 </body>
 
 </html>
