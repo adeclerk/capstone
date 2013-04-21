@@ -63,6 +63,7 @@ class Session
     $result = $this->dbcon->qry($sqlQuery);
 
 	$fields = $result->fetch_assoc();
+	print $fields['data'];
 	return $fields['data'];
   }
 
