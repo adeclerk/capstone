@@ -44,6 +44,11 @@ margin-left: 0px;
 	width: 100%;
 
 }
+
+.employeetab
+{
+	width: 80%;
+}
 div.tab:hover
 {
   background-color: #CCCCFF;
@@ -78,7 +83,7 @@ function setTabs()
 	    menuTabs.push(allElems[i]);
     }
     currentTab = menuTabs[0];
-    lastDisplay = document.getElementById("clienttab");
+    lastDisplay = document.getElementById("employeetab");
     currentTab.style.backgroundColor = "white";
     currentTab.style.borderBottom = "0px";
 }
@@ -106,13 +111,13 @@ function showTab(arg,id)
 	Preferences
 	</div>
     <div id="tabs">
-        <div class="tab" onclick="showTab(this,'clienttab')">Clients</div>
+        <div class="tab" onclick="showTab(this,'employeetab')">Clients</div>
         <div class="tab" onclick="showTab(this,'inboxtab')">Inbox</div>
         <div class="tab" onclick="showTab(this,'filestab')">Files</div>
         <div class="tab" onclick="showTab(this,'historytab')">Client History</div>
 
     <div class="tabcontent">
-      <div id="clienttab">
+      <div id="employeetab">
 		<?php include 'employees_tab_table.php';?>
 
       </div>
