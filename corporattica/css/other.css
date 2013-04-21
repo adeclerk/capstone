@@ -37,7 +37,7 @@ img {
 
 body { 
 	font: .8em Arial, Verdana, Tahoma, Sans-Serif; 
-	background: #f4f4f4 url(../images/bgtile.jpg) repeat-x; 
+	/*background: #f4f4f4 url(../images/bgtile.jpg) repeat-x; */
 	color: #555; 
 }
 
