@@ -49,6 +49,7 @@ class Login
   public function logoutUser()
   {
   	$this->session->delete();
+  	$this->session->close();
   }
   
   public function userLoggedIn()
