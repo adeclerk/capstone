@@ -17,6 +17,7 @@ if($session->isAuthenticated())
 				'title' => 'LLTIC: Admin Main View',
 				'loggednInUser' => '$session->getUser()') );
 		$main->render();
+		print $_SESSION['user'];
 	}
 }
 ?>
