@@ -10,7 +10,9 @@ class UserSession
 	private $login = NULL;
 	private $loggedIn = false;
 	
-	private $user;
+	private $user = NULL;
+	private $uname;
+	private $pw;
   public function __construct($session = NULL,$username,$password)
   {
   	if($session == NULL)
@@ -21,10 +23,8 @@ class UserSession
   	{
   		$this->session = $session;
   	}
-  	
-  	$this->user = new UserRecord($_SESSION['uid'], $username,
-  			UserRecord::hashPass($password), $_SESSION['userLevel']);
-  	
+  	$this->uname = $username;
+  	$this->pw = $password;
   }
   
   public function __destruct()
@@ -35,8 +35,10 @@ class UserSession
   public function autheticate()
   {
   	$this->login = new Login($this->session);
-  	if(	$this->login->loginUser($this->user->getUsername(), 
-  								$this->user->getPassword()))
+  	$this->user = new UserRecord($_SESSION['uid'], $this->uname,
+  			UserRecord::hashPass($this->pw), $_SESSION['userLevel']);
+  	
+  	if(	$this->login->loginUser($this->uname, $this->pw) )
   	{
   		$this->loggedIn = true;
   		return true;
