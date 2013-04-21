@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
 	if(loguserin($_POST['username'],$_POST['password']))
 	{
-		if($_SESSION['userLvel'] == 2)
+		if($_SESSION['userLevel'] == 2)
 		{
 			showUserLoggedIn();
 		}
