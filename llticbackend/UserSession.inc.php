@@ -97,6 +97,29 @@ class UserSession
   	}
   }
   
+  public function getUser()
+  {
+  	if($this->loggedIn)
+  	{
+  		return $_SESSION['user'];
+  	}
+  	else
+  	{
+  		return '';
+  	}
+  }
+  
+  public function getUID()
+  {
+  	if($this->loggedIn)
+  	{
+  		return $_SESSION['uid'];
+  	}
+  	else
+  	{
+  		return '';
+  	}
+  }
 }
 
 ?>
