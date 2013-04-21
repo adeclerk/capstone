@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>LLTIC Inc.</title>
+	<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/slideshow.js"></script>
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/Arial.font.js"></script>
+	<script type="text/javascript">
+		Cufon.replace('h1,h2,h3,h4,h5,#menu,#copy,.blog-date');
+	</script>
+	<script type="text/javascript" src="js/fancyzoom.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('div.photo a').fancyZoom({scaleImg: true, closeOnClick: true});
+		});
+	</script>
+	<!--		for a date time picker
+	<script language="javascript" type="text/javascript" src="datetimepicker.js">
+
+//Date Time Picker script- by TengYong Ng of http://www.rainforestnet.com
+//Script featured on JavaScript Kit (http://www.javascriptkit.com)
+//For this script, visit http://www.javascriptkit.com 
+
+</script>
+-->
+	<link rel="stylesheet" href="css/other.css" type="text/css" />
+</head>
+<body>
+	<div id="bgsmaller">
+		<div class="wrap">
+			
+			<!-- logo -->
+			<h1><a href="index.html">LLTIC Inc.</a></h1>
+			<!-- /logo -->
+			
+			<!-- menu -->
+			<div id="mainmenu">
+				<ul id="menu">
+					<li><a class="current" href="index.html">Home</a></li>
+					<li><a href="inner.html">Drop-Down Menu</a>
+						<ul><li><a href="inner.html">Inner Page Example</a></li><li><a href="inner.html">Inner Page Example</a></li><li><a href="inner.html">Inner Page Example</a></li></ul>
+					</li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+			<!-- /menu -->
+			
+		
+			
+			<!-- main -->
+			<div id="main">
+				<h2 class="inner">Add Employee</h2>
+							<!-- add employee -->
+
+				<form method="post" action="addEmployee.php">
+				
+				
+				
+				<fieldset style="border:1px;">
+ 			<b><legend>Name</legend></b>
+		First: <br><input type="text" class="text" name="fname"> <br>
+		
+		Last: <br><input type="text" class="text" name="lname"><br>
+		</fieldset>
+		
+		
+		Company: <br><input type="text" class="text" name="company"> <br>
+		
+		Email: <br><input type="text" class="text" name="email"> <br>
+		
+		Salary:<br> <input type="text" class="text" name="salary"> <br>
+		<!--
+		Date Hired: <br><input id="demo1" class="text" type="text" size="25">
+		<a href="javascript:NewCal('demo1','mmddyyyy')">
+		<img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a>
+		-->
+		Date Hired:   (mmddyyyy)<br><input type="text" class="text" name="date"> <br>
+		
+		<fieldset>
+			<p><legend>Phone:</legend>
+			+<input type="text" name="ccode" size="1" maxlength="1">
+			<input type="text"  name="areacode" size="1" maxlength="3">
+			<input type="text"  name="pnumber0" size="1" maxlength="3">
+			<input type="text"  name="pnumber1" size="2" maxlength="4">
+		</fieldset></p>
+		
+		<br><br><input type="submit" name="formSubmit" class="submit" value="Submit">
+		</form>
+				
+				
+				
+				
+				
+			</div>
+			<!-- /main -->
+			
+	
+		</div>
+			
+		<!-- footer -->
+		<div id="footer">
+			<div id="footerbg">
+				<div class="wrap">
+				
+					<!-- footer links -->
+					<p id="footer_menu">
+						<!--<a href="#">Jobs @ corporattica</a>-->
+						<i><a href="#">Add Employee</a></i>
+						<!--<a href="#">Terms and Conditions</a>-->
+						
+						<!-- credit link -->
+						<a href="http://www.solucija.com" title="Free CSS Templates">Solucija</a>
+					</p>
+					<!-- /footer links -->
+					
+					<p id="copy"> LLTIC Inc. <span>professional approach</span></p>
+					
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<!-- /footer -->
+		
+	</div>
+</body>
+</html>
