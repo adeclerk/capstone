@@ -1,7 +1,7 @@
 <?php
 require ('Session.inc.php');
 require_once('LlticDbConnection.inc.php');
-//include 'userin.php';
+include 'userin.php';
 $session = new Session();
 error_reporting(E_ALL);
 
@@ -21,7 +21,7 @@ function loguserin($username,$pass)
 		print "Login error, password incorrect";
 		return false;
 	}
-	$session->setVar('user', $username);
+	$_SESSION['user'] = $userFound->getUsername();
 	$_SESSION['userLevel'] = $userFound->getUserLevel();
 	//$_SESSION['pass'] = UserRecord::hashPass($pass);
 

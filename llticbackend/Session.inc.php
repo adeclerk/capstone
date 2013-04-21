@@ -92,20 +92,7 @@ class Session
     //return $this->dbcon->getConnection()->affected_rows;
   }
   
-  public function setVar($name, $value)
-  {
-  	$_SESSION[$this->sessID][$name] = $value;
-  }
-  
-  public function removeVar($name)
-  {
-  	unset($_SESSION[$this->sessID][$name]);
-  }
-  
-  public function getVar($name)
-  {
-  	return $_SESSION[$this->sessID][$name];
-  }
+
   
   public function getId()
   {
