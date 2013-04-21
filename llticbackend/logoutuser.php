@@ -1,5 +1,5 @@
 <?php
-require_once('UserSession.inc.php');
+require ('UserSession.inc.php');
 $session = new UserSession();
 $session->deauthorize();
 
