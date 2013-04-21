@@ -34,9 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 	{
 		$db = new LlticDbConnection();
 		$user = $db->users->findUser($_SESSION['user']);
-		print $user;
+		if($_SESSION['userLevel'] == 2)
+		{
 			showUserLoggedIn();
-		
+		}
 	
 	}
 	else
