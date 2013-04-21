@@ -45,7 +45,7 @@ class userTable
     $index = 0;
     while($row = $result->fetch_assoc())
       {
-		array_push($this->contents[$index],(new UserRecord($row['id'],$row['username'],$row['password'],$row['userLevel'])));
+		array_push($this->contents[$index],(new UserRecord($row['id'],$row['username'],$row['password'],$row['userlevel'])));
 		$index++;
       }
 
@@ -60,7 +60,7 @@ class userTable
     $users = array();
     while($row = $result->fetch_assoc())
       {
-		array_push($users,(new UserRecord($row['id'],$row['username'],$row['password'],$row['userLevel'])));
+		array_push($users,(new UserRecord($row['id'],$row['username'],$row['password'],$row['userlevel'])));
 		$index++;
       }
     return $users;
