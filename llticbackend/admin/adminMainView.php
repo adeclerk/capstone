@@ -13,6 +13,11 @@
 		{
 		
 		}
+		
+		#rightHeader
+		{
+			clear: left;
+		}
 	</style>
 </head>
 

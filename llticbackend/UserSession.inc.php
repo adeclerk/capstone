@@ -29,7 +29,7 @@ class UserSession
   		if(isset($_SESSION['uid']))
   		{
   			$db = new LlticDbConnection();
-			$this->user = $db->users->getUserById($_SESSION['uid']);
+			$this->user = $db->users->findUser($_SESSION['user']);
 			$this->loggedIn = true;
   		}
   	}
