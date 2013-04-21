@@ -1,37 +1,192 @@
-<html>
-<head>
-	<title><?php print $this->title; ?></title>
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title><?php  print $this->title; ?></title>
+<style type="text/css">
+div#tabs
+{
+   margin-left: 0px;
+   margin-bottom: 0px;
+   padding: 0px;
+   float: left;
+   clear: right;
+   width: 1080px;
 
-	<style type="text/css">
-		#header
-		{
-			text-align: left;
-			width: 100%;
-		}
-		
-		#logo
-		{
-		
-		}
-		
-		#rightHeader
-		{
-			clear: left;
-		}
-	</style>
+}
+.tab
+{
+   position: relative;
+   background-color: #CCCCCC;
+   padding-left: 5px;
+   padding-bottom: 0px;
+   margin-bottom: 0px;
+   margin-left: 0px;
+   border: 1px solid;
+   border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+   width: 20%;
+   float: left;
+}
+.tabcontent
+{
+margin-left: 0px;
+ padding-left: 10px;
+ padding-right: 16px;
+ padding-bottom: 10%;
+ padding-top: 10px;
+ margin-top: 0px;
+ clear: left;
+   float: left;
+
+   border-left: 1px solid;
+   border-right: 1px solid;
+   border-bottom: 1px solid;
+   border
+ width: 80%;
+
+}
+div.tab:hover
+{
+  background-color: #CCCCFF;
+}
+table
+{
+    width: 90%;
+}
+th
+{
+   border: 1px solid;
+   text-align: left;
+}
+</style>
+<script type="text/javascript">
+var currentTab = null;
+var lastDisplay = null;
+var maxZ = 1;
+function init()
+{
+  setTabs();
+ 
+}
+function setTabs()
+{
+    var menuTabs = new Array();
+    var allElems = new Array();
+    allElems = document.getElementsByTagName("*");
+    for(var i = 0; i <allElems.length;i++)
+    {
+	if(allElems[i].className == "tab")
+	    menuTabs.push(allElems[i]);
+    }
+    currentTab = menuTabs[0];
+    lastDisplay = document.getElementById("clienttab");
+    currentTab.style.backgroundColor = "white";
+    currentTab.style.borderBottom = "0px";
+}
+function showTab(arg,id)
+      {
+       
+      var last = currentTab;
+      currentTab = arg;
+      last.style.backgroundColor = "#CCCCCC";
+      last.style.borderBottom = "1px solid";
+      currentTab.style.backgroundColor = "white";
+      currentTab.style.borderBottom = "0px";
+
+      var element = document.getElementById(id);
+      lastDisplay.style.display = "none";
+      lastDisplay = document.getElementById(id);
+      element.style.display = "inline";
+      }
+</script>
 </head>
 
-<body>
+<body onload="init()">
 	<div id='header'>
-		<div id='logo'>
-	 		<b>LLTIC</b> 
-		</div>
-	Admin Page
-		<div id='rightHeader'>
-			<a href='../logoutuser.php'>Logout</a>&nbsp; <?php print $this->user; ?>
-		</div>
+	LLTIC Admin Page (<?php print $this->user; ?>) &nbsp;
+	Preferences
 	</div>
+    <div id="tabs">
+        <div class="tab" onclick="showTab(this,'clienttab')">Clients</div>
+        <div class="tab" onclick="showTab(this,'inboxtab')">Inbox</div>
+        <div class="tab" onclick="showTab(this,'filestab')">Files</div>
+        <div class="tab" onclick="showTab(this,'historytab')">Client History</div>
 
-</body>
+    <div class="tabcontent">
+      <div id="clienttab">
+	<table id="clients">
+	  <tr>
+	    <th>Clients</th>
+	    <th>Date</th>
+	  </tr>
+	  <tr>
+	    <td>Joe Schmo</td>
+	    <td>01-19-13</td>
+	  </tr>
+	  <tr>
+	    <td>John Bateman</td>
+	    <td>01-22-13</td>
+	  </tr>
+	  <tr>
+	    <td>Rick Thathertor</td>
+	    <td>12-19-12</td>
+	  </tr>
+	</table>
+      </div>
+      <div id="inboxtab" style="display: none;">
+	<table id="inbox">
+	  <tr>
+	    <th>From</th>
+	    <th>Subject</th>
+	    <th>Date</th>
+	 </tr>
+	 <tr>
+	   <td>john@somecomp.co.uk</td>
+	   <td>How's the project coming along?</td>
+	   <td>01-23-13</td>
+	 </tr>
 
-</html>
+	  </table>
+
+      </div>
+      <div id="filestab" style="display: none;">
+	<table id="files">
+	  <tr>
+	    <th>Filename</th>
+	    <th>Origin</th>
+	    <th>Type</th>
+	    <th>Date</th>
+	 </tr>
+	 <tr>
+	   <td>letter</td>
+	   <td>Rich Thatherton</td>
+	   <td>doc</td>
+	   <td>01-23-13</td>
+	 </tr>
+	 <tr>
+	   <td>report</td>
+	   <td>Sam O'Brian</td>
+	   <td>pdf</td>
+	   <td>01-20-13</td>
+	 </tr>
+
+	  </table>
+
+
+      </div>
+      <div id="historytab" style="display: none;">
+	<table id="history">
+	  <tr>
+	    <th>Completed Client Case</th>
+	    <th>Date</th>
+	 </tr>
+	 <tr>
+	   <td>Rick Thatherton</td>
+	   <td>01-23-13</td>
+	 </tr>
+
+	  </table>
+      </div>
+      </div>
+      </div>
+      
+</body> </html>
