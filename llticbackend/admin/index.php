@@ -13,7 +13,7 @@ if($session->isAuthenticated())
 	{
 		$main = new Template('adminMainView.php',array(
 				'title' => 'LLTIC: Admin Main View',
-				'heading' => 'Employee') );
+				'loggednInUser' => '$session->getUserRecord()->getUsername()') );
 		$main->render();
 	}
 }

@@ -23,7 +23,7 @@
 		</div>
 	Admin Page
 		<div id='rightHeader'>
-			Logout
+			<a href='../logoutuser.php'>Logout</a>$nbsp; <?php print $this->loggedInUser; ?>
 		</div>
 	</div>
 
