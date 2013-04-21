@@ -5,6 +5,7 @@ class Session
 {
   private $dbcon = NULL;
   private $isAlive = true;
+  private $sessID;
   
   public function __construct()
   {
@@ -17,6 +18,7 @@ class Session
       array(&$this, 'clean'));
  
     session_start();
+    $this->sessID = session_id();
   }
 
   public function __destruct()
@@ -103,6 +105,11 @@ class Session
   public function getVar($name)
   {
   	return $_SESSION[$name];
+  }
+  
+  public function getId()
+  {
+  	return $this->sessID;
   }
 }
 

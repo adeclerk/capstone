@@ -1,7 +1,7 @@
 <?php
 require ('Session.inc.php');
 require_once('LlticDbConnection.inc.php');
-include 'userin.php';
+//include 'userin.php';
 $session = new Session();
 error_reporting(E_ALL);
 
