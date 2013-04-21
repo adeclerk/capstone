@@ -22,7 +22,7 @@ function loguserin($username,$pass)
 		return false;
 	}
 	$_SESSION['user'] = $username;
-	$_USERLEVEL['userlevel'] = $userFound->getUserLevel();
+	$_SESSION['userlevel'] = $userFound->getUserLevel();
 	//$_SESSION['pass'] = UserRecord::hashPass($pass);
 
 	return true;
