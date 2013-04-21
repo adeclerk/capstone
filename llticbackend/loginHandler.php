@@ -15,7 +15,7 @@ function loguserin($username,$pass)
 		return false;
 	}
 	
-	if($pass != UserRecord::hashPass($pass))
+	if($userFound->getPassword() != UserRecord::hashPass($pass))
 	{
 		print "Login error, password incorrect";
 		return false;
