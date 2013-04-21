@@ -57,6 +57,7 @@ class Session
 
   private function read($sessionID)
   {
+  	print "READ CALLED";
     $sqlQuery = "SELECT `data` FROM `sessions` WHERE id=`" .$this->dbcon->getConnection()->real_escape_string($sessionID) ."' LIMIT 1";
 
     $result = $this->dbcon->qry($sqlQuery);
