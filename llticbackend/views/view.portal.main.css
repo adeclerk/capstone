@@ -17,6 +17,7 @@
 {
 	float: left;
 	width: 25%
+	clear: right;
 }
 
 #righthead
@@ -26,4 +27,9 @@
 
 	text-align: right;
 	clear: right;
+}
+
+#loginform
+{
+	float: left;
 }
