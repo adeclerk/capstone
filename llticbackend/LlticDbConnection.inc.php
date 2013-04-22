@@ -1,17 +1,24 @@
 <?php
+ /**
+  * @author adeclerk
+  * @file LlticDbConnection.inc.php
+  * @brief LLTIC Database related classes + functions.
+  * @detail Classes representing Database tables, in addition to a class
+  * for connecting to the database. 
+  */
 require('User.inc.php');
 require('Employee.inc.php');
 class userTable
 {
   /** 
-   * Database connection. 
+   * @brief Database connection. 
    */
   private $dbc;
   private $contents;
   private $contentsPtr =0;
   private $contentsCnt = 0;
   /**
-   * User Table Constructor
+   * @brief User Table Constructor
    */
   public function __construct($connection)
   {
@@ -144,13 +151,31 @@ class employeeTable
 		}
 	}
 }
+
+/**
+ * @brief LlticDbConnection class representing connection to LLTIC database. 
+ *
+ */
 class LlticDbConnection
 {
   private $connection;
   private $isOpen;
+  
+  /**
+   * @brief Representation of the users table. 
+   * @var userTable
+   */
   public $users;
+  
+  /**
+   * @brief Representation of the employees table.
+   * @var employeeTable
+   */
   public $employees;
 
+  /**
+   * @brief Default constructor for LlticDbConnection object.
+   */
   public function __construct()
   {
    // Create connection	
@@ -173,22 +198,42 @@ class LlticDbConnection
     $this->connection->close();
   }
 
+  /**
+   * @brief Returns connection object;
+   * @return mysqli connected object.
+   * @return NULL if connection not open.
+   */
   public function getConnection()
   {
-    return $this->connection;
+  	if($this->isOpen())
+    	return $this->connection;
+  	else
+  		return '';
   }
   
-  public function qry($query)
+  /**
+   * @brief Returns result of sql query.
+   * @param string $query String containing sql query.
+   * @return mixed Query result.
+   */
+  public function qry(string $query)
   {
    return $this->connection->query($query);
   }
 
+  /**
+   * @brief Close the db connection.
+   */
   public function close()
   {
   	$this->connection->close();
   	$this->isOpen = False;
   }
   
+  /**
+   * @brief Determine if db connection is open.
+   * @return bool Representing open state.
+   */
   public function isOpen()
   {
   	return $this->isOpen;
