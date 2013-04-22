@@ -1,7 +1,3 @@
 <?php
-
-if($_SERVER['REQUEST_METHOD'] == "POST")
-{
-	
-}
+include 'views/view.portal.main.php';
 ?>
