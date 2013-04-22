@@ -48,7 +48,7 @@ margin-left: 0px;
 .employeetab
 {
 position: relative;
-	width: 100%;
+	width: 80%;
 }
 div.tab:hover
 {
