@@ -1,4 +1,4 @@
 <?php 
-require ('./views/view.login.php');
+require ('views/view.login.php');
 
 ?>
