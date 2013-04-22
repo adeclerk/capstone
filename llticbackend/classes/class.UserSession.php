@@ -6,7 +6,6 @@
  */
 require_once ('class.Login.php');
 
-require_once ('class.User.php');
 class UserSession
 {
 	private $session;
