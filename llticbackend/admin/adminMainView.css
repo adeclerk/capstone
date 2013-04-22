@@ -45,7 +45,7 @@ margin-left: 0px;
 .header
 {
 	position: relative;
-	width: 100%;
+	width: 1080px;
 }
 
 #employeetab
@@ -69,7 +69,7 @@ margin-left: 0px;
 #righthead
 {
 	position: relative;
-	float: left;
+	float: right;
 }
 div.tab:hover
 {
