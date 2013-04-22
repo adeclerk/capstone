@@ -1,4 +1,5 @@
 <?php
+/*
 require_once('classes/class.UserSession.php');
 $session = new Session();
 error_reporting(E_ALL);
@@ -24,4 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 		echo "Failed to login user.";
 	}
   }
+  */
+require ('./controllers/con.login.php');
+
+loginRoutine();
 ?>
