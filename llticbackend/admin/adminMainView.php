@@ -1,69 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html> <head>
 <title><?php  print $this->title; ?></title>
-<style type="text/css">
-div#tabs
-{
-   margin-left: 0px;
-   margin-bottom: 0px;
-   padding: 0px;
-   float: left;
-   clear: right;
-   width: 1080px;
-
-}
-.tab
-{
-   position: relative;
-   background-color: #CCCCCC;
-   padding-left: 5px;
-   padding-bottom: 0px;
-   margin-bottom: 0px;
-   margin-left: 0px;
-   border: 1px solid;
-   border-top-left-radius: 5px;
-border-top-right-radius: 5px;
-   width: 20%;
-   float: left;
-}
-.tabcontent
-{
-position: relative;
-margin-left: 0px;
- padding-left: 10px;
- padding-right: 16px;
- padding-bottom: 10%;
- padding-top: 10px;
- margin-top: 0px;
- clear: left;
-   float: left;
-
-   border-left: 1px solid;
-   border-right: 1px solid;
-   border-bottom: 1px solid;
-	width: 80%;
-
-}
-
-.employeetab
-{
-position: relative;
-	width: 80%;
-}
-div.tab:hover
-{
-  background-color: #CCCCFF;
-}
-table
-{
-    width: 90%;
-}
-th
-{
-   border: 1px solid;
-   text-align: left;
-}
-</style>
+<link href="adminMainView.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
 var currentTab = null;
 var lastDisplay = null;
