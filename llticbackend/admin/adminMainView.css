@@ -57,7 +57,7 @@ margin-left: 0px;
 {
 	position: relative;
 	float: left;
-	font-size: 40pts;
+	font-size: 60pts;
 	font-family: courier;
 	width: 20%;
 }
@@ -72,6 +72,7 @@ margin-left: 0px;
 #righthead
 {
 	position: relative;
+	padding-right: 10px;
 	float: left;
 	width: 20%;
 	text-align: right;
