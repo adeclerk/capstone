@@ -2,7 +2,7 @@
 //require_once('Autoloader.php');
 
 require_once('classes/class.UserSession.php');
-$session = new Session();
+
 error_reporting(E_ALL);
 
 /*function loguserin($username,$pass)
