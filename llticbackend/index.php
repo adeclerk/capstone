@@ -1,4 +1,4 @@
 <?php
 
-print $_SERVER['PATH_TRANSLATED'];
+print $_SERVER['PATH_INFO'];
 ?>
