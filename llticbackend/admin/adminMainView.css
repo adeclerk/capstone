@@ -65,6 +65,7 @@ div.title
 div.righthead
 {
 	position: relative;
+	background-color: #C0C0C0;
 	float: right;
 }
 div.tab:hover
