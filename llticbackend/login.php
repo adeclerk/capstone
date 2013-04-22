@@ -1,18 +1,4 @@
-<html>
-<head>
-<title>LLTIC Login</title>
-</head>
+<?php 
+require ('./views/view.login.php');
 
-<body>
-    <form action="loginHandler.php" method="post">
-            <fieldset>
-                    <legend>Login</legend>
-                    Username: <input type="text" name="username"> </br>
-                    Password: <input type="text" name="password"> </br>
-                    <input type="submit" name="formSubmit" value="Submit">
-            </fieldset>
-           </form>"
-
-</body>
-
-</html>
+?>

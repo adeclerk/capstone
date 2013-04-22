@@ -26,7 +26,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 	}
   }
   */
-require ('./controllers/con.login.php');
 
-loginRoutine();
 ?>
