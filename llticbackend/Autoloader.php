@@ -20,8 +20,7 @@ class Autoloader
 	
 	public function load($class) 
 	{
-    include 'classes/' . $class . '.class.php';
-    include 'controllers/' . $class . '.inc.php';
+    include 'classes/class.' . $class . '.php';
 	}
 }
 
