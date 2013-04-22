@@ -45,6 +45,7 @@ margin-left: 0px;
 .header
 {
 	position: absolute;
+	height: 150px;
 	width: 1080px;
 }
 
