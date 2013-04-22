@@ -48,6 +48,7 @@ position: relative;
 }
 .header
 {
+	position: relative;
 	width: 100%;
 }
 
@@ -63,6 +64,7 @@ position: relative;
 
 .righthead
 {
+	position: relative;
 	float: right;
 }
 div.tab:hover
