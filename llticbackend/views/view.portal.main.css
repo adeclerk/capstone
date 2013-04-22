@@ -29,10 +29,14 @@
 	text-align: right;
 	clear: right;
 }
-
+#main
+{
+	width: 100%;
+}
 #loginform
 {
 	width: 20%;
 	margin-left: 35%;
+	
 
 }

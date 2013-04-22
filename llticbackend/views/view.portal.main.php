@@ -12,6 +12,8 @@
 		Portal Main
 		</div>
 	</div>
+	<div id='main'>
 	<?php include 'view.login.php';?>
+	</div>
 	</body>
 </html>
