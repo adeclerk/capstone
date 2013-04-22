@@ -41,28 +41,28 @@ margin-left: 0px;
 
 }
 
-div.employeetab
+.employeetab
 {
 position: relative;
 	width: 80%;
 }
-div.header
+.header
 {
 	position: relative;
 	width: 100%;
 }
 
-div.logo
+.logo
 {
 	border: 1px solid;
 }
 
-div.title
+.title
 {
 	float: right;
 }
 
-div.righthead
+.righthead
 {
 	position: relative;
 	background-color: #C0C0C0;
