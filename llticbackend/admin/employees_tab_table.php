@@ -4,7 +4,10 @@ require_once('../LlticDbConnection.inc.php');
 <script type="text/javascript">
 function editEmployee($id)
 {
-
+	var row = document.getElementById($id);
+	row.style.display = 'none';
+	row = document.getElementById($id+"_edit");
+	row.style.display = 'inline';
 }
 </script>
 <table style='width: 100%;'>
