@@ -4,7 +4,7 @@
 </head>
 
 <body>
-    <form action="loginHandler.php" method="post">
+    <form action="/controllers/con.login.php" method="post">
             <fieldset>
                     <legend>Login</legend>
                     Username: <input type="text" name="username"> </br>
