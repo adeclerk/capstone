@@ -9,7 +9,7 @@ class Autoloader
 	
 	public static function autoload($class) 
 	{
- 	   include 'classes/class.' . $class . '.php';
+ 	   include_once 'classes/class.' . $class . '.php';
 	}
 }
 
