@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -90,7 +91,7 @@ $(document).ready(function(){initNavTree('class_lltic_db_connection.html','');})
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,20 +108,28 @@ $(document).ready(function(){initNavTree('class_lltic_db_connection.html','');})
 <div class="title">LlticDbConnection Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_lltic_db_connection.html" title="LlticDbConnection class representing connection to LLTIC database.">LlticDbConnection</a> class representing connection to LLTIC database.  
+ <a href="class_lltic_db_connection.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab7a0a080d0e721c656eef11cd641638b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7a0a080d0e721c656eef11cd641638b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>getConnection</b> ()</td></tr>
+<tr class="memitem:a095c5d389db211932136b53f25f39685"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a095c5d389db211932136b53f25f39685"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lltic_db_connection.html#a095c5d389db211932136b53f25f39685">__construct</a> ()</td></tr>
+<tr class="memdesc:a095c5d389db211932136b53f25f39685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="class_lltic_db_connection.html" title="LlticDbConnection class representing connection to LLTIC database.">LlticDbConnection</a> object. <br/></td></tr>
+<tr class="separator:a095c5d389db211932136b53f25f39685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a0a080d0e721c656eef11cd641638b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lltic_db_connection.html#ab7a0a080d0e721c656eef11cd641638b">getConnection</a> ()</td></tr>
+<tr class="memdesc:ab7a0a080d0e721c656eef11cd641638b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns connection object;.  <a href="#ab7a0a080d0e721c656eef11cd641638b">More...</a><br/></td></tr>
 <tr class="separator:ab7a0a080d0e721c656eef11cd641638b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51b66bcd330db530c05f3b2830d7d156"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51b66bcd330db530c05f3b2830d7d156"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>qry</b> ($query)</td></tr>
-<tr class="separator:a51b66bcd330db530c05f3b2830d7d156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e63a2c8646fcd1c93570402df3e300e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lltic_db_connection.html#a2e63a2c8646fcd1c93570402df3e300e">qry</a> (string $query)</td></tr>
+<tr class="memdesc:a2e63a2c8646fcd1c93570402df3e300e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns result of sql query.  <a href="#a2e63a2c8646fcd1c93570402df3e300e">More...</a><br/></td></tr>
+<tr class="separator:a2e63a2c8646fcd1c93570402df3e300e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa69c8bf1f1dcf4e72552efff1fe3e87e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa69c8bf1f1dcf4e72552efff1fe3e87e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> ()</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lltic_db_connection.html#aa69c8bf1f1dcf4e72552efff1fe3e87e">close</a> ()</td></tr>
+<tr class="memdesc:aa69c8bf1f1dcf4e72552efff1fe3e87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the db connection. <br/></td></tr>
 <tr class="separator:aa69c8bf1f1dcf4e72552efff1fe3e87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac21d0b99fadc55cd5e0b06aeecc73d26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac21d0b99fadc55cd5e0b06aeecc73d26"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>isOpen</b> ()</td></tr>
+<tr class="memitem:ac21d0b99fadc55cd5e0b06aeecc73d26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lltic_db_connection.html#ac21d0b99fadc55cd5e0b06aeecc73d26">isOpen</a> ()</td></tr>
+<tr class="memdesc:ac21d0b99fadc55cd5e0b06aeecc73d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if db connection is open.  <a href="#ac21d0b99fadc55cd5e0b06aeecc73d26">More...</a><br/></td></tr>
 <tr class="separator:ac21d0b99fadc55cd5e0b06aeecc73d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -132,8 +141,74 @@ Data Fields</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$employees</b></td></tr>
 <tr class="separator:a598c06abe9d65a9d2990e39693ce2c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_lltic_db_connection.html" title="LlticDbConnection class representing connection to LLTIC database.">LlticDbConnection</a> class representing connection to LLTIC database. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ab7a0a080d0e721c656eef11cd641638b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getConnection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns connection object;. </p>
+<dl class="section return"><dt>Returns</dt><dd>mysqli connected object. </dd>
+<dd>
+NULL if connection not open. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac21d0b99fadc55cd5e0b06aeecc73d26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">isOpen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determine if db connection is open. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool Representing open state. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e63a2c8646fcd1c93570402df3e300e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qry </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns result of sql query. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$query</td><td>String containing sql query. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>mixed Query result. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LlticDbConnection.inc.php</li>
+<li><a class="el" href="_lltic_db_connection_8inc_8php.html">LlticDbConnection.inc.php</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -141,7 +216,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_lltic_db_connection.html">LlticDbConnection</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 14:22:21 for LLTIC Backend by
+    <li class="footer">Generated on Mon Apr 22 2013 14:35:47 for LLTIC Backend by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

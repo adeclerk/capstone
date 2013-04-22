@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -90,7 +91,7 @@ $(document).ready(function(){initNavTree('classuser_table.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,7 +110,9 @@ $(document).ready(function(){initNavTree('classuser_table.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a155afedbdfa01f1c0b813ca97642cdab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_table.html#a155afedbdfa01f1c0b813ca97642cdab">__construct</a> ($connection)</td></tr>
+<tr class="memitem:a155afedbdfa01f1c0b813ca97642cdab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a155afedbdfa01f1c0b813ca97642cdab"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_table.html#a155afedbdfa01f1c0b813ca97642cdab">__construct</a> ($connection)</td></tr>
+<tr class="memdesc:a155afedbdfa01f1c0b813ca97642cdab"><td class="mdescLeft">&#160;</td><td class="mdescRight">User Table Constructor. <br/></td></tr>
 <tr class="separator:a155afedbdfa01f1c0b813ca97642cdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee424b35e1172ec0a2f914eba76966d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee424b35e1172ec0a2f914eba76966d2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>findUser</b> ($username)</td></tr>
@@ -127,26 +130,8 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>getUser</b> ()</td></tr>
 <tr class="separator:ae81b7186fb97a7c6457edcc68c9aa2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a155afedbdfa01f1c0b813ca97642cdab"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">__construct </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$connection</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>User Table Constructor </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LlticDbConnection.inc.php</li>
+<li><a class="el" href="_lltic_db_connection_8inc_8php.html">LlticDbConnection.inc.php</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -154,7 +139,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classuser_table.html">userTable</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 14:22:21 for LLTIC Backend by
+    <li class="footer">Generated on Mon Apr 22 2013 14:35:47 for LLTIC Backend by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

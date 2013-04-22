@@ -8,13 +8,16 @@ var NAVTREE =
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ]
       ] ]
+    ] ],
+    [ "Files", null, [
+      [ "File List", "files.html", "files" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"_lltic_db_connection_8inc_8php.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
