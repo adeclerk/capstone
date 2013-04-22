@@ -1,5 +1,5 @@
 <form id='sendMessage' method='post' action='sendMessage.php'>
 	Recipient: <input type="text" id="recip"><br/>
 	Subject: <input type="text" id="subject"><br/>
-	Content: <input type="textarea" id="content" style='width: 80%; height: 70%;'>
+	Content: <textarea style='width: 90%; height: 70%;' id='content'></textarea>
 </form>
