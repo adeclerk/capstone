@@ -14,7 +14,7 @@
 		<div id="title">
 		Admin Page 
 		</div>
-		<div id="righthead" style="float: right;">
+		<div id="righthead">
 		<?php print $this->user; ?>&nbsp;
 		(logout | preferences)
 		</div>
