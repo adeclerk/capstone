@@ -14,11 +14,11 @@ class Autoloader
 	
 	public function __construct()
 	{
-		spl_autoload_register(array($this,'load'));
+		spl_autoload_register(array($this,'autoload'));
 
 	}
 	
-	public function load($class) 
+	public static function autoload($class) 
 	{
     include 'classes/class.' . $class . '.php';
 	}
