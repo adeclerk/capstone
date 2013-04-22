@@ -4,8 +4,7 @@ require_once('../LlticDbConnection.inc.php');
 <script type="text/javascript">
 function editEmployee($id)
 {
-	document.write('<div style="z-index: 10;"> \
-					
+
 }
 </script>
 <table style='width: 100%;'>
@@ -24,7 +23,7 @@ function editEmployee($id)
 	$result = $db->qry("SELECT * FROM `employees`");
 	while($row = $result->fetch_assoc())
 	{
-		print "<tr>\n\t";
+		print "<tr id='". $row['id'] . "'>\n\t";
 		print "<td>" .$row['id'] . "</td>\n\t";
 		print "<td>" . $row['firstName'] . "</td>\n\t";
 		print "<td>" . $row['lastName'] . "</td>\n\t";
