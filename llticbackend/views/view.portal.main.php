@@ -9,8 +9,9 @@
 		LLTIC, Inc.
 		</div>
 		<div id="title">
-		Admin Page 
+		Portal Main
 		</div>
 	</div>
+	<?php include 'view.login.php';?>
 	</body>
 </html>

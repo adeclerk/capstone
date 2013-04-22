@@ -1,9 +1,4 @@
-<html>
-<head>
-<title>LLTIC Login</title>
-</head>
-
-<body>
+<div id='loginform'>
     <form action="controllers/con.login.php" method="post">
             <fieldset>
                     <legend>Login</legend>
@@ -12,7 +7,4 @@
                     <input type="submit" name="formSubmit" value="Submit">
             </fieldset>
            </form>"
-
-</body>
-
-</html>
+</div>
