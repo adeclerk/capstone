@@ -2,7 +2,7 @@
 //require_once('Autoloader.php');
 
 require_once('Autoloader.php');
-Autoloader::init();
+$autoLoad = new Autoloader();
 $session = new Session();
 error_reporting(E_ALL);
 
