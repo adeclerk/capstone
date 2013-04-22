@@ -4,9 +4,9 @@
  * @file class.Login.php
  * @brief Class representing Login for users.
  */
-require_once('classes/class.LlticDbConnection.php');
-require_once('classes/class.Session.php');
-require_once('classes/class.UserRecord.php');
+require_once('class.LlticDbConnection.php');
+require_once('class.Session.php');
+require_once('class.UserRecord.php');
 class Login
 {
   private $dbcon;
