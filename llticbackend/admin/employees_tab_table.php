@@ -37,7 +37,7 @@ function editEmployee($id)
 		print "<td><a href='#' onclick='editEmployee(" . $row['id']. ")'>edit</a></td>\n";
 		print "</tr>";
 		
-		print "<form id='edit_emp_" . $row['id'] ."' action='editEmployee.php'>\n";
+		print "<form id='edit_emp_" . $row['id'] ."' action='editEmployee.php' method='post'>\n";
 		print "<tr id='". $row['id'] . "_edit' style='display: none;'>\n\t";
 		print "<td><input type='text'  name='id' size='4' value='" .$row['id'] . "'></td>\n\t";
 		print "<td><input type='text' name='firstName'  value='" . $row['firstName'] . "'></td>\n\t";
