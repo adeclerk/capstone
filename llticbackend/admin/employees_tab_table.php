@@ -33,6 +33,17 @@ function editEmployee($id)
 		print "<td>" . $row['phone'] . "</td>\n\t";
 		print "<td><a href='#' onclick='editEmployee(" . $row['id']. ")'>edit</a></td>\n";
 		print "</tr>";
+		
+		print "<tr id='". $row['id'] . "_edit' style='visibility: none;'>\n\t";
+		print "<td>" .$row['id'] . "</td>\n\t";
+		print "<td>" . $row['firstName'] . "</td>\n\t";
+		print "<td>" . $row['lastName'] . "</td>\n\t";
+		print "<td>" . $row['hireDate'] . "</td>\n\t";
+		print "<td>" . $row['country'] . "</td>\n\t";
+		print "<td>" . $row['salary'] . "</td>\n\t";
+		print "<td>" . $row['phone'] . "</td>\n\t";
+		print "<td><a href='#' onclick='editEmployee(" . $row['id']. ")'>edit</a></td>\n";
+		print "</tr>";
 	}
 	?>
 
