@@ -1,6 +1,5 @@
 <?php
 require_once('../classes/class.UserSession.php');
-require_once('../classes/class.UserRecord.php');
 require_once('../classes/class.Template.php');
 
 $session = new UserSession();
