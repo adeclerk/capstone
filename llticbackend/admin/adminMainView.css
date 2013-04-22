@@ -58,12 +58,12 @@ position: relative;
 
 .title
 {
-	clear: left;
+	float: left;
 }
 
 .righthead
 {
-	clear: left;
+	float: left;
 }
 div.tab:hover
 {
