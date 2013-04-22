@@ -1,12 +1,5 @@
 <?php
-//require_once('Autoloader.php');
-
-function autoload($class)
-{
-	include_once './classes/class.' . $class . '.php';
-}
-
-spl_autoload_register('autoload');
+require_once('classes/class.UserSession.php');
 $session = new Session();
 error_reporting(E_ALL);
 
