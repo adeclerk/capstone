@@ -39,13 +39,13 @@ function editEmployee($id)
 		
 		print "<form id='edit_emp_" . $row['id'] ."' action='editEmployee.php'>\n";
 		print "<tr id='". $row['id'] . "_edit' style='display: none;'>\n\t";
-		print "<td><input name='id' type='text' value='" .$row['id'] . "'></td>\n\t";
-		print "<td><input name='firstName' type='text' value='" . $row['firstName'] . "'></td>\n\t";
-		print "<td><input name='lastName' type='text' value='" . $row['lastName'] . "'></td>\n\t";
-		print "<td><input name='hireDate' type='text' value='" . $row['hireDate'] . "'></td>\n\t";
-		print "<td><input name='country' type='text' value='" . $row['country'] . "'></td>\n\t";
-		print "<td><input name='salary' type='text' value='" . $row['salary'] . "'></td>\n\t";
-		print "<td><input name='phone' type='text' value='" . $row['phone'] . "'></td>\n\t";
+		print "<td><input type='text'  name='id'  value='" .$row['id'] . "'></td>\n\t";
+		print "<td><input type='text' name='firstName'  value='" . $row['firstName'] . "'></td>\n\t";
+		print "<td><input type='text' name='lastName' value='" . $row['lastName'] . "'></td>\n\t";
+		print "<td><input type='text' name='hireDate' value='" . $row['hireDate'] . "'></td>\n\t";
+		print "<td><input type='text' name='country' value='" . $row['country'] . "'></td>\n\t";
+		print "<td><input type='text' name='salary' value='" . $row['salary'] . "'></td>\n\t";
+		print "<td><input type='text' name='phone' value='" . $row['phone'] . "'></td>\n\t";
 		print "<td><a href='#' onclick=''>save</a></td>\n";
 		print "</tr>";
 		print "</form>";
