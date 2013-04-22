@@ -1,5 +1,5 @@
 <?php
- require ('classes/class.Employee.php');
+ require ('classes/class.LlticDbConnection.php');
 
 
 ?>
