@@ -50,6 +50,21 @@ position: relative;
 {
 	width: 100%;
 }
+
+.logo
+{
+	
+}
+
+.title
+{
+	clear: left;
+}
+
+.righthead
+{
+	clear: left;
+}
 div.tab:hover
 {
   background-color: #CCCCFF;
