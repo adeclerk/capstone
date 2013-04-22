@@ -1,5 +1,5 @@
 <?php
-require_once('../LlticDbConnection.inc.php');
+require_once('../classes/class.LlticDbConnection.php');
 ?>
 <script type="text/javascript">
 function editEmployee(id)
