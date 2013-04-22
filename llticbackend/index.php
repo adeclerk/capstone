@@ -1,4 +1,7 @@
 <?php
 
-print $_SERVER['PATH_INFO'];
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+	
+}
 ?>
