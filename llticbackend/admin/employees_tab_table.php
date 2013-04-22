@@ -34,7 +34,7 @@ function editEmployee($id)
 		print "<td><a href='#' onclick='editEmployee(" . $row['id']. ")'>edit</a></td>\n";
 		print "</tr>";
 		
-		print "<tr id='". $row['id'] . "_edit' style='visibility: none;'>\n\t";
+		print "<tr id='". $row['id'] . "_edit' style='display: none;'>\n\t";
 		print "<td>" .$row['id'] . "</td>\n\t";
 		print "<td>" . $row['firstName'] . "</td>\n\t";
 		print "<td>" . $row['lastName'] . "</td>\n\t";
