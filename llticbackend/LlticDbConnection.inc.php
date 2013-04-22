@@ -216,7 +216,7 @@ class LlticDbConnection
    * @param string $query String containing sql query.
    * @return mixed Query result.
    */
-  public function qry(string $query)
+  public function qry($query)
   {
    return $this->connection->query($query);
   }
