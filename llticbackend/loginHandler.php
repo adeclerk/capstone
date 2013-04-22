@@ -1,7 +1,7 @@
 <?php
 //require_once('Autoloader.php');
-require_once('classes/class.Session.php');
-require_once('classes/class.UserSession.php');
+require_once('./classes/class.Session.php');
+require_once('./classes/class.UserSession.php');
 $session = new Session();
 error_reporting(E_ALL);
 
