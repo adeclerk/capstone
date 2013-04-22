@@ -1,5 +1,5 @@
 <?php
-require_once 'LlticDbConnection.inc.php';
+require_once ('class.LlticDbConnection.php');
 class Employee
 {
   public $id;

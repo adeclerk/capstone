@@ -1,6 +1,5 @@
 <?php
-require ('Session.inc.php');
-require_once('UserSession.inc.php');
+require_once('Autoloader.php');
 $session = new Session();
 error_reporting(E_ALL);
 

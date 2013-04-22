@@ -6,8 +6,8 @@
   * @detail Classes representing Database tables, in addition to a class
   * for connecting to the database. 
   */
-require('User.inc.php');
-require('Employee.inc.php');
+require_once('class.UserRecord.php');
+require_once('class.Employee.php');
 
 /**
  * @brief userTable - class representing the users table.

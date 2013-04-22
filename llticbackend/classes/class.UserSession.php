@@ -5,9 +5,9 @@
  * @brief User Authetication session class.
  */
 require_once ('class.Login.php');
-require_once ('LlticDbConnection.inc.php');
-require_once ('Session.inc.php');
-require_once ('User.inc.php');
+require_once ('class.LlticDbConnection.php');
+require_once ('class.Session.php');
+require_once ('class.User.php');
 class UserSession
 {
 	private $session;
