@@ -28,7 +28,7 @@ border-top-right-radius: 5px;
 }
 .tabcontent
 {
-position: absolute;
+position: relative;
 margin-left: 0px;
  padding-left: 10px;
  padding-right: 16px;
@@ -41,7 +41,6 @@ margin-left: 0px;
    border-left: 1px solid;
    border-right: 1px solid;
    border-bottom: 1px solid;
-   border
 	width: 100%;
 
 }
