@@ -5,23 +5,37 @@ class Employee
   public $id;
   public $firstName;
   public $lastName;
-  public $email;
   public $hireDate;
   public $salary;
   public $phone;
   public $userID;
   public $init;
 
-  public function __construct()
+  public function __construct($id = NULL,$firstName = NULL,
+  								$lastName = NULL,$hireDate = NULL,$salary = NULL,
+  								$phone = NULL,$userId = NULL)
   {
-    $this->init = False;
+  	if($id == NULL)
+  	{
+    	$this->init = False;
+  	}
+  	else
+  	{
+  		$this->id = $id;
+  		$this->firstName = $firstName;
+  		$this->lastName = $lastName;
+  		$this->hireDate = $hireDate;
+  		$this->salary = $salary;
+  		$this->phone = $phone;
+  		$this->userID = $userId;
+  		$this->init = True;
+  	}
   }
   public function set(array $row)
   {
     $this->id = $row['id'];
     $this->firstName = $row['firstName'];
     $this->lastName = $row['lastName'];
-    $this->email = $row['email'];
     $this->hireDate = $row['hireDate'];
     $this->salary = $row['salary'];
     $this->phone = $row['phone'];
@@ -29,18 +43,16 @@ class Employee
     $this->init = True;
   }
 
-  public function printRecord()
+  public function __toString()
   {
     print "<tr><td>"
-      .$this->id . "</td><td>"
+      		.$this->id . "</td><td>"
             . $this->firstName . "</td><td>"
             . $this->lastName . "</td><td>"
-            . $this->email . "</td><td>"
             . $this->hireDate . "</td><td>"
             . $this->salary . "</td><td>"
-            . $this->isAdmin . "</td><td>"
-            . $this->username . "</td><td>"
-            . $this->phone . "</td><td></tr>";
+            . $this->phone . "</td><td></tr>"
+            . $this->userID . "</td><td>";
   }
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 require('User.inc.php');
+require('Employee.inc.php');
 class userTable
 {
   /** 
@@ -19,7 +20,7 @@ class userTable
 
   public function __destruct()
   {
-
+	
   }
 
   public function findUser($username)
@@ -98,11 +99,57 @@ class userTable
   }
 	
 }
+
+class employeeTable
+{
+	private $dbc;
+	
+	public function __construct($connection)
+	{
+		$this->dbc = $connection;
+	}
+	
+	public function __destruct()
+	{
+	
+	}
+	
+	public function getById($id)
+	{
+		$sql = "SELECT * FROM `employees` WHERE `id`='" . $id ."'";
+		$result = $this->dbc->qry($sql);
+		if($row = $result->fetch_assoc())
+		{
+			return new Employee($row['id'],$row['firstName'],$row['lastName'],
+								$row['hireDate'],$row['salary'],$row['phone'],$row['userID']);
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public function getByUserId($id)
+	{
+		$sql = "SELECT * FROM `employees` WHERE `userID`='" . $id ."'";
+		$result = $this->dbc->qry($sql);
+		if($row = $result->fetch_assoc())
+		{
+			return new Employee($row['id'],$row['firstName'],$row['lastName'],
+					$row['hireDate'],$row['salary'],$row['phone'],$row['userID']);
+		}
+		else
+		{
+			return false;
+		}
+	}
+}
 class LlticDbConnection
 {
   private $connection;
   private $isOpen;
   public $users;
+  public $employees;
 
   public function __construct()
   {
@@ -117,6 +164,7 @@ class LlticDbConnection
 		exit();
  	}
     $this->users = new userTable($this);
+    $this->employees = new employeeTable($this);
 
   }
 

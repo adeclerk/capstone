@@ -1,6 +1,13 @@
 <?php
 require_once('../LlticDbConnection.inc.php');
 ?>
+<script type="text/javascript">
+function editEmployee($id)
+{
+	document.write('<div style="z-index: 10;"> \
+					
+}
+</script>
 <table style='width: 100%;'>
 	<tr>
 		<th>ID</th>
@@ -25,7 +32,7 @@ require_once('../LlticDbConnection.inc.php');
 		print "<td>" . $row['country'] . "</td>\n\t";
 		print "<td>" . $row['salary'] . "</td>\n\t";
 		print "<td>" . $row['phone'] . "</td>\n\t";
-		print "<td><a href=''>edit</a></td>\n";
+		print "<td><a href='#' onclick='editEmployee(" . $row['id']. ")'>edit</a></td>\n";
 		print "</tr>";
 	}
 	?>
