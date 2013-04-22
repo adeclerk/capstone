@@ -14,7 +14,8 @@ class Autoloader
 	
 	public function __construct()
 	{
-		spl_autoload_register('load');
+		spl_autoload_register(array($this,'load'));
+
 	}
 	
 	public function load($class) 
@@ -24,5 +25,5 @@ class Autoloader
 	}
 }
 
-autoloader::init();
+Autoloader::init();
 ?>
