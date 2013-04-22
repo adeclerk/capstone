@@ -124,6 +124,47 @@ function showTab(arg,id)
 		<?php include 'employees_tab_table.php';?>
 
       </div>
+            <div id="inboxtab" style="display: none;">
+	<table id="inbox">
+	  <tr>
+	    <th>From</th>
+	    <th>Subject</th>
+	    <th>Date</th>
+	 </tr>
+	 <tr>
+	   <td>john@somecomp.co.uk</td>
+	   <td>How's the project coming along?</td>
+	   <td>01-23-13</td>
+	 </tr>
+
+	  </table>
+
+      </div>
+      <div id="filestab" style="display: none;">
+	<table id="files">
+	  <tr>
+	    <th>Filename</th>
+	    <th>Origin</th>
+	    <th>Type</th>
+	    <th>Date</th>
+	 </tr>
+	 <tr>
+	   <td>letter</td>
+	   <td>Rich Thatherton</td>
+	   <td>doc</td>
+	   <td>01-23-13</td>
+	 </tr>
+	 <tr>
+	   <td>report</td>
+	   <td>Sam O'Brian</td>
+	   <td>pdf</td>
+	   <td>01-20-13</td>
+	 </tr>
+
+	  </table>
+
+
+      </div>
       <div id="historytab" style="display: none;">
 	<table id="history">
 	  <tr>
