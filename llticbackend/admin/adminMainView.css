@@ -54,7 +54,7 @@ position: relative;
 
 .logo
 {
-	clear: right;
+	border: 1px solid;
 }
 
 .title
