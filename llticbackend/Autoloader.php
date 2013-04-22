@@ -24,5 +24,4 @@ class Autoloader
 	}
 }
 
-Autoloader::init();
 ?>
