@@ -10,6 +10,9 @@ class Template
 		return $this->args[$name];
 	}
 	
+	public function __set($name, $value) {
+		$this->args[$name] = $value;
+	}
 	public function __construct($file, $args = array())
 	{
 		$this->file = $file;
