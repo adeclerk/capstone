@@ -2,11 +2,12 @@
 //require_once('Autoloader.php');
 
 require_once('classes/class.UserSession.php');
+$session = new Session();
+error_reporting(E_ALL);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
   {
-
-	$login = new UserSession(NULL,$_POST['username'],$_POST['password']);
+	$login = new UserSession($session,$_POST['username'],$_POST['password']);
   	if($login->autheticate())
   	{
   		switch($login->getUserRecord()->getUserLevel())
