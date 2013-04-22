@@ -2,12 +2,17 @@
 require_once('../LlticDbConnection.inc.php');
 ?>
 <script type="text/javascript">
-function editEmployee($id)
+function editEmployee(id)
 {
-	var row = document.getElementById($id);
+	var row = document.getElementById(id);
 	row.style.display = 'none';
 	row = document.getElementById($id+"_edit");
 	row.style.display = 'table-row';
+}
+function formSubmit(id)
+{
+	var form = document.getElementById("edit_emp_"+id);
+	form.submit();
 }
 </script>
 <table style='width: 100%;'>
@@ -46,7 +51,7 @@ function editEmployee($id)
 		print "<td><input type='text' name='country' value='" . $row['country'] . "'></td>\n\t";
 		print "<td><input type='text' name='salary' value='" . $row['salary'] . "'></td>\n\t";
 		print "<td><input type='text' name='phone' value='" . $row['phone'] . "'></td>\n\t";
-		print "<td><a href='#' onclick=''>save</a></td>\n";
+		print "<td><a href='#' onclick='formSubmit(" .$row['id'] . ")'>save</a></td>\n";
 		print "</tr>";
 		print "</form>";
 	}
