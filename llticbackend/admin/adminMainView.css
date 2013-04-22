@@ -48,17 +48,22 @@ margin-left: 0px;
 	width: 100%;
 }
 
-.logo
+#employeetab
+{
+	position: relative;
+	width: 80%;
+}
+#logo
 {
 	border: 1px solid;
 }
 
-.title
+#title
 {
 	float: right;
 }
 
-.righthead
+#righthead
 {
 	position: relative;
 	background-color: #C0C0C0;
