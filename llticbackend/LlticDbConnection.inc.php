@@ -8,17 +8,20 @@
   */
 require('User.inc.php');
 require('Employee.inc.php');
+
+/**
+ * @brief userTable - class representing the users table.
+ *
+ */
 class userTable
 {
-  /** 
-   * @brief Database connection. 
-   */
   private $dbc;
   private $contents;
-  private $contentsPtr =0;
+  private $contentsPtr = -1;
   private $contentsCnt = 0;
   /**
    * @brief User Table Constructor
+   * @param LlticDbConnection $connection LlticDbConnection object.
    */
   public function __construct($connection)
   {
@@ -30,6 +33,12 @@ class userTable
 	
   }
 
+  /**
+   * @brief Find user by username.
+   * @param string $username
+   * @return NULL if user not found.
+   * @reutrn UserRecord if user found. 
+   */
   public function findUser($username)
   {
   	$result = $this->dbc->qry("SELECT * FROM `users` WHERE username='" .$username ."'");
@@ -44,8 +53,12 @@ class userTable
   	}
   }
   
+  /**
+   * @brief Load all users into memory in the userTable object. This allows calls to the getUser() function.
+   */
   public function loadAllUsers()
   {
+  	$this->contentsPtr = 0;
     $sql = "SELECT * FROM `users`";
     $result = $this->dbc->qry($sql);
     
@@ -60,6 +73,10 @@ class userTable
     $this->contentsCnt = $index+1;
   }
 
+  /**
+   * @brief Get all users in table.
+   * @return array of UserRecords representing users in table. 
+   */
   public function getAllUsers()
   {
     $sql = "SELECT * FROM `users`";
@@ -74,6 +91,12 @@ class userTable
     return $users;
   }
   
+  /**
+   * @brief Find user by userId;
+   * @param integer $id
+   * @return UserRecord if user exists.
+   * @return NULL if user not found.
+   */
   public function getUserById($id)
   {
   	$users = $this->getAllUsers();
@@ -88,11 +111,16 @@ class userTable
   	return '';
   }
   
+  /**
+   * @brief Get next user from table. 
+   * @return UserRecord representing next user in table.
+   * @return NULL if at end of user table.
+   */
   public function getUser()
   {
   	if($this->contentsPtr == -1)
   	{
-  		$this->contentsPtr++;
+  		$this->loadAllUsers();
   		return $this->contents[$this->contentsPtr];
   	}
   	elseif( $this->contentsPtr == $this->contentsCnt)
@@ -107,10 +135,17 @@ class userTable
 	
 }
 
+/**
+ * @brief Class representing employees table in database. 
+ */
 class employeeTable
 {
 	private $dbc;
 	
+	/**
+	 * @brief Contruct employeeTable with database connection.
+	 * @param LlticDbConnection $connection Object representing database connection.
+	 */
 	public function __construct($connection)
 	{
 		$this->dbc = $connection;
@@ -121,6 +156,12 @@ class employeeTable
 	
 	}
 	
+	/**
+	 * @brief Get employee record by employeeId.
+	 * @param int $id employeeId
+	 * @return Employee if employee found.
+	 * @return NULL if employee not found.
+	 */
 	public function getById($id)
 	{
 		$sql = "SELECT * FROM `employees` WHERE `id`='" . $id ."'";
@@ -136,6 +177,12 @@ class employeeTable
 		}
 	}
 	
+	/**
+	 * @brief Get employee record by userID.
+	 * @param int $id userID
+	 * @return Employee if employee found.
+	 * @return NULL if employee not found.
+	 */
 	public function getByUserId($id)
 	{
 		$sql = "SELECT * FROM `employees` WHERE `userID`='" . $id ."'";
