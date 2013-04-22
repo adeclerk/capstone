@@ -8,7 +8,7 @@ div#tabs
    width: 1080px;
 
 }
-#tab
+.tab
 {
    position: relative;
    background-color: #CCCCCC;
@@ -22,7 +22,7 @@ border-top-right-radius: 5px;
    width: 20%;
    float: left;
 }
-#tabcontent
+.tabcontent
 {
 position: relative;
 margin-left: 0px;
@@ -41,10 +41,14 @@ margin-left: 0px;
 
 }
 
-#employeetab
+.employeetab
 {
 position: relative;
 	width: 80%;
+}
+.header
+{
+	width: 100%;
 }
 div.tab:hover
 {

@@ -8,8 +8,16 @@
 
 <body onload="init()">
 	<div id='header'>
-	LLTIC Admin Page (<?php print $this->user; ?>) &nbsp;
-	Preferences
+		<div id='logo'>
+		LLTIC, Inc.
+		</div>
+		<div id='title'>
+		Admin Page 
+		</div>
+		<div id='righthead'>
+		<?php print $this->user; ?>&nbsp;
+		(logout | preferences)
+		</div>
 	</div>
     <div id="tabs">
         <div class="tab" onclick="showTab(this,'employeetab')">Employees</div>
