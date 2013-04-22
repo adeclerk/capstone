@@ -107,19 +107,104 @@ $(document).ready(function(){initNavTree('classemployee_table.html','');});
 <div class="title">employeeTable Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class representing employees table in database.  
+ <a href="classemployee_table.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a155afedbdfa01f1c0b813ca97642cdab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a155afedbdfa01f1c0b813ca97642cdab"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__construct</b> ($connection)</td></tr>
+<tr class="memitem:a155afedbdfa01f1c0b813ca97642cdab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classemployee_table.html#a155afedbdfa01f1c0b813ca97642cdab">__construct</a> ($connection)</td></tr>
+<tr class="memdesc:a155afedbdfa01f1c0b813ca97642cdab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contruct <a class="el" href="classemployee_table.html" title="Class representing employees table in database.">employeeTable</a> with database connection.  <a href="#a155afedbdfa01f1c0b813ca97642cdab">More...</a><br/></td></tr>
 <tr class="separator:a155afedbdfa01f1c0b813ca97642cdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04a2ab5bf1980cc1c81cd541b6bb1ee7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04a2ab5bf1980cc1c81cd541b6bb1ee7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>getById</b> ($id)</td></tr>
+<tr class="memitem:a04a2ab5bf1980cc1c81cd541b6bb1ee7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classemployee_table.html#a04a2ab5bf1980cc1c81cd541b6bb1ee7">getById</a> ($id)</td></tr>
+<tr class="memdesc:a04a2ab5bf1980cc1c81cd541b6bb1ee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get employee record by employeeId.  <a href="#a04a2ab5bf1980cc1c81cd541b6bb1ee7">More...</a><br/></td></tr>
 <tr class="separator:a04a2ab5bf1980cc1c81cd541b6bb1ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad123b0e2fe43debc80ce9397d97f170e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad123b0e2fe43debc80ce9397d97f170e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>getByUserId</b> ($id)</td></tr>
+<tr class="memitem:ad123b0e2fe43debc80ce9397d97f170e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classemployee_table.html#ad123b0e2fe43debc80ce9397d97f170e">getByUserId</a> ($id)</td></tr>
+<tr class="memdesc:ad123b0e2fe43debc80ce9397d97f170e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get employee record by userID.  <a href="#ad123b0e2fe43debc80ce9397d97f170e">More...</a><br/></td></tr>
 <tr class="separator:ad123b0e2fe43debc80ce9397d97f170e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class representing employees table in database. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a155afedbdfa01f1c0b813ca97642cdab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__construct </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$connection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contruct <a class="el" href="classemployee_table.html" title="Class representing employees table in database.">employeeTable</a> with database connection. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype"><a class="el" href="class_lltic_db_connection.html" title="LlticDbConnection class representing connection to LLTIC database.">LlticDbConnection</a></td><td class="paramname">$connection</td><td>Object representing database connection. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a04a2ab5bf1980cc1c81cd541b6bb1ee7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getById </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get employee record by employeeId. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">int</td><td class="paramname">$id</td><td>employeeId </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_employee.html">Employee</a> if employee found. </dd>
+<dd>
+NULL if employee not found. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad123b0e2fe43debc80ce9397d97f170e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getByUserId </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get employee record by userID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">int</td><td class="paramname">$id</td><td>userID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_employee.html">Employee</a> if employee found. </dd>
+<dd>
+NULL if employee not found. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_lltic_db_connection_8inc_8php.html">LlticDbConnection.inc.php</a></li>
 </ul>
@@ -129,7 +214,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classemployee_table.html">employeeTable</a></li>
-    <li class="footer">Generated on Mon Apr 22 2013 14:35:47 for LLTIC Backend by
+    <li class="footer">Generated on Mon Apr 22 2013 14:54:09 for LLTIC Backend by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>
