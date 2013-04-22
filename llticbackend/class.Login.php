@@ -1,4 +1,9 @@
 <?php
+/**
+ * @author adeclerk
+ * @file class.Login.php
+ * @brief Class representing Login for users.
+ */
 require_once('LlticDbConnection.inc.php');
 require_once('Session.inc.php');
 require_once('User.inc.php');
