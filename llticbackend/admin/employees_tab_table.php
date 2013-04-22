@@ -37,8 +37,8 @@ function editEmployee($id)
 		print "<td><a href='#' onclick='editEmployee(" . $row['id']. ")'>edit</a></td>\n";
 		print "</tr>";
 		
-		print "<tr id='". $row['id'] . "_edit' style='display: none;'>\n\t";
 		print "<form id='edit_emp_" . $row['id'] ."' action='editEmployee.php'>\n";
+		print "<tr id='". $row['id'] . "_edit' style='display: none;'>\n\t";
 		print "<td><input name='id' type='text' value='" .$row['id'] . "'></td>\n\t";
 		print "<td><input name='firstName' type='text' value='" . $row['firstName'] . "'></td>\n\t";
 		print "<td><input name='lastName' type='text' value='" . $row['lastName'] . "'></td>\n\t";
@@ -48,6 +48,7 @@ function editEmployee($id)
 		print "<td><input name='phone' type='text' value='" . $row['phone'] . "'></td>\n\t";
 		print "<td><a href='#' onclick=''>save</a></td>\n";
 		print "</tr>";
+		print "</form>";
 	}
 	?>
 
