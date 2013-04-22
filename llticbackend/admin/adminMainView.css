@@ -77,6 +77,7 @@ margin-left: 0px;
 	float: left;
 
 	text-align: right;
+	clear: right;
 }
 div.tab:hover
 {
