@@ -55,6 +55,7 @@ margin-left: 0px;
 }
 #logo
 {
+	position: relative;
 	float: left;
 	font-size: 40pts;
 	font-family: courier;
@@ -63,6 +64,7 @@ margin-left: 0px;
 
 #title
 {
+	position: relative;
 	float: left;
 	width: 40%
 }
