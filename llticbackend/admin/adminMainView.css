@@ -64,14 +64,14 @@ margin-left: 0px;
 #title
 {
 	float: left;
-	width: 20%
+	width: 40%
 }
 
 #righthead
 {
 	position: relative;
 	float: left;
-	width: 20%;
+	width: 30%;
 	text-align: right;
 }
 div.tab:hover
