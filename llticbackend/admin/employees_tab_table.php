@@ -7,7 +7,7 @@ function editEmployee($id)
 	var row = document.getElementById($id);
 	row.style.display = 'none';
 	row = document.getElementById($id+"_edit");
-	row.style.display = 'inline';
+	row.style.display = 'table-cell';
 }
 </script>
 <table style='width: 100%;'>
