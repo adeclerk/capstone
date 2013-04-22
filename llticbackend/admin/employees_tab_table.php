@@ -39,7 +39,7 @@ function editEmployee($id)
 		
 		print "<form id='edit_emp_" . $row['id'] ."' action='editEmployee.php'>\n";
 		print "<tr id='". $row['id'] . "_edit' style='display: none;'>\n\t";
-		print "<td><input type='text'  name='id'  value='" .$row['id'] . "'></td>\n\t";
+		print "<td><input type='text'  name='id' size='4' value='" .$row['id'] . "'></td>\n\t";
 		print "<td><input type='text' name='firstName'  value='" . $row['firstName'] . "'></td>\n\t";
 		print "<td><input type='text' name='lastName' value='" . $row['lastName'] . "'></td>\n\t";
 		print "<td><input type='text' name='hireDate' value='" . $row['hireDate'] . "'></td>\n\t";
