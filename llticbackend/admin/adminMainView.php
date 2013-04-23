@@ -16,7 +16,7 @@
 		</div>
 		<div id="righthead">
 		<?php print $this->user; ?>&nbsp;
-		(<a href='<?php print $_SERVER['SERVER_NAME'] ?>/portal/controllers/con.logout.php'>logout</a> | preferences)
+		(<a href='../controllers/con.logout.php'>logout</a> | preferences)
 		</div>
 	</div>
     <div id="tabs">
