@@ -1,4 +1,4 @@
-<div class="window" id='loginform'>
+<div class="window">
 	<div class="windowtitle">
 	Login
 	</div>

@@ -10,9 +10,8 @@
 		</div>
 
 	</div>
-	<div id='main'>
-				<?php print $this->content; ?>
+
+	<?php print $this->content; ?>
 	
-	</div>
 	</body>
 </html>
