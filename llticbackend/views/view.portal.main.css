@@ -1,7 +1,7 @@
 #header
 {
 	
-	width: 1080px;
+	width: 100%;
 	clear: right;
 }
 
@@ -17,8 +17,8 @@
 #title
 {
 	float: left;
-	width: 25%
-	clear: right;
+	
+
 }
 
 #righthead
@@ -27,16 +27,32 @@
 	float: left;
 
 	text-align: right;
-	clear: right;
 }
 #main
 {
+
+	float: left;
 	width: 100%;
 }
 #loginform
 {
-	width: 20%;
-	margin-left: 35%;
-	
+	padding: 20px;
+	border: 1px solid;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	box-shadow: 10px 10px 5px #C0C0C0;
+	float: left;
+}
 
+#sub
+{
+	padding: 10px;
+	float: right;
+}
+
+#forgot
+{
+	padding: 10px;
+	float: left;
+	font-size: 10pt;
 }
