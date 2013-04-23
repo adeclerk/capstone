@@ -1,7 +1,10 @@
-<div id='loginform'>
+<div class="window" id='loginform'>
+	<div class="windowtitle">
+	Login
+	</div>
+	<div class="windowcontent">
     <form action="controllers/con.login.php" method="post">
             <fieldset>
-                    <legend>Login</legend>
                     Username: <input type="text" name="username"> <br/>
                     Password: <input type="text" name="password"> <br/>
             </fieldset>
@@ -12,4 +15,5 @@
             	<input type="submit" name="formSubmit" value="Submit">
             </div>
            </form>
+           </div>
 </div>
