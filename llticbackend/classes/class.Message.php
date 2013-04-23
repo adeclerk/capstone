@@ -1,9 +1,8 @@
 <?php
-
+require ('classes/class.LlticDbConnection.php');
 class Message
 {
-
-	
+	private $dbcon;
 	public $id;
 	public $sId;
 	public $rId;
@@ -43,5 +42,29 @@ class Message
 		$this->isRead = $row['isRead'];	
 	}
 	
+	public function setRead($msgID)
+	{
+		
+	}
+	
+	public function getAllMessages($recipID)
+	{
+		
+	}
+	
+	public function getAllUnreadMessages($recipID)
+	{
+		
+	}
+	
+	public function send($sendID, $recipID, $subj, $content)
+	{
+		
+	}
+	
+	public function delete($msgID)
+	{
+		
+	}
 }
 ?>
