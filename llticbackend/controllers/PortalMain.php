@@ -11,7 +11,6 @@ class PortalMain implements Controller
 	{
 		$this->session = new UserSession();
 		$this->template = new Template('views/view.portal.main.php');
-		$this->template->render();
 	}
 	
 	public function __destruct()
@@ -28,8 +27,9 @@ class PortalMain implements Controller
 		else
 		{
 			$controller = new PortalLogin();
-			$controller->invoke();
+			$this->template->content = $controller->invoke();
 		}
+		$this->template->render();
 	}
 }
 

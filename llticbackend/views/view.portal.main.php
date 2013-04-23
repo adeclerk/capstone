@@ -16,7 +16,7 @@
 				Portal Main
 			</div>
 			<div id='windowcontent'>
-				<?php include 'view.login.php';?>
+				<?php print $this->content; ?>
 			</div>
 		</div>
 	</div>
