@@ -8,12 +8,17 @@
 		<div id="logo">
 		LLTIC, Inc.
 		</div>
-		<div id="title">
-		Portal Main
-		</div>
+
 	</div>
 	<div id='main'>
-	<?php include 'view.login.php';?>
+		<div id='mainwindow'>
+			<div id='windowtitle'>
+				Portal Main
+			</div>
+			<div id='windowcontent'>
+				<?php include 'view.login.php';?>
+			</div>
+		</div>
 	</div>
 	</body>
 </html>
