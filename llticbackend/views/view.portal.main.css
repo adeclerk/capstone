@@ -40,6 +40,7 @@
 	padding-top: 0px;
 	border: 1px solid;
 	-moz-border-radius: 15px;
+
 	border-radius: 15px;
 	box-shadow: 6px 6px 2px #C0C0C0;
 	float: left;
@@ -50,6 +51,8 @@
 	width: 100%;
 	text-align: center;
 	border-bottom: 1px solid;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
 	background-color: #C0C0C0;
 	float: left;
 }
