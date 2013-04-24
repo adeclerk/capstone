@@ -12,7 +12,9 @@
 	</div>
 	<div id='main'>
 				<?php 
-					var_dump($this);
+				//foreach($this->content as $cont)
+					//$cont->render();
+					$this->content->render();
 					?>
 	
 	</div>
