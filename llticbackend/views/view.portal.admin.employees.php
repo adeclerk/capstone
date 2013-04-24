@@ -34,19 +34,19 @@ function formSubmit(id)
 		print "<td>" . $employee->country .  "</td>\n\t";
 		print "<td>" . $employee->salary . "</td>\n\t";
 		print "<td>" . $employee->userID . "</td>\n\t";
-		print "<td><a href='#' onclick='editEmployee(" . $row['id']. ")'>edit</a></td>\n";
+		print "<td><a href='#' onclick='editEmployee(" . $employee->id. ")'>edit</a></td>\n";
 		print "</tr>";
 		
-		print "<form id='edit_emp_" . $row['id'] ."' action='editEmployee.php' method='post'>\n";
-		print "<tr id='". $row['id'] . "_edit' style='display: none;'>\n\t";
-		print "<td><input type='text'  name='id' size='4' value='" .$row['id'] . "'></td>\n\t";
-		print "<td><input type='text' name='firstName'  value='" . $row['firstName'] . "'></td>\n\t";
-		print "<td><input type='text' name='lastName' value='" . $row['lastName'] . "'></td>\n\t";
-		print "<td><input type='text' name='hireDate' value='" . $row['hireDate'] . "'></td>\n\t";
-		print "<td><input type='text' name='country' value='" . $row['country'] . "'></td>\n\t";
-		print "<td><input type='text' name='salary' value='" . $row['salary'] . "'></td>\n\t";
-		print "<td><input type='text' name='phone' value='" . $row['phone'] . "'></td>\n\t";
-		print "<td><a href='#' onclick='formSubmit(" .$row['id'] . ")'>save</a></td>\n";
+		print "<form id='edit_emp_" . $employee->id  ."' action='editEmployee.php' method='post'>\n";
+		print "<tr id='". $employee->id  . "_edit' style='display: none;'>\n\t";
+		print "<td><input type='text'  name='id' size='4' value='" . $employee->id  . "'></td>\n\t";
+		print "<td><input type='text' name='firstName'  value='" . $employee->firstName . "'></td>\n\t";
+		print "<td><input type='text' name='lastName' value='" . $employee->lastName . "'></td>\n\t";
+		print "<td><input type='text' name='hireDate' value='" . $employee->hireDate . "'></td>\n\t";
+		print "<td><input type='text' name='country' value='" . $employee->country . "'></td>\n\t";
+		print "<td><input type='text' name='salary' value='" . $employee->salary. "'></td>\n\t";
+		print "<td><input type='text' name='phone' value='" . $employee->phone . "'></td>\n\t";
+		print "<td><a href='#' onclick='formSubmit(" . $employee->id  . ")'>save</a></td>\n";
 		print "</tr>";
 		print "</form>";
 	}
