@@ -1,5 +1,5 @@
 <?php
-require ('controllers/Controller.php');
+require ('Controller.php');
 require ('classes/class.UserSession.php');
 require ('classes/class.Template.php');
 class PortalLogin implements Controller
