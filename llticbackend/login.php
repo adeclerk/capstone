@@ -1,7 +1,7 @@
 <?php 
-require ('controllers/PortalMain.php');
+require ('controllers/PortalLogin.php');
 
-$controller = new PortalMain();
+$controller = new PortalLogin();
 $controller->invoke();
 
 ?>
