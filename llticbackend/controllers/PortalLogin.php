@@ -7,7 +7,7 @@ class PortalLogin implements Controller
 {
 	
 	private $session;
-	
+	private $userSession;
 	private $user;
 	private $pw;
 	
@@ -27,10 +27,10 @@ class PortalLogin implements Controller
 	{
 	//	if ($_SERVER['REQUEST_METHOD'] === 'POST')
 		//{
-			$login = new UserSession($this->session,$this->user,$this->pw);
-			if($login->autheticate())
+			$this->userSession = new UserSession($this->session,$this->user,$this->pw);
+			if($this->userSession->autheticate())
 			{
-				switch($login->getUserRecord()->getUserLevel())
+				switch($this->userSession->getUserRecord()->getUserLevel())
 				{
 					case 0:
 						break;
@@ -47,6 +47,11 @@ class PortalLogin implements Controller
 				throw new Exception("Failed to login user.");
 			}
 		//}
+	}
+	
+	public function getUserSession()
+	{
+		return $this->userSession;
 	}
 }
 
