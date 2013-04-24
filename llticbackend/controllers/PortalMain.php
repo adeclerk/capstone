@@ -28,7 +28,7 @@ class PortalMain implements Controller
 		{
 			$controller = new PortalLogin();
 			$this->template->content = array();
-			array_push($this->template->content, $controller);
+			array_push($this->template->content, '$controller');
 			
 		}
 		$this->template->render();
