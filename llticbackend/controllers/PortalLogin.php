@@ -7,16 +7,13 @@ class PortalLogin implements Controller
 {
 	
 	private $session;
-	private $userSession;
+	
 	private $user;
 	private $pw;
 	
-	public function __construct($userSession=NULL,$user, $pw)
+	public function __construct($user, $pw)
 	{
-		if($userSession = NULL)
-		{
-			$this->userSession = new UserSession(NULL,$user,$pw);
-		}
+		$this->session = new Session();
 		$this->user = $user;
 		$this->pw = $pw;
 	}
@@ -30,10 +27,10 @@ class PortalLogin implements Controller
 	{
 	//	if ($_SERVER['REQUEST_METHOD'] === 'POST')
 		//{
-			//$login = new UserSession($this->session,$this->user,$this->pw);
-			if($this->userSession->autheticate())
+			$login = new UserSession($this->session,$this->user,$this->pw);
+			if($login->autheticate())
 			{
-				switch($this->userSession->getUserRecord()->getUserLevel())
+				switch($login->getUserRecord()->getUserLevel())
 				{
 					case 0:
 						break;
