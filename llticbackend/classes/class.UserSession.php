@@ -69,6 +69,21 @@ class UserSession
   	return false;
   }
   
+  public function autheticateUser($user,$pw)
+  {
+  	$this->login = new Login($this->session);
+  	if($this->login->loginUser($user,$pw))
+  	{
+  		$this->loggedIn = true;
+  		$this->user = new UserRecord($_SESSION['uid'],$_SESSION['username'],UserRecord::hashPass($pw),$_SESSION['userLevel']);
+  		
+  		return true;
+  	}
+  	else
+  	{
+  		return false;
+  	}
+  }
   public function deauthorize()
   {
   	if($this->loggedIn)

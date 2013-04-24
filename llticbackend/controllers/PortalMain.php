@@ -1,6 +1,6 @@
 <?php
 require_once ('Controller.php');
-require_once ('classes/class.Session.php');
+require_once ('classes/class.UserSession.php');
 require_once  ('controllers/PortalLogin.php');
 require_once ('classes/class.Template.php');
 class PortalMain implements Controller
@@ -9,7 +9,7 @@ class PortalMain implements Controller
 	public $template;
 	public function __construct()
 	{
-		$this->session = new Session();
+		$this->session = new UserSession();
 		$this->template = new Template('views/view.portal.main.php');
 		$this->template->content = array();
 	}

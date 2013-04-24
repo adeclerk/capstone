@@ -25,8 +25,8 @@ class PortalLogin implements Controller
 	
 	public function invoke()
 	{
-	//	if ($_SERVER['REQUEST_METHOD'] === 'POST')
-		//{
+		if ($_SERVER['REQUEST_METHOD'] === 'POST')
+		{
 			$this->userSession = new UserSession($this->session,$this->user,$this->pw);
 			if($this->userSession->autheticate())
 			{
@@ -46,7 +46,7 @@ class PortalLogin implements Controller
 			{
 				throw new Exception("Failed to login user.");
 			}
-		//}
+		}
 	}
 	
 	public function getUserSession()
