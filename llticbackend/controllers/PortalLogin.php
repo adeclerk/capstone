@@ -6,7 +6,7 @@ class PortalLogin implements Controller
 {
 	
 	private $session;
-	private $userSession;
+
 	private $user;
 	private $pw;
 	
@@ -39,10 +39,6 @@ class PortalLogin implements Controller
 		}
 	}
 	
-	public function getUserSession()
-	{
-		return $this->userSession;
-	}
 }
 
 ?>
