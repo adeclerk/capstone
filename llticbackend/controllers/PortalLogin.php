@@ -21,7 +21,7 @@ class PortalLogin implements Controller
 	
 	public function __destruct()
 	{
-		
+		$this->session->__destruct();
 	}
 	
 	public function invoke()
