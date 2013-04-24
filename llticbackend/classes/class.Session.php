@@ -63,7 +63,6 @@ class Session
     $sqlQuery = "SELECT * FROM `sessions` WHERE `id`=" . $sessionID ."";
 
     $result = $this->dbcon->qry($sqlQuery);
-    print "READING";
 	if($result->num_rows == 1)
 	{
 		$fields = $result->fetch_assoc();
@@ -77,7 +76,6 @@ class Session
 
   private function write($sessionID, $data)
   {
-  	print "WRITING";
     $sqlQuery = "REPLACE INTO `sessions` (`id`,`data`) VALUES('" . $sessionID . "','" . $data . "')";
     $this->dbcon->qry($sqlQuery);
 
