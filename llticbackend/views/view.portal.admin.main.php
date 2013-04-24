@@ -14,7 +14,7 @@
 				<?php 
 				//foreach($this->content as $cont)
 					//$cont->render();
-					//$this->content->render();
+					$this->content->render();
 					?>
 	
 	</div>
