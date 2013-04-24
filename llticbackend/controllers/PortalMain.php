@@ -29,8 +29,15 @@ class PortalMain implements Controller
 		{
 			if($_SERVER['REQUEST_METHOD'] == 'POST')
 			{
+				try {
+					
 				$controller = new PortalLogin();
 				$controller->invoke();
+				}
+				catch (Exception $e)
+				{
+					print $e->getMessage();
+				}
 			}
 			else
 			{

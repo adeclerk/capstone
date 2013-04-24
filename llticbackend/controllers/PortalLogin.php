@@ -41,11 +41,6 @@ class PortalLogin implements Controller
 				throw new Exception("Failed to login user.");
 			}
 		}
-		else
-		{
-			//$this->view = new Template('views/view.portal.login.php');
-			//$this->view->render();
-		}
 	}
 }
 
