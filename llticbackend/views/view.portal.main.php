@@ -12,8 +12,7 @@
 	</div>
 	<div id='main'>
 				<?php 
-				foreach($this->template->content as $cont)
-					$cont->render();
+				  $this->template->content->render();
 					?>
 	
 	</div>
