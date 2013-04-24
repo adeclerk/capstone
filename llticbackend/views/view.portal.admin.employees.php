@@ -24,18 +24,16 @@ function formSubmit(id)
 		<th></th>
 	</tr>
 	<?php 
-	$db = new LlticDbConnection();
-	$result = $db->qry("SELECT * FROM `employees`");
-	while($row = $result->fetch_assoc())
+	foreach($this->employees as $employee)
 	{
-		print "<tr id='". $row['id'] . "'>\n\t";
-		print "<td>" .$row['id'] . "</td>\n\t";
-		print "<td>" . $row['firstName'] . "</td>\n\t";
-		print "<td>" . $row['lastName'] . "</td>\n\t";
-		print "<td>" . $row['hireDate'] . "</td>\n\t";
-		print "<td>" . $row['country'] . "</td>\n\t";
-		print "<td>" . $row['salary'] . "</td>\n\t";
-		print "<td>" . $row['phone'] . "</td>\n\t";
+		print "<tr id='". $employee->id . "'>\n\t";
+		print "<td>" .$employee->id . "</td>\n\t";
+		print "<td>" . $employee->firstName . "</td>\n\t";
+		print "<td>" . $employee->lastName . "</td>\n\t";
+		print "<td>" . $employee->hireDate . "</td>\n\t";
+		print "<td>" . $employee->country .  "</td>\n\t";
+		print "<td>" . $employee->salary . "</td>\n\t";
+		print "<td>" . $employee->userID . "</td>\n\t";
 		print "<td><a href='#' onclick='editEmployee(" . $row['id']. ")'>edit</a></td>\n";
 		print "</tr>";
 		

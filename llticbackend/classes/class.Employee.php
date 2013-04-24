@@ -6,6 +6,7 @@ class Employee
   public $firstName;
   public $lastName;
   public $hireDate;
+  public $country;
   public $salary;
   public $phone;
   public $userID;
@@ -39,6 +40,7 @@ class Employee
     $this->firstName = $row['firstName'];
     $this->lastName = $row['lastName'];
     $this->hireDate = $row['hireDate'];
+    $this->country = $row['country'];
     $this->salary = $row['salary'];
     $this->phone = $row['phone'];
     $this->userID = $row['userID'];
@@ -47,14 +49,10 @@ class Employee
 
   public function __toString()
   {
-    print "<tr><td>"
-      		.$this->id . "</td><td>"
-            . $this->firstName . "</td><td>"
-            . $this->lastName . "</td><td>"
-            . $this->hireDate . "</td><td>"
-            . $this->salary . "</td><td>"
-            . $this->phone . "</td><td></tr>"
-            . $this->userID . "</td><td>";
+	print $this->id . " : " . $this->firstName . " : "
+			. $this->lastName . " : " . $this->hireDate . " : "
+			. $this->country . " : " . $this->salary . " : "
+			. $this->phone . " : " . $this->userID . " <br/>";
   }
   
   public function open()
