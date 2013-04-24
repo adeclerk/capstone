@@ -11,14 +11,14 @@ class AdminMain implements Controller
 	
 	public function __construct()
 	{
-		$this->session = new Session();
-		$this->view = new Template('views/view.portal.admin.main.php');
-		$this->view->content = array();
+		//$this->session = new Session();
+		//$this->view = new Template('views/view.portal.admin.main.php');
+		//$this->view->content = array();
 	}
 	
 	public function __destruct()
 	{
-		$this->session->__destruct();
+		//$this->session->__destruct();
 	}
 	
 	public function invoke()
