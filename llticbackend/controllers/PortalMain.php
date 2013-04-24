@@ -36,8 +36,7 @@ class PortalMain implements Controller
 		if(isset($_SESSION['userlevel']))
 		{
 			print "STUFF";
-			$this->template->content = new Template('views/view.portal.login.php');
-			$this->template->render();
+
 		}
 		else
 		{
