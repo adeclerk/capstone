@@ -1,7 +1,7 @@
 <?php
-require ('controllers/Controller.php');
-require ('classes/class.Session.php');
-require ('classes/class.Template.php');
+require_once ('controllers/Controller.php');
+require_once ('classes/class.Session.php');
+require_once ('classes/class.Template.php');
 
 class AdminMain implements Controller
 {
@@ -13,6 +13,7 @@ class AdminMain implements Controller
 	{
 		$this->session = new Session();
 		$this->view = new Template('views/view.portal.admin.main.php');
+		$this->view->content = array();
 	}
 	
 	public function __destruct()
