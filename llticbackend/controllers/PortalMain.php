@@ -27,8 +27,8 @@ class PortalMain implements Controller
 		}
 		else
 		{
-			array_push($this->template->content, new Template('views/view.portal.login.php'));
-				//$this->template->content = new Template('views/view.portal.login.php');
+			//array_push($this->template->content, new Template('views/view.portal.login.php'));
+				$this->template->content = new Template('views/view.portal.login.php');
 			
 		}
 		$this->template->render();
