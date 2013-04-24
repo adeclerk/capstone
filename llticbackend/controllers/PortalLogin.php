@@ -6,7 +6,6 @@ class PortalLogin implements Controller
 {
 	
 	private $session;
-	private $view;
 	
 	private $user;
 	private $pw;

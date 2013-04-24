@@ -44,6 +44,7 @@ class PortalMain implements Controller
 				$this->template->content = new Template('views/view.portal.login.php');
 			}
 		}
+
 		$this->template->render();
 	}
 }
