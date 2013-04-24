@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<link href="../views/view.portal.main.css" rel="stylesheet" type="text/css">
+	<link href="views/view.portal.main.css" rel="stylesheet" type="text/css">
 		<title>LLTIC Inc, Admin Portal</title>
 	</head>
 	<body>
