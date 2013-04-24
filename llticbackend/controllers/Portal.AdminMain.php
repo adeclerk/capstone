@@ -18,7 +18,7 @@ class AdminMain implements Controller
 	
 	public function __destruct()
 	{
-		$this->session->__destruct();
+		$this->session->close();
 	}
 	
 	public function invoke()
