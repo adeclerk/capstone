@@ -10,27 +10,29 @@ class Employee
   public $phone;
   public $userID;
   public $init;
+  
+  private $dbcon;
+  private $isOpen;
 
-  public function __construct($id = NULL,$firstName = NULL,
-  								$lastName = NULL,$hireDate = NULL,$salary = NULL,
-  								$phone = NULL,$userId = NULL)
+  public function __construct($row = NULL)
   {
-  	if($id == NULL)
+  	$this->dbcon = new LlticDbConnection();
+  	$this->isOpen = true;
+  	if($row == NULL)
   	{
     	$this->init = False;
   	}
   	else
   	{
-  		$this->id = $id;
-  		$this->firstName = $firstName;
-  		$this->lastName = $lastName;
-  		$this->hireDate = $hireDate;
-  		$this->salary = $salary;
-  		$this->phone = $phone;
-  		$this->userID = $userId;
-  		$this->init = True;
+		$this->set($row);
   	}
   }
+  
+  public function __destruct()
+  {
+  	$this->dbcon->close();
+  }
+  
   public function set(array $row)
   {
     $this->id = $row['id'];
@@ -54,5 +56,72 @@ class Employee
             . $this->phone . "</td><td></tr>"
             . $this->userID . "</td><td>";
   }
+  
+  public function open()
+  {
+  	if(!$this->isOpen)
+  	{
+  		$this->dbcon = new LlticDbConnection();
+  		$this->isOpen = true;
+  	}
+  }
+  
+  public function close()
+  {
+  	if($this->isOpen)
+  	{
+  		$this->dbcon->close();
+  		$this->isOpen = false;
+  	}
+  }
+  
+  public function read($empID)
+  {
+  	$sql = "SELECT * FROM `employees` WHERE `id`='" . $empID . "'";
+  	if($this->isOpen)
+  	{
+  		$result = $this->dbcon->qry($sql);
+  		if($result->num_rows == 1)
+  		{
+  			$row = $result->fetch_assoc();
+  			return new Employee($row);
+  		}
+  		else
+  		{
+  			return '';
+  		}
+  	}
+  	else
+  	{
+  		return '';
+  	}
+  }
+  
+  public function write($fname,$lname,$hireDate,$salary,$country,$phone,$userID)
+  {
+  	$sql = "REPLACE INTO `employees` (`firstName`,`lastName`,`hireDate`,`salary`,`country`,`phone`,`userID`) VALUES('"
+  		. $fname . "','" . $lname ."','" . $hireDate . "','" . $salary . "','" . $country ."','". $phone . "','" . $userID . "')";
+  	if($this->isOpen)
+  	{
+  		$result = $this->dbcon->qry($sql);
+  		
+  	}
+  }
+  
+  public function getAllEmployees()
+  {
+  	$sql = "SELECT * FROM `employees`";
+  	if($this->isOpen)
+  	{
+  		$result = $this->dbcon->qry($sql);
+  		$returnEmp = array();
+  		while($row = $result->fetch_assoc())
+  		{
+  			array_push($returnEmp,new Employee($row));
+  		}
+  		return $returnEmp;
+  	}
+  }
+  
 }
 ?>
