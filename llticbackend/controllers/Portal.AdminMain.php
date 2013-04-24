@@ -11,7 +11,7 @@ class AdminMain implements Controller
 	
 	public function __construct()
 	{
-		$this->view = new Template('../views/view.portal.admin.main.php');
+		$this->view = new Template('views/view.portal.admin.main.php');
 		$this->session = new Session();
 	}
 	
@@ -28,7 +28,7 @@ class AdminMain implements Controller
 		}
 		else
 		{
-			$this->view->content = new Template('../views/view.portal.error.php', array(
+			$this->view->content = new Template('views/view.portal.error.php', array(
 												'error' => 'User not authorized to view this page'));
 			$this->view->render();
 		}
