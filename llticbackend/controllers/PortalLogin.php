@@ -26,7 +26,7 @@ class PortalLogin implements Controller
 	{
 	//	if ($_SERVER['REQUEST_METHOD'] === 'POST')
 		//{
-			$login = new UserSession(NULL,$this->user,$this->pw);
+			$login = new UserSession($this->session,$this->user,$this->pw);
 			if($login->autheticate())
 			{
 				switch($login->getUserRecord()->getUserLevel())
