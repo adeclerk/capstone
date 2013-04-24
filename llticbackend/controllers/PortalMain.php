@@ -1,7 +1,7 @@
 <?php
 require_once ('Controller.php');
 require_once ('classes/class.UserSession.php');
-require_once ('controllers/PortalLogin.php');
+require  ('controllers/PortalLogin.php');
 require_once ('classes/class.Template.php');
 class PortalMain implements Controller
 {
@@ -31,7 +31,7 @@ class PortalMain implements Controller
 			{
 				try {
 					
-				$controller = new PortalLogin();
+				$controller = new PortalLogin($_POST['username'],$_POST['password']);
 				$controller->invoke();
 				}
 				catch (Exception $e)

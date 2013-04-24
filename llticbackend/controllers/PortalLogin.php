@@ -8,9 +8,14 @@ class PortalLogin implements Controller
 	private $session;
 	private $view;
 	
-	public function __construct()
+	private $user;
+	private $pw;
+	
+	public function __construct($user, $pw)
 	{
 		$this->session = new Session();
+		$this->user = $user;
+		$this->pw = $pw;
 	}
 	
 	public function __destruct()
@@ -20,9 +25,9 @@ class PortalLogin implements Controller
 	
 	public function invoke()
 	{
-		if ($_SERVER['REQUEST_METHOD'] === 'POST')
-		{
-			$login = new UserSession($session,$_POST['username'],$_POST['password']);
+	//	if ($_SERVER['REQUEST_METHOD'] === 'POST')
+		//{
+			$login = new UserSession($session,$this->user,$this->pw);
 			if($login->autheticate())
 			{
 				switch($login->getUserRecord()->getUserLevel())
@@ -40,7 +45,7 @@ class PortalLogin implements Controller
 			{
 				throw new Exception("Failed to login user.");
 			}
-		}
+		//}
 	}
 }
 
