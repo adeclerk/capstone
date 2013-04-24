@@ -27,7 +27,7 @@ class AdminMain implements Controller
 		if($_SESSION['userlevel'] == "2")
 		{
 			$this->view->render();
-			print $_SESSION['user'];
+			
 		}
 		else
 		{
@@ -35,6 +35,7 @@ class AdminMain implements Controller
 			$this->view->content->error = 'User not authorized to view this page';
 			$this->view->render();
 		}
+		print $_SESSION['user'];
 		
 	}
 }
