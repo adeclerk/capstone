@@ -24,7 +24,7 @@ class AdminMain implements Controller
 	public function invoke()
 	{
 		
-		if($_SESSION['userlevel'] == '2')
+		if($_SESSION['userlevel'] == "2")
 		{
 			$this->view->render();
 		}
