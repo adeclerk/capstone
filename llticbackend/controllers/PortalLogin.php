@@ -1,7 +1,6 @@
 <?php
 require_once ('Controller.php');
-require_once ('classes/class.UserSession.php');
-require_once ('classes/class.UserRecord.php');
+require_once('classes/class.LoginUser.php');
 require_once ('classes/class.Template.php');
 class PortalLogin implements Controller
 {
@@ -11,9 +10,9 @@ class PortalLogin implements Controller
 	private $user;
 	private $pw;
 	
-	public function __construct($user=NULL, $pw=NULL)
+	public function __construct($user, $pw)
 	{
-		$this->session = new Session();
+		$this->session = new LoginUser($user,$pw);
 
 		$this->user = $user;
 		$this->pw = $pw;
@@ -28,20 +27,9 @@ class PortalLogin implements Controller
 	{
 		if ($_SERVER['REQUEST_METHOD'] === 'POST')
 		{
-			$this->userSession = new UserSession($this->session,$_POST['username'],$_POST['password']);
-			if($this->userSession->autheticate())
+			if($this->session->login())
 			{
-				/*switch($this->userSession->getUserRecord()->getUserLevel())
-				{
-					case 0:
-						break;
-					case 1:
-						break;
-					case 2:
-						header("Location: http://". $_SERVER['SERVER_NAME'] . "/portal/admin");
-						break;
-				}
-				*/
+				print "IT WORKED";
 				
 			}
 			else

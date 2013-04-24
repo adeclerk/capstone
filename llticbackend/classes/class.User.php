@@ -81,10 +81,10 @@ class User
 		}
 	}
 	
-	public function write($uid,$uname,$pass,$email,$userLevel)
+	public function write($uname,$pass,$email,$userLevel)
 	{
-		$sql = "REPLACE INTO `users` (`id`,`username`,`password`,`email`,`userLevel`) VALUES('"
-		. $uid . "','" . $uname . "','" .$pass . "','" . $email . "','" .$userLevel . "')";
+		$sql = "REPLACE INTO `users` (`username`,`password`,`email`,`userLevel`) VALUES('"
+		. $uname . "','" .$pass . "','" . $email . "','" .$userLevel . "')";
 		if($this->dbOpen)
 		{
 			$this->db->qry($sql);

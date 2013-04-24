@@ -1,7 +1,7 @@
 <?php 
 require ('controllers/PortalLogin.php');
 
-$controller = new PortalLogin();
+$controller = new PortalLogin($_POST['username'],$_POST['password']);
 try
 {
 	$controller->invoke();
