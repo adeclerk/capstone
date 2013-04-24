@@ -10,9 +10,9 @@ class PortalLogin implements Controller
 	private $user;
 	private $pw;
 	
-	public function __construct($user, $pw)
+	public function __construct($session,$user, $pw)
 	{
-		$this->session = new LoginUser($user,$pw);
+		$this->session = new LoginUser($session,$user,$pw);
 
 		$this->user = $user;
 		$this->pw = $pw;
