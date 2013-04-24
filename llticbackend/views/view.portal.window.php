@@ -1,4 +1,4 @@
-<div id='<?php print $this->windowname; ?>'>
+<div id='<?php print $this->windowname; ?>' class='window'>
 	<div class='windowtitle'>
 	<?php print $this->windowtitle; ?>
 	</div>
