@@ -1,5 +1,5 @@
 <?php
-require ('controllers/Portal.AdminMain.php');
+include ('controllers/Portal.AdminMain.php');
 
 
 ?>
