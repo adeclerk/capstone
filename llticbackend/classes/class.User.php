@@ -95,7 +95,7 @@ class User
 	
 	public function getIdByUsername($uname)
 	{
-		$sql = "SELECT `id` FROM `users` WHERE username='" .$uname . "'";
+		$sql = "SELECT `id` FROM `users` WHERE `username`='" .$uname . "'";
 		if($this->dbOpen)
 		{
 			$result = $this->db->qry($sql);
