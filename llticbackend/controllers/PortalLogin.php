@@ -31,7 +31,7 @@ class PortalLogin implements Controller
 			$this->userSession = new UserSession($this->session,$_POST['username'],$_POST['password']);
 			if($this->userSession->autheticate())
 			{
-				switch($this->userSession->getUserRecord()->getUserLevel())
+				/*switch($this->userSession->getUserRecord()->getUserLevel())
 				{
 					case 0:
 						break;
@@ -41,6 +41,7 @@ class PortalLogin implements Controller
 						header("Location: http://". $_SERVER['SERVER_NAME'] . "/portal/admin");
 						break;
 				}
+				*/
 				
 			}
 			else
