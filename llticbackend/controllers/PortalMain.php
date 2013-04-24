@@ -21,29 +21,28 @@ class PortalMain implements Controller
 	
 	public function invoke()
 	{
+		if($_SERVER['REQUEST_METHOD'] == 'POST')
+		{
+			try {
+					
+				$controller = new PortalLogin($_POST['username'],$_POST['password']);
+				$controller->invoke();
+			}
+			catch (Exception $e)
+			{
+				print $e->getMessage();
+			}
+		}
 		if($this->session->isAuthenticated())
 		{
 			print "STUFF";
 		}
 		else
 		{
-			if($_SERVER['REQUEST_METHOD'] == 'POST')
-			{
-				try {
-					
-				$controller = new PortalLogin($_POST['username'],$_POST['password']);
-				$controller->invoke();
-				}
-				catch (Exception $e)
-				{
-					print $e->getMessage();
-				}
-			}
-			else
-			{
+
 				$this->template->content = new Template('views/view.portal.login.php');
 				$this->template->render();
-			}
+			
 			
 		}
 
