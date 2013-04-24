@@ -1,5 +1,5 @@
 <?php
-require ('classes/class.Session.php');
+require ('controllers/Portal.AdminMain.php');
 
 $controller = new AdminMain();
 $controller->invoke();
