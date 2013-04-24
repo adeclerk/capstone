@@ -22,7 +22,7 @@ class User
 			$this->uname = $row['username'];
 			$this->password = $row['password'];
 			$this->email = $row['email'];
-			$this->level = $row['userLevel'];
+			$this->level = $row['userlevel'];
 		}
 	}
 	
