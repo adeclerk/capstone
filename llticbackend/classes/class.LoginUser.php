@@ -10,7 +10,7 @@ class LoginUser
 	private $curUser;
 	private $username;
 	private $enteredPW;
-	public function __construct($session,$user,$password)
+	public function __construct($user,$password)
 	{
 		$this->session = new Session();
 		$this->enteredPW = $password;
