@@ -1,5 +1,5 @@
 <?php
-require_once ('class.LlticDbConnection.php');
+require_once ('classes/class.LlticDbConnection.php');
 error_reporting(E_ALL);
 class Session
 {
