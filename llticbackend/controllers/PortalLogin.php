@@ -24,6 +24,7 @@ class PortalLogin implements Controller
 	public function __destruct()
 	{
 		$this->session->__destruct();
+		$this->sess->__destruct();
 	}
 	
 	public function invoke()
@@ -33,7 +34,6 @@ class PortalLogin implements Controller
 			if($this->session->login())
 			{
 				print "IT WORKED";
-				session_write_close();
 				
 			}
 			else
