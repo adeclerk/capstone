@@ -1,7 +1,7 @@
 <?php
 require_once ('Controller.php');
-require ('classes/class.Session.php');
-require ('classes/class.Template.php');
+require ('class.Session.php');
+require ('class.Template.php');
 
 class AdminMain implements Controller
 {
