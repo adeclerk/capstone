@@ -4,7 +4,7 @@
  * @file UserSession.inc.php
  * @brief User Authetication session class.
  */
-require_once ('class.Login.php');
+require_once ('classes/class.Login.php');
 
 class UserSession
 {
