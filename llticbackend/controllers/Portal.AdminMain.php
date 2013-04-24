@@ -1,7 +1,7 @@
 <?php
 require_once ('Controller.php');
-require_once 'classes/class.Session.php';
-require_once 'classes/class.Template.php';
+require 'classes/class.Session.php';
+require 'classes/class.Template.php';
 require 'controllers/Portal.AdminEmployee.php';
 
 class AdminMain implements Controller
@@ -32,8 +32,8 @@ class AdminMain implements Controller
 			$userWindow->windowtitle = "User";
 			$userWindow->windowcontent = new Template('views/view.portal.window.user.php', array(
 										'username' => $_SESSION['user']));
-			$contr = new AdminEmployee();
-			$this->view->content = $contr->invoke();
+			
+			$this->view->content = $userWindow;
 			$this->view->render();
 		}
 		else
