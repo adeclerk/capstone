@@ -54,17 +54,16 @@ class UserSession
   		return true;
   	
   	$this->login = new Login($this->session);
-  	
-  	if(!$this->user)
-  	{
-  		$this->user = new UserRecord($_SESSION['uid'], $this->uname,
-  			UserRecord::hashPass($this->pw), $_SESSION['userLevel']);
-  	}
-  	
+  	  	
   	if(	$this->login->loginUser($this->uname, $this->pw) )
   	{
   		$this->loggedIn = true;
   		return true;
+  	}
+  	if(!$this->user)
+  	{
+  		$this->user = new UserRecord($_SESSION['uid'], $this->uname,
+  				UserRecord::hashPass($this->pw), $_SESSION['userLevel']);
   	}
   	return false;
   }
