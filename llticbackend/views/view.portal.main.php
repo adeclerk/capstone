@@ -12,9 +12,8 @@
 	</div>
 	<div id='main'>
 				<?php 
-				//foreach($this->template->content as $cont)
-				//	$cont->invoke();
-				$this->template->content->invoke();
+				foreach($this->template->content as $cont)
+					$cont->invoke();
 					?>
 	
 	</div>
