@@ -31,7 +31,7 @@ class PortalMain implements Controller
 			
 		}
 		$this->template->render();
-		$this->template->content->render();
+		
 		var_dump($this);
 	}
 }
