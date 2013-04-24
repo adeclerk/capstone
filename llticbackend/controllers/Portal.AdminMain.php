@@ -1,5 +1,5 @@
 <?php
-require_once ('Controller.php');
+require_once ('controllers/Controller.php');
 require_once ('classes/class.Session.php');
 require_once ('classes/class.Template.php');
 
@@ -22,6 +22,7 @@ class AdminMain implements Controller
 	
 	public function invoke()
 	{
+		/*
 		if($_SESSION['userlevel'] == 2)
 		{
 			//$this->view->render();
@@ -32,5 +33,6 @@ class AdminMain implements Controller
 			$this->view->content->error = 'User not authorized to view this page');
 			$this->view->render();
 		}
+		*/
 	}
 }
