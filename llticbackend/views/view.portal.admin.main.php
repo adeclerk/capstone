@@ -15,7 +15,7 @@
 				foreach($this->content as $cont)
 					$cont->render();
 					//$this->content->render();
-					var_dump($this);
+	
 					?>
 	
 	</div>

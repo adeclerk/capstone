@@ -9,7 +9,8 @@ class AdminEmployee implements Controller
 	private $employeeTable;
 	public function __construct()
 	{
-		$this->view = new Template('views/view.portal.admin.employees.php');
+		//$this->view = new Template('views/view.portal.admin.employees.php');
+		$this->view = new Template('views/view.portal.window.php');
 		$this->employeeTable = new Employee();
 	}
 	
@@ -20,7 +21,8 @@ class AdminEmployee implements Controller
 	
 	public function invoke()
 	{
-		$this->view->employees = $this->employeeTable->getAllEmployees();
+		$this->view->windowcontent = new Template('views/view.portal.admin.employees.php');
+		$this->view->windowcontent->employees = $this->employeeTable->getAllEmployees();
 		return $this->view;
 	}
 }
