@@ -63,6 +63,7 @@ class Session
     $sqlQuery = "SELECT * FROM `sessions` WHERE `id`=" . $sessionID ."";
 
     $result = $this->dbcon->qry($sqlQuery);
+    print "READING";
 	if($result->num_rows == 1)
 	{
 		$fields = $result->fetch_assoc();

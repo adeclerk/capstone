@@ -42,29 +42,21 @@ class Message
 		$this->isRead = $row['isRead'];	
 	}
 	
-	public function setRead($msgID)
+	public function open()
 	{
 		
 	}
 	
-	public function getAllMessages($recipID)
+	public function close()
 	{
 		
 	}
 	
-	public function getAllUnreadMessages($recipID)
+	public function read($mid)
 	{
 		
 	}
 	
-	public function send($sendID, $recipID, $subj, $content)
-	{
-		
-	}
 	
-	public function delete($msgID)
-	{
-		
-	}
 }
 ?>
