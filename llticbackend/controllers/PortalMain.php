@@ -28,7 +28,7 @@ class PortalMain implements Controller
 		else
 		{
 			$controller = new PortalLogin();
-			$this->template->content = '$controller';
+			$this->template->content = $controller;
 			
 		}
 		$this->template->render();
