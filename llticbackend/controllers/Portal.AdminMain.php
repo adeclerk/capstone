@@ -30,7 +30,7 @@ class AdminMain implements Controller
 			$userWindow->windowname = "user";
 			$userWindow->windowtitle = "User";
 			$userWindow->windowcontent = new Template('views/view.portal.window.user.php', array(
-										'username' => $_SESSION['username']));
+										'username' => $_SESSION['user']));
 			$this->view->content = $userWindow;			
 			$this->view->render();
 		}
@@ -40,7 +40,7 @@ class AdminMain implements Controller
 			$this->view->content->error = 'User not authorized to view this page';
 			$this->view->render();
 		}
-		print $_SESSION['user'];
+		
 		
 	}
 }
