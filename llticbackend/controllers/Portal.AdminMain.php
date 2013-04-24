@@ -1,6 +1,6 @@
 <?php
 require_once ('Controller.php');
-require ('classes/class.Session.php');
+require ('http://' .$_SERVER['SERVER_NAME'] . 'classes/class.Session.php');
 
 class AdminMain implements Controller
 {
