@@ -2,7 +2,7 @@
 require_once ('Controller.php');
 require_once ('classes/class.Session.php');
 
-class AdminMain
+class AdminMain implements Controller
 {
 
 	private $view; 
