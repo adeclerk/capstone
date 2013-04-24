@@ -78,7 +78,7 @@ class Session
   private function write($sessionID, $data)
   {
   	print "WRITING";
-    $sqlQuery = "REPLACE INTO `sessions` (`id`,`data`) VALUES('" . $sessionID . "','" . $this->dbcon->getConnection()->real_escape_string($data) . "')";
+    $sqlQuery = "REPLACE INTO `sessions` (`id`,`data`) VALUES('" . $sessionID . "','" . $data . "')";
     $this->dbcon->qry($sqlQuery);
 
     return $this->dbcon->getConnection()->affected_rows;
