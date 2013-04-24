@@ -36,6 +36,8 @@ class PortalMain implements Controller
 		if($this->session->isAuthenticated())
 		{
 			print "STUFF";
+			$this->template->content = new Template('views/view.portal.login.php');
+			$this->template->render();
 		}
 		else
 		{
