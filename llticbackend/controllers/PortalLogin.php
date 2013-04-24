@@ -43,8 +43,8 @@ class PortalLogin implements Controller
 		}
 		else
 		{
-			$this->view = new Template('views/view.portal.login.php');
-			$this->view->render();
+			//$this->view = new Template('views/view.portal.login.php');
+			//$this->view->render();
 		}
 	}
 }
