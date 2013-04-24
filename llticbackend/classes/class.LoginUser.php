@@ -19,7 +19,7 @@ class LoginUser
 	
 	public function __destruct()
 	{
-		$this->userTable->__destruct();
+		$this->userTable->close();
 	}
 	
 	public function login()
