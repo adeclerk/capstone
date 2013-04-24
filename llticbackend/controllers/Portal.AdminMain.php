@@ -32,8 +32,8 @@ class AdminMain implements Controller
 			$userWindow->windowtitle = "User";
 			$userWindow->windowcontent = new Template('views/view.portal.window.user.php', array(
 										'username' => $_SESSION['user']));
-			
-			$this->view->content = $userWindow;
+			$contr = new AdminEmployee();
+			$this->view->content = $contr->invoke();
 			$this->view->render();
 		}
 		else
