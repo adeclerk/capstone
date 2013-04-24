@@ -13,7 +13,7 @@ class AdminMain implements Controller
 	{
 		$this->session = new Session();
 		$this->view = new Template('views/view.portal.admin.main.php');
-		$this->view->content = array();
+		//$this->view->content = array();
 	}
 	
 	public function __destruct()
