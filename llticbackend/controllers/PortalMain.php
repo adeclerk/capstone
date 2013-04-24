@@ -11,7 +11,7 @@ class PortalMain implements Controller
 	{
 		$this->session = new UserSession();
 		$this->template = new Template('views/view.portal.main.php');
-		//$this->template->content = array();
+		$this->template->content = array();
 	}
 	
 	public function __destruct()
