@@ -26,6 +26,12 @@ class AdminMain implements Controller
 		
 		if($_SESSION['userlevel'] == "2")
 		{
+			$userWindow = new Template('views/view.portal.window.php');
+			$userWindow->windowname = "user";
+			$userWindow->windowtitle = "User";
+			$userWindow->windowcontent = new Template('views/view.portal.window.user.php', array(
+										'username' => $_SESSION['username']));
+			
 			$this->view->render();
 		}
 		else

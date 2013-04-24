@@ -3,6 +3,6 @@
 	<?php print $this->windowtitle; ?>
 	</div>
 	<div class='windowcontent'>
-	<?php print $this->windowcontent; ?>
+	<?php print $this->windowcontent->render(); ?>
 	</div>
 </div>
