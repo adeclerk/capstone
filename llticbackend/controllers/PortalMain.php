@@ -6,7 +6,7 @@ require_once ('classes/class.Template.php');
 class PortalMain implements Controller
 {
 	private $session;
-	private $template;
+	public $template;
 	public function __construct()
 	{
 		$this->session = new UserSession();
