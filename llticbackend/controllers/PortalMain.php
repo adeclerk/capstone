@@ -42,10 +42,12 @@ class PortalMain implements Controller
 			else
 			{
 				$this->template->content = new Template('views/view.portal.login.php');
+				$this->template->render();
 			}
+			
 		}
 
-		$this->template->render();
+		
 	}
 }
 
