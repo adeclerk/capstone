@@ -1,4 +1,3 @@
-<?php require_once ('classes/class.Template.php');?>
 <html>
 	<head>
 	<link href="views/view.portal.main.css" rel="stylesheet" type="text/css">
