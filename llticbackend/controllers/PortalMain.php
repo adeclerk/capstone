@@ -1,5 +1,5 @@
 <?php
-require_once ('Controller.php');
+require_once ('controllers/Controller.php');
 require_once ('classes/class.UserSession.php');
 require  ('controllers/PortalLogin.php');
 require_once ('classes/class.Template.php');
