@@ -21,6 +21,7 @@ class LoginUser
 	public function __destruct()
 	{
 		$this->userTable->__destruct();
+		$this->session->__destruct();
 	}
 	
 	public function login()
@@ -38,7 +39,6 @@ class LoginUser
 				$_SESSION['uid'] = $this->curUser->uid;
 				$_SESSION['user'] = $this->curUser->uname;
 				$_SESSION['userlevel'] = $this->curUser->level;
-				$this->session->__destruct();
 				return true;
 			}
 			else

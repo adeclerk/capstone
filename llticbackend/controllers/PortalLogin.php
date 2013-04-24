@@ -30,6 +30,7 @@ class PortalLogin implements Controller
 			if($this->session->login())
 			{
 				print "IT WORKED";
+				print "USER: " . $_SESSION['user'];
 				
 			}
 			else
