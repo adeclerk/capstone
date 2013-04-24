@@ -25,7 +25,7 @@ class PortalMain implements Controller
 		{
 			try {
 					
-				$controller = new PortalLogin($this->session,$_POST['username'],$_POST['password']);
+				$controller = new PortalLogin($_POST['username'],$_POST['password']);
 				$controller->invoke();
 			}
 			catch (Exception $e)
