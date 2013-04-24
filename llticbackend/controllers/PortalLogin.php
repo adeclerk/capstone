@@ -30,7 +30,7 @@ class PortalLogin implements Controller
 			$login = new UserSession($this->session,$this->user,$this->pw);
 			if($login->autheticate())
 			{
-				switch($login->getUserRecord()->getUserLevel())
+	/*			switch($login->getUserRecord()->getUserLevel())
 				{
 					case 0:
 						break;
@@ -40,6 +40,7 @@ class PortalLogin implements Controller
 						//header("Location: http://". $_SERVER['SERVER_NAME'] . "/portal/admin");
 						break;
 				}
+				*/
 			}
 			else
 			{
