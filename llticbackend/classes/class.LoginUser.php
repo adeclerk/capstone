@@ -1,5 +1,4 @@
 <?php
-require_once ('classes/class.Session.php');
 require_once ('classes/class.User.php');
 
 class LoginUser
@@ -10,9 +9,9 @@ class LoginUser
 	private $curUser;
 	private $username;
 	private $enteredPW;
-	public function __construct($user,$password)
+	public function __construct($session,$user,$password)
 	{
-		$this->session = new Session();
+		$this->session = $session;
 		$this->enteredPW = $password;
 		$this->username = $user;
 		$this->userTable = new User();
