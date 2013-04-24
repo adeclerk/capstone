@@ -1,7 +1,7 @@
 <?php
-require ('Controller.php');
-require ('classes/class.UserSession.php');
-require ('classes/class.Template.php');
+require_once ('Controller.php');
+require_once ('classes/class.UserSession.php');
+require_once ('classes/class.Template.php');
 class PortalLogin implements Controller
 {
 	
