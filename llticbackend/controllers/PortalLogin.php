@@ -44,7 +44,7 @@ class PortalLogin implements Controller
 		else
 		{
 			$this->view = new Template('views/view.portal.login.php');
-			return $this->view;
+			$this->view->render();
 		}
 	}
 }
