@@ -63,13 +63,15 @@ class Session
     $sqlQuery = "SELECT * FROM `sessions` WHERE `id`='" . $sessionID ."'";
 
     $result = $this->dbcon->qry($sqlQuery);
-	if($result->num_rows == 0)
+	if($result->num_rows == 1)
+	{
+		$fields = $result->fetch_assoc();
+		return $fields['data'];
+	}
+	else
 	{
 		return '';
 	}
-	$fields = $result->fetch_assoc();
-	
-	return $fields['data'];
   }
 
   private function write($sessionID, $data)
