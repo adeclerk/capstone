@@ -12,7 +12,7 @@ class LoginUser
 	private $enteredPW;
 	public function __construct($session,$user,$password)
 	{
-		$this->session = $session;
+		$this->session = new Session();
 		$this->enteredPW = $password;
 		$this->username = $user;
 		$this->userTable = new User();
@@ -21,7 +21,6 @@ class LoginUser
 	public function __destruct()
 	{
 		$this->userTable->__destruct();
-		
 	}
 	
 	public function login()
@@ -39,6 +38,7 @@ class LoginUser
 				$_SESSION['uid'] = $this->curUser->uid;
 				$_SESSION['user'] = $this->curUser->uname;
 				$_SESSION['userlevel'] = $this->curUser->level;
+				$this->session->__destruct();
 				return true;
 			}
 			else
