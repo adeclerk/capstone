@@ -11,8 +11,8 @@ class AdminMain implements Controller
 	
 	public function __construct()
 	{
-		$this->view = new Template('views/view.portal.admin.main.php');
 		$this->session = new Session();
+		$this->view = new Template('views/view.portal.admin.main.php');
 	}
 	
 	public function __destruct()
