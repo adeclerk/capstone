@@ -13,7 +13,7 @@
 	<div id='main'>
 				<?php 
 				foreach($this->template->content as $cont)
-					$cont->invoke();
+					$cont->render();
 					?>
 	
 	</div>
