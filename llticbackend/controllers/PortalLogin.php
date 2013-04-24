@@ -40,7 +40,7 @@ class PortalLogin implements Controller
 				case 1:
 					break;
 				case 2:
-					header('Location: http://' . $_SERVER['SERVER_NAME']. '/portal/admin');
+					header('Location: http://' . $_SERVER['SERVER_NAME']. '/portal/');
 					break;
 				}
 				
