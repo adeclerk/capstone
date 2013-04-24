@@ -25,13 +25,14 @@ class LoginUser
 	
 	public function login()
 	{
-		$this->curUser = $this->userTable->getIdByUsername($this->username);
-		if(!$this->curUser)
+		$id = $this->userTable->getIdByUsername($this->username);
+		if(!$id)
 		{
 			throw new Exception('User not found');
 		}
 		else 
 		{
+			$this->curUser = $this->userTable->read($id);
 			if($this->curUser->password == User::hashPass($this->enteredPW))
 			{
 				$_SESSION['uid'] = $this->curUser->uid;
