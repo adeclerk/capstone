@@ -1,6 +1,6 @@
 <?php
 require_once 'controllers/Controller.php';
-
+require_once 'classes/class.Session.php';
 
 class PortalLogout implements Controller
 {
