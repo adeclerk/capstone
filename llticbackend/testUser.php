@@ -7,5 +7,6 @@ $userTable = new User();
 print $userTable->read(2);
 $_SESSION['test'] = testVal;
 print $session->getId();
+unset($session);
 
 ?>
