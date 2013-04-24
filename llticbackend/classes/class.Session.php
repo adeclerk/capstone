@@ -49,6 +49,7 @@ class Session
   private function open()
   {
     $this->dbcon = new LlticDbConnection();
+    $this->isAlive = true;
   }
 
   private function close()
