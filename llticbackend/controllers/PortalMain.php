@@ -31,6 +31,7 @@ class PortalMain implements Controller
 			array_push($this->template->content,$controller->invoke());
 		}
 		$this->template->render();
+		var_dump($this);
 	}
 }
 
