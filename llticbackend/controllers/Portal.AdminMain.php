@@ -14,7 +14,6 @@ class AdminMain implements Controller
 	{
 		$this->session = new Session();
 		$this->view = new Template('views/view.portal.admin.main.php');
-		$this->view->content = array();
 	}
 	
 	public function __destruct()
@@ -33,8 +32,8 @@ class AdminMain implements Controller
 			$userWindow->windowcontent = new Template('views/view.portal.window.user.php', array(
 										'username' => $_SESSION['user']));
 			$contr = new AdminEmployee();
-			array_push($this->view->content,$contr->invoke());
-			array_push($this->view->content,$userWindow);
+			$this->view->content = array($contr->invoke(),$userWindow);
+	
 			$this->view->render();
 		}
 		else
