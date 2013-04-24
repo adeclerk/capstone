@@ -3,7 +3,7 @@
 	Login
 	</div>
 	<div class="windowcontent">
-    <form action="/portal/login.php" method="post">
+    <form action="/portal/" method="post">
             <fieldset>
                     Username: <input type="text" name="username"> <br/>
                     Password: <input type="text" name="password"> <br/>
