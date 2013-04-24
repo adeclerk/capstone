@@ -60,7 +60,8 @@ class Session
 
   private function read($sessionID)
   {
-    $sqlQuery = "SELECT * FROM `sessions` WHERE `id`='" . $this->dbcon->getConnection()->real_escape_string($sessionID) ."'";
+    $sqlQuery = "SELECT * FROM `sessions` WHERE `id`='" . $sessionID ."'";
+    print "<br /> SEARCHING ON " . $sessionID . "<br/>";
 
     $result = $this->dbcon->qry($sqlQuery);
 	if($result->num_rows == 1)
