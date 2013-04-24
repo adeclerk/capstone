@@ -104,7 +104,7 @@ class User
 				return '';
 			}
 			$row = $result->fetch_assoc();
-			return $row['username'];
+			return $row['id'];
 		}
 	}
 	
