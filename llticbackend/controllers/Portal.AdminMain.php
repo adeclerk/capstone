@@ -27,6 +27,7 @@ class AdminMain implements Controller
 		if($_SESSION['userlevel'] == "2")
 		{
 			$this->view->render();
+			print $_SESSION['user'];
 		}
 		else
 		{
