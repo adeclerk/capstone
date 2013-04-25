@@ -144,7 +144,7 @@ class Employee
   		else
   		{
   			$row = $result->fetch_assoc();
-  			return $row['firstName'] . " " . $row['lastName'];
+  			return $row;
   		}
   	}
   }
