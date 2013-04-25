@@ -33,7 +33,7 @@ class PortalMain implements Controller
 				print $e->getMessage();
 			}
 		}
-		if(isset($_SESSION['userlevel']))
+		if($_SESSION['userlevel'])
 		{
 			print "STUFF";
 
