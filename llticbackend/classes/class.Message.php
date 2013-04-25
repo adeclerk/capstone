@@ -1,11 +1,14 @@
 <?php
 require_once ('classes/class.LlticDbConnection.php');
+require_once ('classes/class.User.php');
 class Message
 {
 	private $dbcon;
 	private $isOpen = true;
 	public $id;
 	public $sId;
+	public $sender;
+	public $recip;
 	public $rId;
 	public $sub;
 	public $content;
@@ -24,6 +27,9 @@ class Message
 			$this->content = $row['content'];
 			$this->timestamp = $row['timestamp'];
 			$this->isRead = $row['isRead'];
+			$tmp = new User();
+			$this->sender = $tmp->getNameByUserId($row['sendID']);
+			$this->recip = $tmp->getNameByUserId($row['recID']);
 		}
 		
 		$this->dbcon = new LlticDbConnection();
@@ -36,7 +42,7 @@ class Message
 	
 	public function __toString()
 	{
-		return $this->id . " : " . $this->sId . " : " . $this->rId . " : " . $this->timestamp . " : "
+		return $this->id . " : " . $this->sender . " : " . $this->recip . " : " . $this->timestamp . " : "
 				. $this->sub . " : " . $this->content . " : " . $this->isRead . "<br/>";
 	}
 	
@@ -49,6 +55,9 @@ class Message
 		$this->content = $row['content'];
 		$this->timestamp = $row['timestamp'];
 		$this->isRead = $row['isRead'];	
+		$tmp = new User();
+		$this->sender = $tmp->getNameByUserId($row['sendID']);
+		$this->recip = $tmp->getNameByUserId($row['recID']);
 	}
 	
 	public function open()

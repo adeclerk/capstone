@@ -112,6 +112,25 @@ class User
 	{
 		return md5("ewokllticsalt:$pass");
 	}
+	
+	public function getNameByUserId($uid)
+	{
+		// check employee table
+		$sql = "SELECT `firstName`,`lastName` FROM `employees` WHERE `userID`='" . $uid . "'";
+		if($this->dbOpen)
+		{
+			$result = $this->db->qry($sql);
+			if($result->num_rows > 0 )
+			{
+				$row = $result->fetch_assoc();
+				return $row;
+			}
+			else
+			{
+				// check client table 
+			}
+		}
+	}
 }
 
 ?>
