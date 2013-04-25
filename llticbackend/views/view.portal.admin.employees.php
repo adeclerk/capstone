@@ -41,14 +41,13 @@ function addEmployee()
 	print "<form id='add_employee' action='/portal/admin.php' method='post'>\n";
 	print "<input type='hidden' name='addemployee' value='addemployee'>\n";
 	print "<tr id='add_emp' style='display: none;'>\n\t";
-	print "<td><input type='text'  name='id' size='4'></td>\n\t";
+	print "<td><input type='text'  name='uid' size='4'></td>\n\t";
 	print "<td><input type='text' name='firstName'></td>\n\t";
 	print "<td><input type='text' name='lastName'></td>\n\t";
 	print "<td><input type='text' name='hireDate'></td>\n\t";
 	print "<td><input type='text' name='country'></td>\n\t";
 	print "<td><input type='text' name='salary'></td>\n\t";
 	print "<td><input type='text' name='phone'></td>\n\t";
-	print "<input type='hidden' name='uid'>";
 	print "<td><a href='#' onclick='addEmployeeSubmit()'>save</a></td>\n";
 	print "</tr>";
 	print "</form>";
