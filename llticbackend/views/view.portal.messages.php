@@ -82,4 +82,4 @@ function hideMessage(id)
 		print "<div style='text-align: left;'>Subject: " . $message->sub . " </div>";
 		print $message->content . "</div>";
 	}
-}?>
+?>
