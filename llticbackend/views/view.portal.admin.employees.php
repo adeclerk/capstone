@@ -28,7 +28,9 @@ function addEmployeeView()
 	var window = document.getElementById("employees_content");
 	var form = document.getElementById("add_emp");
 	form.style.display = 'table-row';
-	window.innerHTML='<?php include 'views/view.portal.admin.employees.addForm.php'; ?>';
+	var request = new XMLHttpRequest();
+	request.open("GET","views/view.portal.admin.employees.addForm.php",true);
+	window.innerHTML= request.send();
 }
 </script>
 <div style='text-align: right; height: 10px;'>
