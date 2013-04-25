@@ -8,7 +8,7 @@ foreach($this->username as $user)
 			. $user->fullname['lastName'] . ") " . "</option>";
 ?>
 	</select>
-	Subject: <input type="text" id="subject"><br/>
+	Subject: <input type="text" id="subject" size='45'><br/>
 	Content: <br/><textarea style='width: 90%; height: 70%;' id='content'></textarea>
 	<input type="submit" value="submit" id="submitForm">
 </form>

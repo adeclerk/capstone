@@ -27,16 +27,18 @@ class PortalMessages implements Controller
 	{
 		if($_SERVER['REQUEST_METHOD'] == 'POST')
 		{
-			$this->view->windowcontent = new Template('views/view.portal.messages.compose.php');
-		}
-		else
-		{
-			$this->view->windowcontent = new Template('views/view.portal.messages.php');
-			$this->view->windowcontent->composeTab = new Template('views/view.portal.messages.compose.php');
+			$messageTable = new Message();
 			$userTable = new User();
-			$this->view->windowcontent->composeTab->username = $userTable->getAllUsers();
-			$this->view->windowcontent->messages = $this->messageTable->getAllUnread(3);
+			$user = $userTable->getIdByUsername($_POST['recip']);
+			$messageTable->write($_SESSION['uid'],$user,$_POST['subject'],$_POST['content']);
 		}
+
+		$this->view->windowcontent = new Template('views/view.portal.messages.php');
+		$this->view->windowcontent->composeTab = new Template('views/view.portal.messages.compose.php');
+		$userTable = new User();
+		$this->view->windowcontent->composeTab->username = $userTable->getAllUsers();
+		$this->view->windowcontent->messages = $this->messageTable->getAllUnread(3);
+	
 		return $this->view;
 	}
 }
