@@ -37,7 +37,7 @@ class Message
 	public function __toString()
 	{
 		return $this->id . " : " . $this->sId . " : " . $this->rId . " : " . $this->timestamp . " : "
-				. $this->subj . " : " . $this->content . " : " . $this->isRead . "<br/>";
+				. $this->sub . " : " . $this->content . " : " . $this->isRead . "<br/>";
 	}
 	
 	public function set($row)
