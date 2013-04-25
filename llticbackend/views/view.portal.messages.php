@@ -11,10 +11,10 @@ function showCompose()
 	button.innerHTML = "<a href='#' onclick='showInbox()'>Back</a>";
 }
 </script>
-<div style='text-align: right; width: 1080px;' id='button'>
+<div style='text-align: right; width: 800x;' id='button'>
 <a href='#' onclick="showCompose()" >Compose</a>
 </div>
-<table id='inboxtable' style='width: 1080px;'>
+<table id='inboxtable' style='width: 800px;'>
 	<tr>
 		<th>Sender</th>
 		<th>Recipient</th>
