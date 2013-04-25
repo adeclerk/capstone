@@ -33,7 +33,7 @@ function formSubmit(id)
 		print "<td>" . $employee->hireDate . "</td>\n\t";
 		print "<td>" . $employee->country .  "</td>\n\t";
 		print "<td>" . $employee->salary . "</td>\n\t";
-		print "<td>" . $employee->userID . "</td>\n\t";
+		print "<td>" . $employee->phone . "</td>\n\t";
 		print "<td><a href='#' onclick='editEmployee(" . $employee->id. ")'>edit</a></td>\n";
 		print "</tr>";
 		
