@@ -35,7 +35,16 @@ class PortalMain implements Controller
 		}
 		if($_SESSION['userlevel'])
 		{
-			print "STUFF";
+			switch($_SESSION['userlevel'])
+			{
+				case 0:
+					break;
+				case 1:
+					break;
+				case 2:
+					header('Location: http://' . $_SERVER['SERVER_NAME'] . '/portal/admin.php');
+					break;
+			}
 
 		}
 		else
