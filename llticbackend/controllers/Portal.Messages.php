@@ -38,7 +38,7 @@ class PortalMessages implements Controller
 			$usernameArray = array();
 			foreach($userArray as $user)
 			{
-				array_push($usernameArray,$user->username);
+				array_push($usernameArray,$user->uname);
 			}
 			$this->view->windowcontent->composeTab->username = $usernameArray;
 			$this->view->windowcontent->messages = $this->messageTable->getAllUnread(3);
