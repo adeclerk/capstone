@@ -91,7 +91,7 @@ class Message
 	}
 	public function getAllUnread($rid)
 	{
-		$sql = "SELECT * FROM `messages` WHERE `recID`='" .$rid . "'";
+		$sql = "SELECT * FROM `messages` WHERE `recID`=" .$rid . "";
 		if($this->isOpen)
 		{
 			$result = $this->dbcon->qry($sql);
