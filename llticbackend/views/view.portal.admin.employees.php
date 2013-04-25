@@ -30,7 +30,8 @@ function addEmployeeView()
 	form.style.display = 'table-row';
 	var request = new XMLHttpRequest();
 	request.open("GET","views/view.portal.admin.employees.addForm.php",true);
-	window.innerHTML= request.send();
+	request.send();
+	window.innerHTML= request.responseText();
 }
 </script>
 <div style='text-align: right; height: 10px;'>
