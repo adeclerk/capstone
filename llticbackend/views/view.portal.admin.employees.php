@@ -37,7 +37,7 @@ function formSubmit(id)
 		print "<td><a href='#' onclick='editEmployee(" . $employee->id. ")'>edit</a></td>\n";
 		print "</tr>";
 		
-		print "<form id='edit_emp_" . $employee->id  ."' action='/admin.php' method='post'>\n";
+		print "<form id='edit_emp_" . $employee->id  ."' action='/portal/admin.php' method='post'>\n";
 		print "<tr id='". $employee->id  . "_edit' style='display: none;'>\n\t";
 		print "<td><input type='text'  name='id' size='4' value='" . $employee->id  . "'></td>\n\t";
 		print "<td><input type='text' name='firstName'  value='" . $employee->firstName . "'></td>\n\t";
