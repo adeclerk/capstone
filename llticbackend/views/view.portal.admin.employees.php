@@ -26,8 +26,8 @@ function addEmployee()
 function addEmployeeView()
 {
 	var window = document.getElementById("employees_content");
-	var form = document.getElementById("add_emp");
-	form.style.display = 'table-row';
+	//var form = document.getElementById("add_emp");
+	//form.style.display = 'table-row';
 	var request = new XMLHttpRequest();
 	request.open("GET","views/view.portal.admin.employees.addForm.php",true);
 	request.send();
