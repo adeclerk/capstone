@@ -26,7 +26,7 @@ class PortalMessages implements Controller
 	
 	public function invoke()
 	{
-		$this->view->windowcontent->messages = array($this->messageTable->getAllUnread(3));
+		$this->view->windowcontent->messages = $this->messageTable->getAllUnread(3);
 		return $this->view;
 	}
 }
