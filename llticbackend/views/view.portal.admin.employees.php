@@ -38,6 +38,7 @@ function formSubmit(id)
 		print "</tr>";
 		
 		print "<form id='edit_emp_" . $employee->id  ."' action='/portal/admin.php' method='post'>\n";
+		print "<input type='hidden' name='eid' value='" . $employee->id . "'>";
 		print "<tr id='". $employee->id  . "_edit' style='display: none;'>\n\t";
 		print "<td><input type='text'  name='id' size='4' value='" . $employee->id  . "'></td>\n\t";
 		print "<td><input type='text' name='firstName'  value='" . $employee->firstName . "'></td>\n\t";
