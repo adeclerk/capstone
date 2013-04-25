@@ -34,6 +34,6 @@ function showCompose()
 		?>
 
 </table>
-<div id='compose' style='display: none;'>
+<div id='compose' style='display: none; width: 800px;'>
 	<?php print $this->composeTab->render(); ?>
 </div>
