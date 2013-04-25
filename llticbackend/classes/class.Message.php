@@ -93,8 +93,8 @@ class Message
 	
 	public function write($sid,$rid,$subj,$content)
 	{
-		$sql = "INSERT INTO `messages` (`sendID`,`recID`,`subject`,`content`) VALUES('" . $sid . "','" . $rid . "','" 
-		.$subj . "','" . $content . "')";
+		$sql = "INSERT INTO `messages` (`sendID`,`recID`,`subject`,`content`,`isRead`) VALUES('" . $sid . "','" . $rid . "','" 
+		.$subj . "','" . $content . "','0')";
 		if($this->isOpen)
 		{
 			$this->dbcon->qry($sql);
