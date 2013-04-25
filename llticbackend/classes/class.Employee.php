@@ -108,7 +108,7 @@ class Employee
   
   public function edit($eid,$fname,$lname,$hireDate,$salary,$country,$phone,$userID)
   {
-  	$sql = "REPLACE INTO `employees` (`id`,firstName`,`lastName`,`hireDate`,`salary`,`country`,`phone`,`userID`) VALUES('"
+  	$sql = "REPLACE INTO `employees` (`id`,`firstName`,`lastName`,`hireDate`,`salary`,`country`,`phone`,`userID`) VALUES('"
   	. $eid. "','" . $fname . "','" . $lname ."','" . $hireDate . "','" . $salary . "','" . $country ."','". $phone . "','" . $userID . "')";
   	if($this->isOpen)
   	{
