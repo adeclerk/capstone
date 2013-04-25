@@ -38,8 +38,10 @@ class AdminMain implements Controller
 		}
 		else
 		{
-			$this->view->content = array(new Template('views/view.portal.error.php'));
-			$this->view->content->error = 'User not authorized to view this page';
+			$this->view->content = array(
+									new Template('views/view.portal.error.php', array(
+											'error' =>'User not authorized to view this page')));
+
 			$this->view->render();
 		}
 		
