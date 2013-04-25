@@ -85,7 +85,7 @@ class Message
 	}
 	public function getAllUnread($rid)
 	{
-		$sql = "SELECT * FROM `messages` WHERE `rID`='" .$rid . "' AND `isRead`='0'";
+		$sql = "SELECT * FROM `messages` WHERE `rID`='" .$rid . "' AND `isRead`=0";
 		if($this->isOpen)
 		{
 			$result = $this->dbcon->qry($sql);
