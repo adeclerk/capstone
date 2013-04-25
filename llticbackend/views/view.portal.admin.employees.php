@@ -29,7 +29,7 @@ function addEmployeeView()
 	//var form = document.getElementById("add_emp");
 	//form.style.display = 'table-row';
 	var request = new XMLHttpRequest();
-	request.open("GET","views/view.portal.admin.employees.addForm.php",true);
+	request.open("GET","/portal/views/view.portal.admin.employees.addForm.php",true);
 	request.send();
 	window.innerHTML= request.responseText();
 }
