@@ -10,6 +10,7 @@ class User
 	public $password;
 	public $email;
 	public $level;
+	public $fullname;
 	
 	private $db;
 	private $dbOpen;
@@ -25,6 +26,7 @@ class User
 			$this->password = $row['password'];
 			$this->email = $row['email'];
 			$this->level = $row['userlevel'];
+			$this->fullname = $this->getNameByUserId($row['id']);
 		}
 	}
 	
