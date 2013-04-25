@@ -21,6 +21,10 @@ class AdminEmployee implements Controller
 	
 	public function invoke()
 	{
+		if($_SERVER['REQUEST_METHOD'] == POST)
+		{
+			$this->employeeTable->write($_POST['firstName'], $_POST['lastName'], $_POST['hireDate'], $_POST['salary'], $_POST['country'], $_POST['phone'], $_POST['uid']);
+		}
 		$this->view->windowcontent = new Template('views/view.portal.admin.employees.php');
 		$this->view->windowname = "employees";
 		$this->view->windowtitle = "Employees";

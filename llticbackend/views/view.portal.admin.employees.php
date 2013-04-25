@@ -37,7 +37,7 @@ function formSubmit(id)
 		print "<td><a href='#' onclick='editEmployee(" . $employee->id. ")'>edit</a></td>\n";
 		print "</tr>";
 		
-		print "<form id='edit_emp_" . $employee->id  ."' action='editEmployee.php' method='post'>\n";
+		print "<form id='edit_emp_" . $employee->id  ."' action='/admin.php' method='post'>\n";
 		print "<tr id='". $employee->id  . "_edit' style='display: none;'>\n\t";
 		print "<td><input type='text'  name='id' size='4' value='" . $employee->id  . "'></td>\n\t";
 		print "<td><input type='text' name='firstName'  value='" . $employee->firstName . "'></td>\n\t";
@@ -46,6 +46,7 @@ function formSubmit(id)
 		print "<td><input type='text' name='country' value='" . $employee->country . "'></td>\n\t";
 		print "<td><input type='text' name='salary' value='" . $employee->salary. "'></td>\n\t";
 		print "<td><input type='text' name='phone' value='" . $employee->phone . "'></td>\n\t";
+		print "<input type='hidden' name='uid' value='" . $employee->userID . "'>";
 		print "<td><a href='#' onclick='formSubmit(" . $employee->id  . ")'>save</a></td>\n";
 		print "</tr>";
 		print "</form>";
