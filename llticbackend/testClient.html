@@ -35,17 +35,30 @@ function showTable()
 							<td>" + vals[count].phone + "</td> \
 							<td>" + vals[count].company + "</td> \
 							<td>" + vals[count].country + "</td> \
-							<td>" + vals[count].consult_date + " </td> \
+							<td>" + vals[count].consultDate + " </td> \
 							<td>" + vals[count].userID + " </td> \
 							<td>" + vals[count].consultID + " </td> \
 							</tr>");
 	}
 }
 
+function getClients()
+{
+	var request = new XMLHttpRequest();
+	request.open("GET","/portal/testClient.php");
+	request.send();
+	
+	var clientArray;
+	request.onreadystatechange=function()
+	{
+		vals = JSON.parse(request.responseText);
+	}
+	showTable();
+}
 </script>
 <title>Insert title here</title>
 </head>
-<body>
+<body onload='getClients()'>
 
 </body>
 </html>
