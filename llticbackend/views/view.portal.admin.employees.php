@@ -25,13 +25,16 @@ function addEmployee()
 
 function addEmployeeView()
 {
-	var window = document.getElementById("employees_content");
+	var empwindow = document.getElementById("employees_content");
 	//var form = document.getElementById("add_emp");
 	//form.style.display = 'table-row';
 	var request = new XMLHttpRequest();
 	request.open("GET","/portal/views/view.portal.admin.employees.addForm.php",true);
 	request.send();
-	window.innerHTML= request.responseText();
+	request.onreadystatechange=function()
+	{
+		empwindow.innerHTML= request.responseText();
+	}
 }
 </script>
 <div style='text-align: right; height: 10px;'>
