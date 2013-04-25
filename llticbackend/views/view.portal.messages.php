@@ -5,10 +5,13 @@ function showCompose()
 	table.style.display = 'none';
 	var compose = document.getElementById("compose");
 	compose.style.display = 'inline';
-	
+
+	var button = document.getElementById("button");
+	button.style.textAlign = 'right';
+	button.innerHTML = "<a href='#' onclick='showInbox()'>Back</a>";
 }
 </script>
-<div style='text-align: right;'>
+<div style='text-align: right; width: 1080px;' id='button'>
 <a href='#' onclick="showCompose()" >Compose</a>
 </div>
 <table id='inboxtable'>
