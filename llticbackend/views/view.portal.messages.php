@@ -5,7 +5,7 @@ function showCompose()
 	//table.style.display = 'none';
 	var compose = document.getElementById("compose");
 	compose.style.display = 'inline';
-	compose.style.display.zIndex ='10';
+	compose.style.zIndex ='10';
 
 	var button = document.getElementById("button");
 	button.style.textAlign = 'right';
