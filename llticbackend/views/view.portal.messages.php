@@ -1,8 +1,8 @@
 <script type='text/javascript'>
 function showCompose()
 {
-//	var table = document.getElementById("inboxtable");
-	//table.style.display = 'none';
+	var table = document.getElementById("inboxtable");
+	table.style.display = 'none';
 	var compose = document.getElementById("compose");
 	compose.style.display = 'inline';
 	compose.style.zIndex ='10';
@@ -12,6 +12,17 @@ function showCompose()
 	button.style.textAlign = 'right';
 	button.style.width = '800px;';
 	button.innerHTML = "<a href='#' onclick='showInbox()'>Back</a>";
+}
+
+function showInbox()
+{
+	var button = document.getElementById("button");
+	button.style.textAlign = 'right';
+	button.innerHTML = "<a href='#' onclick='showCompose()'>Compose</a>";
+	var table = document.getElementById("inboxtable");
+	table.style.display='table';
+	var compose = document.getElementById("compose");
+	compose.style.display='none';
 }
 </script>
 <div style='text-align: right; width: 800x;' id='button'>
