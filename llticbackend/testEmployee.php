@@ -9,6 +9,6 @@ foreach($tEmp as $employee)
 	print $employee;
 
 $name = $emp->getNameByUserId(2);
-print $name;
+print $name['firstName'];
 
 ?>
