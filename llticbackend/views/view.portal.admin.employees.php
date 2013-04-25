@@ -26,7 +26,9 @@ function addEmployee()
 function addEmployeeView()
 {
 	var window = document.getElementById("employees_content");
-	window.innerHTML="TEST";
+	var form = document.getElementById("add_emp");
+	form.style.display = 'table-row';
+	window.innerHTML="Add Employee" + form;
 }
 </script>
 <div style='text-align: right; height: 10px;'>
