@@ -33,7 +33,7 @@ function addEmployeeView()
 	request.send();
 	request.onreadystatechange=function()
 	{
-		empwindow.innerHTML= request.responseText();
+		empwindow.innerHTML= request.responseText;
 	}
 }
 </script>
