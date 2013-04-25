@@ -1,11 +1,3 @@
-<script type="text/javascript">
-function minimize(windowID)
-{
-	var window = document.getElementById(windowID+"_content");
-	window.style.display = 'none';
-}
-</script>
-
 <html>
 	<head>
 	<link href="views/view.portal.main.css" rel="stylesheet" type="text/css">
