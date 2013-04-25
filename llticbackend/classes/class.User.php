@@ -18,7 +18,7 @@ class User
 		$this->dbOpen = true;
 		if($row)
 		{
-			$this->uid = $row['uid'];
+			$this->uid = $row['id'];
 			$this->uname = $row['username'];
 			$this->password = $row['password'];
 			$this->email = $row['email'];

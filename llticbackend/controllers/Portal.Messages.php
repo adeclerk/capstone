@@ -23,6 +23,7 @@ class PortalMessages implements Controller
 	
 	public function invoke()
 	{
+		$this->view->messages = $this->messageTable->getAllUnread($_SESSION['uid']);
 		return $this->view;
 	}
 }
