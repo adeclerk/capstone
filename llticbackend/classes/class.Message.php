@@ -89,7 +89,24 @@ class Message
 			$this->dbcon->qry($sql);
 		}
 	}
+	
 	public function getAllUnread($rid)
+	{
+		$sql = "SELECT * FROM `messages` WHERE `recID`='" .$rid . "' AND `isRead`=0";
+		if($this->isOpen)
+		{
+			$result = $this->dbcon->qry($sql);
+			$messageArray = array();
+			while($row = $result->fetch_assoc())
+			{
+				array_push($messageArray,new Message($row));
+			}
+			return $messageArray;
+			
+		}
+	}
+	
+	public function getAll($rid)
 	{
 		$sql = "SELECT * FROM `messages` WHERE `recID`=" .$rid . "";
 		if($this->isOpen)
@@ -101,7 +118,7 @@ class Message
 				array_push($messageArray,new Message($row));
 			}
 			return $messageArray;
-			
+				
 		}
 	}
 	

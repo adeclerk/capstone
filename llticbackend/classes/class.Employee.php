@@ -134,19 +134,18 @@ class Employee
   public function getNameByUserId($uid)
   {
   	$sql = "SELECT `firstName`,`lastName` FROM `employees` WHERE `userID`='" . $uid . "'";
-  	print "TEST";
+
   	if($this->isOpen)
   	{
-  		print "TEST2";
+  
   		$result = $this->dbcon->qry($sql);
   		if($result->num_rows == 0)
   		{
-  			print "FAIL";
   			return '';
   		}
   		else
   		{
-  			print "PASS";
+  		
   			$row = $result->fetch_assoc();
   			return $row;
   		}
