@@ -12,7 +12,7 @@ function formSubmit(id)
 	form.submit();
 }
 </script>
-<div style='text-align: right; padding: 0px;'>
+<div style='text-align: right; height: 10px;'>
 	<form name='addEmployee' action='/portal/admin.php'>
 	<input type="submit" name='add' value='Add'>
 	</form>
