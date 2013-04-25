@@ -2,7 +2,7 @@
 	<div class='windowtitle'>
 	<?php print $this->windowtitle; ?>
 	</div>
-	<div class='windowcontent'>
+	<div class='windowcontent' id='<?php print $this->windowname . "_content"?>'>
 	<?php print $this->windowcontent->render(); ?>
 	</div>
 </div>
