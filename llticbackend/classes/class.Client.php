@@ -10,6 +10,7 @@ class Client
 	public $company;
 	public $country;
 	public $consultDate;
+	public $consultID;
 	public $userID;
 	
 	private $dbcon;
@@ -44,6 +45,7 @@ class Client
 		$this->company = $row['company'];
 		$this->country = $row['country'];
 		$this->consultDate = $row['consult_date'];
+		$this->consultID = $row['consultID'];
 		$this->userID = $row['userID'];	
 	}
 	
