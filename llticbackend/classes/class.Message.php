@@ -76,8 +76,8 @@ class Message
 	
 	public function write($sid,$rid,$subj,$content)
 	{
-		$sql = "INSERT INTO `messages` (`sendID`,`recID`,`subject`,`content`) VALUES('" . $sid . "','" . $rid . "','" .$subj
-			. "','" . $content . "')";
+		$sql = "INSERT INTO `messages` (`sendID`,`recID`,`subject`,`content`) VALUES('" . $sid . "','" . $rid . "','" 
+		.$subj . "','" . $content . "')";
 		if($this->isOpen)
 		{
 			$this->dbcon->qry($sql);
@@ -85,7 +85,7 @@ class Message
 	}
 	public function getAllUnread($rid)
 	{
-		$sql = "SELECT * FROM `messages` WHERE `recID`='" .$rid . "' AND `isRead`=0";
+		$sql = "SELECT * FROM `messages` WHERE `recID`='" .$rid . "'";
 		if($this->isOpen)
 		{
 			$result = $this->dbcon->qry($sql);
