@@ -8,6 +8,7 @@ function showCompose()
 
 	var button = document.getElementById("button");
 	button.style.textAlign = 'right';
+	button.style.width = '800px;';
 	button.innerHTML = "<a href='#' onclick='showInbox()'>Back</a>";
 }
 </script>
