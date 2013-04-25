@@ -131,5 +131,23 @@ class Employee
   	}
   }
   
+  public function getNameByUserId($uid)
+  {
+  	$sql = "SELECT `firstName`,`lastName` FROM `employees` WHERE `userID`='" . $uid . "'";
+  	if($this->isOpen)
+  	{
+  		$result = $this->dbcon->qry($sql);
+  		if($result->num_rows == 0)
+  		{
+  			return '';
+  		}
+  		else
+  		{
+  			$row = $result->fetch_assoc();
+  			return $row['firstName'] . " " . $row['lastName'];
+  		}
+  	}
+  }
+  
 }
 ?>
