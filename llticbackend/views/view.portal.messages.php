@@ -13,7 +13,7 @@ function showCompose()
 	button.style.width = '800px;';
 	button.innerHTML = "<a href='#' onclick='showInbox()'>Back</a>";
 
-	var title = document.getElementById("inbox");
+	var title = document.getElementById("inbox_title");
 	title.innerHTML = "Compose Message";
 }
 
@@ -27,7 +27,7 @@ function showInbox()
 	var compose = document.getElementById("compose");
 	compose.style.display='none';
 
-	var title = document.getElementById("inbox");
+	var title = document.getElementById("inbox_title");
 	title.innerHTML = "Inbox";
 }
 </script>
