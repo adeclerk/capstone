@@ -1,4 +1,13 @@
 <script type="text/javascript">
+function showCompose()
+{
+	var table = document.getElementById("inboxtable");
+	table.style.display = none;
+	var compose = document.getElementById("compose");
+	compose.style.display = inline;
+	
+}
+
 function editEmployee(id)
 {
 	var row = document.getElementById(id);
