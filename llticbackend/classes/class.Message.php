@@ -1,5 +1,5 @@
 <?php
-require ('classes/class.LlticDbConnection.php');
+require_once ('classes/class.LlticDbConnection.php');
 class Message
 {
 	private $dbcon;
