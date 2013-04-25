@@ -25,7 +25,7 @@ class PortalMessages implements Controller
 	
 	public function invoke()
 	{
-		if($_POST['msgs'])
+		if($_SERVER['REQUEST_METHOD'] == 'POST')
 		{
 			$this->view->windowcontent = new Template('views/view.portal.messages.compose.php');
 		}
