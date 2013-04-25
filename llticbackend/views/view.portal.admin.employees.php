@@ -11,11 +11,20 @@ function formSubmit(id)
 	var form = document.getElementById("edit_emp_"+id);
 	form.submit();
 }
+
+function addEmployeeSubmit()
+{
+	var form = document.getElementById("add_employee");
+	form.submit();
+}
+function addEmployee()
+{
+	var tmp = document.getElementById("add_emp");
+	tmp.style.display = 'table-row';
+}
 </script>
 <div style='text-align: right; height: 10px;'>
-	<form name='addEmployee' action='/portal/admin.php'>
-	<input type="submit" name='add' value='Add'>
-	</form>
+	<input type="button" name="add" value="Add" onclick='addEmployee()'>
 </div>
 <table style='width: 100%;'>
 	<tr>
@@ -29,6 +38,20 @@ function formSubmit(id)
 		<th></th>
 	</tr>
 	<?php 
+	print "<form id='add_employee' action='/portal/admin.php' method='post'>\n";
+	print "<input type='hidden' name='eid' value='" . $employee->id . "'>";
+	print "<tr id='add_emp' style='display: none;'>\n\t";
+	print "<td><input type='text'  name='id' size='4'></td>\n\t";
+	print "<td><input type='text' name='firstName'></td>\n\t";
+	print "<td><input type='text' name='lastName'></td>\n\t";
+	print "<td><input type='text' name='hireDate'></td>\n\t";
+	print "<td><input type='text' name='country'></td>\n\t";
+	print "<td><input type='text' name='salary'></td>\n\t";
+	print "<td><input type='text' name='phone'></td>\n\t";
+	print "<input type='hidden' name='uid'>";
+	print "<td><a href='#' onclick='formSubmit(" . $employee->id  . ")'>save</a></td>\n";
+	print "</tr>";
+	print "</form>";
 	foreach($this->employees as $employee)
 	{
 		print "<tr id='". $employee->id . "'>\n\t";
