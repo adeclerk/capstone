@@ -26,4 +26,5 @@
 		Phone: <input type="text" name="phone"><br/>
 		Hire Date: <input type="text" name="hireDate">
 	</fieldset>
+	<input type='submit' name='formSubmit' value='Submit'>
 </form>
