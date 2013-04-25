@@ -95,7 +95,7 @@ class Message
 		if($this->isOpen)
 		{
 			$result = $this->dbcon->qry($sql);
-			//$messageArray = array();
+			$messageArray = array();
 			while($row = $result->fetch_assoc())
 			{
 				array_push($messageArray,new Message($row));
