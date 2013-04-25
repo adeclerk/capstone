@@ -39,7 +39,7 @@ function addEmployee()
 	</tr>
 	<?php 
 	print "<form id='add_employee' action='/portal/admin.php' method='post'>\n";
-	print "<input type='hidden' name='eid' value='" . $employee->id . "'>";
+	print "<input type='hidden' name='addemployee' value='addemployee'>\n";
 	print "<tr id='add_emp' style='display: none;'>\n\t";
 	print "<td><input type='text'  name='id' size='4'></td>\n\t";
 	print "<td><input type='text' name='firstName'></td>\n\t";

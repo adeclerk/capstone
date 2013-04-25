@@ -23,6 +23,16 @@ class AdminEmployee implements Controller
 	{
 		if($_SERVER['REQUEST_METHOD'] == POST)
 		{
+			if(isset($_POST['addemployee']))
+			{
+				$this->employeeTable->write($_POST['firstName'],
+											$_POST['lastName'],
+											$_POST['hireDate'],
+											$_POST['salary'],
+											$_POST['country'],
+											$_POST['phone'],
+											$_POST['uid']);
+			}
 			$this->employeeTable->edit($_POST['eid'],$_POST['firstName'], $_POST['lastName'], $_POST['hireDate'], $_POST['salary'], $_POST['country'], $_POST['phone'], $_POST['uid']);
 		}
 		$this->view->windowcontent = new Template('views/view.portal.admin.employees.php');
