@@ -28,8 +28,10 @@ class Message
 			$this->timestamp = $row['timestamp'];
 			$this->isRead = $row['isRead'];
 			$tmp = new User();
-			$this->sender = $tmp->getNameByUserId($row['sendID']);
-			$this->recip = $tmp->getNameByUserId($row['recID']);
+			$tmpSend = $tmp->getNameByUserId($row['sendID']);
+			$this->sender = $tmpSend['firstName'] . " " . $tmpSend['lastName'];
+			$tmpRecip = $tmp->getNameByUserId($row['recID']);
+			$this->recip = $tmpRecip['firstName'] . " " . $tmpRecip['lastName'];
 		}
 		
 		$this->dbcon = new LlticDbConnection();
