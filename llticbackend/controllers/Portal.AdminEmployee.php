@@ -22,8 +22,8 @@ class AdminEmployee implements Controller
 	public function invoke()
 	{
 		$this->view->windowcontent = new Template('views/view.portal.admin.employees.php');
-		$this->view->windowcontent->windowname = "employees";
-		$this->view->windowcontent->windowtitle = "Employees";
+		$this->view->windowname = "employees";
+		$this->view->windowtitle = "Employees";
 		$this->view->windowcontent->employees = $this->employeeTable->getAllEmployees();
 		return $this->view;
 	}
