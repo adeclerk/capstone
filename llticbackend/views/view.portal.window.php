@@ -1,5 +1,5 @@
 <div id='<?php print $this->windowname; ?>' class='window'>
-	<div class='windowtitle'>
+	<div class='windowtitle' id='<?php print $this->windowname; ?>_title'>
 	<?php print $this->windowtitle; ?>
 	</div>
 	<div class='windowcontent' id='<?php print $this->windowname . "_content"?>'>

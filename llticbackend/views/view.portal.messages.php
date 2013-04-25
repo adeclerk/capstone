@@ -12,6 +12,9 @@ function showCompose()
 	button.style.textAlign = 'right';
 	button.style.width = '800px;';
 	button.innerHTML = "<a href='#' onclick='showInbox()'>Back</a>";
+
+	var title = document.getElementById("inbox");
+	title.innerHTML = "Compose Message";
 }
 
 function showInbox()
@@ -23,6 +26,9 @@ function showInbox()
 	table.style.display='table';
 	var compose = document.getElementById("compose");
 	compose.style.display='none';
+
+	var title = document.getElementById("inbox");
+	title.innerHTML = "Inbox";
 }
 </script>
 <div style='text-align: right; width: 800x;' id='button'>
