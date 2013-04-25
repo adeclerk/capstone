@@ -34,7 +34,7 @@ function showInbox()
 function showMessage(id)
 {
 	alert("CALLED");
-	var message = document.getElementById(id);
+	var message = document.getElementById("msg_"+id);
 	message.style.display = 'inline';
 	var table = document.getElementById("inboxtable");
 	table.style.display='none';
@@ -65,7 +65,7 @@ function hideMessage(id)
 	{
 		print "\n\t<tr>\n\t\t<td>" . $message->sender . "</td>\n\t\t<td>"
 			. $message->recip . "</td>\n\t\t<td>" . $message->timestamp . "</td>\n\t\t<td>"
-			. "<a href='#' onclick=\"showMessage(msg_" . $message->id . ")\">" .$message->sub . "</a></td>\n\t</tr>";
+			. "<a href='#' onclick=\"showMessage(" . $message->id . ")\">" .$message->sub . "</a></td>\n\t</tr>";
 	}
 			
 		?>
