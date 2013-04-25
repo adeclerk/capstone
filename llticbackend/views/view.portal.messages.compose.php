@@ -2,7 +2,10 @@
 Recipient: <select id='recip'>
 <?php
 foreach($this->username as $user)
-	print "<option value='". $user->uname ."'>" . $user->uname . " (" . $user->fullname['firstName'] . $user->fullname['lastName'] . ") " . "</option>";
+	print "<option value='"
+			. $user->uname ."'>" . $user->uname 
+			. " (" . $user->fullname['firstName'] . " " 
+			. $user->fullname['lastName'] . ") " . "</option>";
 ?>
 	</select>
 	Subject: <input type="text" id="subject"><br/>
