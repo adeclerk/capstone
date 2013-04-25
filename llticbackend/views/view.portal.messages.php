@@ -33,6 +33,7 @@ function showInbox()
 
 function showMessage(id)
 {
+	alert("CALLED");
 	var message = document.getElementById(id);
 	message.style.display = 'inline';
 	var table = document.getElementById("inboxtable");
