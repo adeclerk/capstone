@@ -9,7 +9,7 @@ class PortalMain implements Controller
 	public $template;
 	public function __construct()
 	{
-		//$this->session = new Session();
+		$this->session = new Session();
 		$this->template = new Template('views/view.portal.main.php');
 		$this->template->content = array();
 	}
