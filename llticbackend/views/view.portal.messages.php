@@ -1,3 +1,13 @@
+<script type='text/javascript'>
+function showCompose()
+{
+	var table = document.getElementById("inboxtable");
+	table.style.display = none;
+	var compose = document.getElementById("compose");
+	compose.style.display = inline;
+	
+}
+</script>
 <div style='text-align: right;'>
 <a href='#' onclick="showCompose()" >Compose</a>
 </div>
@@ -21,15 +31,5 @@
 
 </table>
 <div id='compose' style='display: none;'>
-
+	<?php print $this->composeTab->render(); ?>
 </div>
-<script type='text/javascript'>
-function showCompose()
-{
-	var table = document.getElementById("inboxtable");
-	table.style.display = none;
-	var compose = document.getElementById("compose");
-	compose.style.display = inline;
-	
-}
-</script>
