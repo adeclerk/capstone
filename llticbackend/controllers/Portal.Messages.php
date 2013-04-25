@@ -15,7 +15,6 @@ class PortalMessages implements Controller
 		$this->view = new Template('views/view.portal.window.php');
 		$this->view->windowname = "inbox";
 		$this->view->windowtitle = "Inbox";
-		$this->view->windowcontent = new Template('views/view.portal.messages.php');
 		$this->messageTable = new Message();
 	}
 	
@@ -26,7 +25,15 @@ class PortalMessages implements Controller
 	
 	public function invoke()
 	{
-		$this->view->windowcontent->messages = $this->messageTable->getAllUnread(3);
+		if($_POST['msgs'])
+		{
+			$this->view->windowcontent = new Template('views/view.portal.messages.compose.php');
+		}
+		else
+		{
+			$this->view->windowcontent = new Template('views/view.portal.messages.php');
+			$this->view->windowcontent->messages = $this->messageTable->getAllUnread(3);
+		}
 		return $this->view;
 	}
 }

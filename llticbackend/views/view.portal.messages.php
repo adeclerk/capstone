@@ -1,5 +1,20 @@
+<script type='text/javascript'>
+function showCompose()
+{
+	var request = new XMLHttpRequest();
+	request.open("POST","/portal/admin.php"true);
+	request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	request.send("msgs=TRUE");
+
+	request.onreadystatechange=function()
+	{
+		var windowContent = document.getElementById("inbox");
+		windowContent.innerHTML = request.responseText;
+	}
+}
+</script>
 <div style='text-align: right;'>
-Compose
+<a href='#' onclick="showCompose()" >Compose</a>
 </div>
 <table>
 	<tr>
