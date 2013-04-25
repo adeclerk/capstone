@@ -25,7 +25,7 @@ function addEmployee()
 
 function addEmployeeView()
 {
-	var window = document.getElementById("employees");
+	var window = document.getElementById("employees_content");
 	window.innerHTML="TEST";
 }
 </script>
