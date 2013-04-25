@@ -14,7 +14,7 @@ function showCompose()
 <div style='text-align: right; width: 1080px;' id='button'>
 <a href='#' onclick="showCompose()" >Compose</a>
 </div>
-<table id='inboxtable'>
+<table id='inboxtable' style='width: 1080px;'>
 	<tr>
 		<th>Sender</th>
 		<th>Recipient</th>
