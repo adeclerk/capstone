@@ -139,10 +139,12 @@ class Employee
   		$result = $this->dbcon->qry($sql);
   		if($result->num_rows == 0)
   		{
+  			print "FAIL";
   			return '';
   		}
   		else
   		{
+  			print "PASS";
   			$row = $result->fetch_assoc();
   			return $row;
   		}
