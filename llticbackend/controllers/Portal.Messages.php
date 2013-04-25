@@ -34,7 +34,13 @@ class PortalMessages implements Controller
 			$this->view->windowcontent = new Template('views/view.portal.messages.php');
 			$this->view->windowcontent->composeTab = new Template('views/view.portal.messages.compose.php');
 			$userTable = new User();
-			$this->view->windowcontent->composeTab->username = $userTable->getAllUsers();
+			$userArray = $userTable->getAllUsers();
+			$usernameArray = array();
+			foreach($userArray as $user)
+			{
+				array_push($usernameArray,$user->username);
+			}
+			$this->view->windowcontent->composeTab->username = $usernameArray;
 			$this->view->windowcontent->messages = $this->messageTable->getAllUnread(3);
 		}
 		return $this->view;
