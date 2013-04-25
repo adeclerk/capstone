@@ -97,8 +97,16 @@ class Employee
   
   public function write($fname,$lname,$hireDate,$salary,$country,$phone,$userID)
   {
-  	$sql = "REPLACE INTO `employees` (`firstName`,`lastName`,`hireDate`,`salary`,`country`,`phone`,`userID`) VALUES('"
+  	if($hireDate == NULL)
+  	{
+  		$sql = "REPLACE INTO `employees` (`firstName`,`lastName`,`salary`,`country`,`phone`,`userID`) VALUES('"
+  		. $fname . "','" . $lname . "','" . $salary . "','" . $country ."','". $phone . "','" . $userID . "')";
+  	}
+  	else
+  	{
+  		$sql = "REPLACE INTO `employees` (`firstName`,`lastName`,`hireDate`,`salary`,`country`,`phone`,`userID`) VALUES('"
   		. $fname . "','" . $lname ."','" . $hireDate . "','" . $salary . "','" . $country ."','". $phone . "','" . $userID . "')";
+  	}
   	if($this->isOpen)
   	{
   		$result = $this->dbcon->qry($sql);
