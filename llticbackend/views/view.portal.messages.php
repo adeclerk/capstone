@@ -1,10 +1,11 @@
 <script type='text/javascript'>
 function showCompose()
 {
-	var table = document.getElementById("inboxtable");
-	table.style.display = 'none';
+//	var table = document.getElementById("inboxtable");
+	//table.style.display = 'none';
 	var compose = document.getElementById("compose");
 	compose.style.display = 'inline';
+	compose.style.display.zIndex ='10';
 
 	var button = document.getElementById("button");
 	button.style.textAlign = 'right';
