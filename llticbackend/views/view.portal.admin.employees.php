@@ -36,6 +36,11 @@ function addEmployeeView()
 		empwindow.innerHTML= request.responseText;
 	}
 }
+
+function showEmployees()
+{
+	
+}
 </script>
 <div style='text-align: right; height: 10px;'>
 	<input type="button" name="add" value="Add" onclick='addEmployeeView()'>

@@ -1,3 +1,6 @@
+<div style='text-align: left'>
+<a href='' onclick='showEmployees()'><-Back</a>
+</div>
 <form name="addemp" action="/portal/admin.php" method="post">
 	<fieldset>
 		<legend>User Details</legend>
