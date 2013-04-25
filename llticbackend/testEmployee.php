@@ -8,7 +8,7 @@ $tEmp = $emp->getAllEmployees();
 foreach($tEmp as $employee)
 	print $employee;
 
-$name = $emp->getNameByUserId(3);
+$name = $emp->getNameByUserId(2);
 print $name;
 
 ?>
