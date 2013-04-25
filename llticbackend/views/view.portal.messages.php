@@ -30,6 +30,23 @@ function showInbox()
 	var title = document.getElementById("inbox_title");
 	title.innerHTML = "Inbox";
 }
+
+function showMessage(id)
+{
+	var message = document.getElementById(id);
+	message.style.display = 'inline';
+	var table = document.getElementById("inboxtable");
+	table.style.display='none';
+}
+
+function hideMessage(id)
+{
+	var message = document.getElementById(id);
+	message.style.display = 'none';
+	var table = document.getElementById("inboxtable");
+	table.style.display='table';
+}
+	
 </script>
 <div style='text-align: right; width: 800x;' id='button'>
 <a href='#' onclick="showCompose()" >Compose</a>
@@ -45,7 +62,7 @@ function showInbox()
 	<?php 
 	foreach($this->messages as $message)
 	{
-		print "\n\t<tr>\n\t\t<td>" . $message->sender . "</td>\n\t\t<td>"
+		print "\n\t<tr onclick='showMessage(msg_" . $message->id . ")'>\n\t\t<td>" . $message->sender . "</td>\n\t\t<td>"
 			. $message->recip . "</td>\n\t\t<td>" . $message->timestamp . "</td>\n\t\t<td>"
 			. $message->sub . "</td>\n\t</tr>";
 	}
@@ -56,3 +73,13 @@ function showInbox()
 <div id='compose' style='display: none; width: 800px;'>
 	<?php print $this->composeTab->render(); ?>
 </div>
+
+<?php 
+	foreach($this->messages as $message)
+	{
+		print "<div id='msg_" . $message->id . "' style='display: none'>";
+		print "<div style='text-align: left;'>" . $message->sender . " | " . $message->timestamp . "</div>";
+		print "<div style='text-align: left;'>Subject: " . $message->sub . " </div>";
+		print $message->content . "</div>";
+	}
+}?>
