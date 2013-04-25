@@ -1,5 +1,5 @@
 <?php
-require_once 'controllers/Controller.php';
+require_once 'Controller.php';
 require_once 'classes/class.Template.php';
 require_once 'classes/class.Message.php';
 
