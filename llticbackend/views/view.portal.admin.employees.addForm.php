@@ -1,5 +1,5 @@
 <div style='text-align: left'>
-<a href='' onclick='showEmployees()'><-Back</a>
+<a href=''><-Back</a>
 </div>
 <form name="addemp" action="/portal/admin.php" method="post">
 	<fieldset>
