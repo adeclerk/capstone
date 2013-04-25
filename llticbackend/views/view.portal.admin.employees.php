@@ -22,9 +22,15 @@ function addEmployee()
 	var tmp = document.getElementById("add_emp");
 	tmp.style.display = 'table-row';
 }
+
+function addEmployeeView()
+{
+	var window = document.getElementById("windowcontent");
+	window.innerHTML="TEST";
+}
 </script>
 <div style='text-align: right; height: 10px;'>
-	<input type="button" name="add" value="Add" onclick='addEmployee()'>
+	<input type="button" name="add" value="Add" onclick='addEmployeeView()'>
 </div>
 <table style='width: 100%;'>
 	<tr>
