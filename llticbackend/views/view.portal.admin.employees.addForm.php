@@ -3,6 +3,7 @@
 </div>
 <form name="addemp" action="/portal/admin.php" method="post">
 	<fieldset>
+	<input type='hidden' name='addemployee' value="true">
 		<legend>User Details</legend>
 		Username: <input type="text" name="username"><br/>
 		Password: <input type="password" name="password1"><br/>
