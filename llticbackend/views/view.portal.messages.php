@@ -62,7 +62,8 @@ function hideMessage(id)
 	<?php 
 	foreach($this->messages as $message)
 	{
-		print "\n\t<tr>\n\t\t<td>" . $message->sender . "</td>\n\t\t<td>"
+		print "\n\t<tr onclick='showMessage(msg_"
+				. $message->id . ")'>\n\t\t<td>" . $message->sender . "</td>\n\t\t<td>"
 			. $message->recip . "</td>\n\t\t<td>" . $message->timestamp . "</td>\n\t\t<td>"
 			. $message->sub . "</td>\n\t</tr>";
 	}
