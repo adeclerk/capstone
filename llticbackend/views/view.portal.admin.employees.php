@@ -49,7 +49,7 @@ function addEmployee()
 	print "<td><input type='text' name='salary'></td>\n\t";
 	print "<td><input type='text' name='phone'></td>\n\t";
 	print "<input type='hidden' name='uid'>";
-	print "<td><a href='#' onclick='formSubmit(" . $employee->id  . ")'>save</a></td>\n";
+	print "<td><a href='#' onclick='addEmployeeSubmit()'>save</a></td>\n";
 	print "</tr>";
 	print "</form>";
 	foreach($this->employees as $employee)
