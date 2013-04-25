@@ -1,5 +1,7 @@
 <?php
 require_once ('classes/class.LlticDbConnection.php');
+require_once ('classes/class.Client.php');
+require_once ('classes/class.Employee.php');
 
 class User
 {
@@ -128,7 +130,41 @@ class User
 			else
 			{
 				// check client table 
+				$sql = "SELECT `firstName`,`lastName` FROM `clients` WHERE `userID`='" . $uid . "'";
+				$result = $this->db->qry($sql);
+				if($result->num_rows > 0)
+				{
+					$row = $result->fetch_assoc();
+					return $row;
+				}
+				else
+				{
+					return '';
+				}
 			}
+		}
+		else
+		{
+			return '';
+		}
+	}
+	
+	public function getAllUsers()
+	{
+		$sql = "SELECT * FROM `users`";
+		$users = array();
+		if($this->dbOpen)
+		{
+			$result = $this->db->qry($sql);
+			while($row = $result->fetch_assoc())
+			{
+				array_push($users,new User($row));
+			}
+			return $users;
+		}
+		else
+		{
+			return '';
 		}
 	}
 }
