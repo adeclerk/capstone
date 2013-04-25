@@ -1,7 +1,7 @@
 <div style='text-align: right;'>
 <a href='#' onclick="showCompose()" >Compose</a>
 </div>
-<table>
+<table id='inboxtable'>
 	<tr>
 		<th>Sender</th>
 		<th>Recipient</th>
@@ -20,18 +20,16 @@
 		?>
 
 </table>
+<div id='compose' style='display: none;'>
+
+</div>
 <script type='text/javascript'>
 function showCompose()
 {
-	var request = new XMLHttpRequest();
-	request.open("POST","/portal/admin.php"true);
-	request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	request.send("msgs=TRUE");
-
-	request.onreadystatechange=function()
-	{
-		var windowContent = document.getElementById("inbox");
-		windowContent.innerHTML = request.responseText;
-	}
+	var table = document.getElementById("inboxtable");
+	table.style.display = none;
+	var compose = document.getElementById("compose");
+	compose.style.display = inline;
+	
 }
 </script>

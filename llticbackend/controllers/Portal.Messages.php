@@ -32,6 +32,7 @@ class PortalMessages implements Controller
 		else
 		{
 			$this->view->windowcontent = new Template('views/view.portal.messages.php');
+			$this->view->windowcontent->composeTab = new Template('views/view.portal.messages.compose.php');
 			$this->view->windowcontent->messages = $this->messageTable->getAllUnread(3);
 		}
 		return $this->view;
