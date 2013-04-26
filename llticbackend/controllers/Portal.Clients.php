@@ -28,6 +28,6 @@ class PortalClients
 		$this->view->windowname = "clients";
 		$this->view->windowtitle = "Clients";
 		$this->view->windowcontent->clients = $this->clientTable->getAllClients();
-		return $this->view();
+		return $this->view;
 	}
 }
