@@ -41,7 +41,7 @@ function showMessage(id)
 
 	var button = document.getElementById("buttonlink");
 	button.innerHTML = "<- Back";
-	button.onclick = showInbox;
+	button.onclick = hideMessage(id);
 	
 }
 
