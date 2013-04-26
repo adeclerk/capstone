@@ -63,7 +63,7 @@ function showclients()
 	print "<td><input type='text'  name='uid' size='4'></td>\n\t";
 	print "<td><input type='text' name='firstName'></td>\n\t";
 	print "<td><input type='text' name='lastName'></td>\n\t";
-	print "<td><input type='text' name='contactDate'></td>\n\t";
+	print "<td><input type='text' name='consult_date'></td>\n\t";
 	print "<td><input type='text' name='country'></td>\n\t";
 	print "<td><input type='text' name='company'></td>\n\t";
 	print "<td><input type='text' name='phone'></td>\n\t";
@@ -76,7 +76,7 @@ function showclients()
 		print "<td>" .$client->id . "</td>\n\t";
 		print "<td>" . $client->firstName . "</td>\n\t";
 		print "<td>" . $client->lastName . "</td>\n\t";
-		print "<td>" . $client->contactDate . "</td>\n\t";
+		print "<td>" . $client->consult_date . "</td>\n\t";
 		print "<td>" . $client->country .  "</td>\n\t";
 
 		print "<td>" . $client->phone . "</td>\n\t";
@@ -89,7 +89,7 @@ function showclients()
 		print "<td><input type='text'  name='id' size='4' value='" . $client->id  . "'></td>\n\t";
 		print "<td><input type='text' name='firstName'  value='" . $client->firstName . "'></td>\n\t";
 		print "<td><input type='text' name='lastName' value='" . $client->lastName . "'></td>\n\t";
-		print "<td><input type='text' name='hireDate' value='" . $client->contactDate . "'></td>\n\t";
+		print "<td><input type='text' name='hireDate' value='" . $client->consult_date . "'></td>\n\t";
 		print "<td><input type='text' name='country' value='" . $client->country . "'></td>\n\t";
 
 		print "<td><input type='text' name='phone' value='" . $client->phone . "'></td>\n\t";
