@@ -88,7 +88,7 @@ function hideMessage()
 		print "<div id='msg_" . $message->id . "' style='display: none;'>";
 		//print "<div style='text-align: left;' onclick='hideMessage(" . $message->id . "><- Back</div>";
 		print "<div style='text-align: left;'>" . $message->sender . " | " . $message->timestamp . "</div><hr/>";
-		print "<div style='text-align: left;'>Subject: " . $message->sub . " </div>";
+		print "<div style='text-align: left;'>Subject: " . $message->sub . " </div><hr/>";
 		print $message->content . "</div>";
 	}
 ?>
