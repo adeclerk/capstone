@@ -37,7 +37,7 @@ class AdminMain implements Controller
 			$inboxWindow = new PortalMessages();
 			$contr = new AdminEmployee();
 			$clients = new PortalClients();
-			$this->view->content = array($contr->invoke(),$userWindow,$inboxWindow->invoke());
+			$this->view->content = array($clients->invoke(),$contr->invoke(),$userWindow,$inboxWindow->invoke());
 	
 			$this->view->render();
 		}
