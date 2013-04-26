@@ -16,7 +16,7 @@ function tabInit()
 	request.send();
 	request.onreadystatechange=function()
 	{
-		messages.innerHTML = request.responseTxt;
+		messages.innerHTML = request.responseText;
 	}
 }
 
