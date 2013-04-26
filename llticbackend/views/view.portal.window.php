@@ -11,7 +11,7 @@ function minimize(windowID)
 	else
 	{
 		window.style.display = 'none';
-		windowTitle.style.padding = "10px";
+		windowTitle.style.padding = "2px";
 	}
 }
 </script>
