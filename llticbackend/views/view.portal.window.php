@@ -2,10 +2,17 @@
 function minimize(windowID)
 {
 	var window = document.getElementById(windowID+"_content");
+	var windowTitle = document.getElementById(windowID+"_title");
 	if(window.style.display == 'none')
+	{
 		window.style.display = 'inline';
+		windowTitle.style.padding = "0px";
+	}
 	else
+	{
 		window.style.display = 'none';
+		windowTitle.style.padding = "20px";
+	}
 }
 </script>
 <div id='<?php print $this->windowname; ?>' class='window'>
