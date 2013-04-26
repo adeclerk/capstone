@@ -32,7 +32,7 @@ class PortalClients
 			}
 			else
 			{
-				$this->clientTable->edit($_POST['eid'], $_POST['firstName'],$_POST['lastName'],$_POST['phone'], $_POST['company'], $_POST['country'], $_POST['userID'])
+				$this->clientTable->edit($_POST['eid'], $_POST['firstName'],$_POST['lastName'],$_POST['phone'], $_POST['company'], $_POST['country'], $_POST['userID']);
 			}
 		}
 		$this->view->windowcontent = new Template('views/view.portal.clients.php');
