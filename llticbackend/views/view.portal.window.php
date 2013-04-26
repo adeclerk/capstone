@@ -2,7 +2,7 @@
 function minimize(windowID)
 {
 	var window = document.getElementById(windowID+"_content");
-	var windowTitle = document.getElementById(windowID+"_title");
+	var windowTitle = document.getElementById(windowID);
 	if(window.style.display == 'none')
 	{
 		window.style.display = 'inline';
