@@ -56,7 +56,7 @@ function hideMessage()
 }
 	
 </script>
-<div style='text-align: right; width: 800x;' id='button'>
+<div style='text-align: right; width: 800px;' id='button'>
 <a href='#' onclick="showCompose()" id='buttonlink' >Compose</a>
 </div>
 <table id='inboxtable' style='width: 800px;'>
