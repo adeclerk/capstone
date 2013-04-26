@@ -12,7 +12,7 @@ function tabInit()
 	
 	var messages = document.getElementById("wincontent");
 	var request = new XMLHttpRequest();
-	request.open("GET","/portal/messages.php",true);
+	request.open("GET","messages.php",true);
 	request.send();
 	request.onreadystatechange=function()
 	{
