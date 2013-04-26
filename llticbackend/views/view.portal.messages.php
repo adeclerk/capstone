@@ -1,4 +1,5 @@
 <script type='text/javascript'>
+var openMessage = NULL;
 function showCompose()
 {
 	var table = document.getElementById("inboxtable");
@@ -41,13 +42,15 @@ function showMessage(id)
 
 	var button = document.getElementById("buttonlink");
 	button.innerHTML = "<- Back";
-	button.onclick = hideMessage(id);
+	button.onclick = hideMessage;
+
+	openMessage = "msg_"+id;
 	
 }
 
-function hideMessage(id)
+function hideMessage()
 {
-	var message = document.getElementById(id);
+	var message = openMessage;
 	message.style.display = 'none';
 	var table = document.getElementById("inboxtable");
 	table.style.display='table';
