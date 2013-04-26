@@ -42,9 +42,9 @@ function showMessage(id)
 
 	var button = document.getElementById("buttonlink");
 	button.innerHTML = "<- Back";
-	button.onclick = hideMessage();
+	button.onclick = hideMessage;
 
-	openMessage = "msg_"+id;
+	openMessage = message;
 	
 }
 
