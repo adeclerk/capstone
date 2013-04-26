@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>LLTIC Backend: login_helpers.php File Reference</title>
+<title>LLTIC Backend: Autoloader.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('login__helpers_8php.html','');});
+$(document).ready(function(){initNavTree('_autoloader_8php_source.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -101,17 +101,31 @@ $(document).ready(function(){initNavTree('login__helpers_8php.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">login_helpers.php File Reference</div>  </div>
+<div class="title">Autoloader.php</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><a href="login__helpers_8php_source.html">Go to the source code of this file.</a></p>
-</div><!-- contents -->
+<a href="_autoloader_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
+<div class="line"><a name="l00002"></a><span class="lineno"><a class="code" href="class_autoloader.html">    2</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_autoloader.html">Autoloader</a></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="class_autoloader.html#a095c5d389db211932136b53f25f39685">    4</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_autoloader.html#a095c5d389db211932136b53f25f39685">__construct</a>()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        spl_autoload_register(array($this,<span class="stringliteral">&#39;autoload&#39;</span>));</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    }</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="class_autoloader.html#ab4c022bf9d3474583030f31894865182">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code" href="class_autoloader.html#ab4c022bf9d3474583030f31894865182">autoload</a>($class) </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;       include_once <span class="stringliteral">&#39;classes/class.&#39;</span> . $class . <span class="stringliteral">&#39;.php&#39;</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;?&gt;</div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="login__helpers_8php.html">login_helpers.php</a></li>
+    <li class="navelem"><a class="el" href="_autoloader_8php.html">Autoloader.php</a></li>
     <li class="footer">Generated on Fri Apr 26 2013 09:06:08 for LLTIC Backend by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>LLTIC Backend: login_helpers.php File Reference</title>
+<title>LLTIC Backend: sendMessage.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('login__helpers_8php.html','');});
+$(document).ready(function(){initNavTree('send_message_8php_source.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -101,17 +101,32 @@ $(document).ready(function(){initNavTree('login__helpers_8php.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">login_helpers.php File Reference</div>  </div>
+<div class="title">sendMessage.php</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><a href="login__helpers_8php_source.html">Go to the source code of this file.</a></p>
-</div><!-- contents -->
+<a href="send_message_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;require_once <span class="stringliteral">&#39;classes/class.Message.php&#39;</span>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;require_once <span class="stringliteral">&#39;classes/class.Session.php&#39;</span>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;require_once <span class="stringliteral">&#39;classes/class.User.php&#39;</span>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="send_message_8php.html#abefb3c26429d514777313e9a63d7cbac">    6</a></span>&#160;<a class="code" href="login_8php.html#abefb3c26429d514777313e9a63d7cbac">$session</a> = <span class="keyword">new</span> Session();</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordflow">if</span>($_SERVER[<span class="stringliteral">&#39;REQUEST_METHOD&#39;</span>] == <span class="stringliteral">&#39;POST&#39;</span>)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    $messageTable = <span class="keyword">new</span> Message();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    $userTable = <span class="keyword">new</span> User();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    $user = $userTable-&gt;getIdByUsername($_POST[<span class="stringliteral">&#39;recip&#39;</span>]);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    $messageTable-&gt;write(<a class="code" href="test_user_8php.html#acc23cf06fa22ee369d783d958dee5309">$_SESSION</a>[<span class="stringliteral">&#39;uid&#39;</span>],$user,$_POST[<span class="stringliteral">&#39;subject&#39;</span>],$_POST[<span class="stringliteral">&#39;content&#39;</span>]);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    header(<span class="stringliteral">&#39;Location: &#39;</span>. $_SERVER[<span class="stringliteral">&#39;HTTP_REFERER&#39;</span>]);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;?&gt;</div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="login__helpers_8php.html">login_helpers.php</a></li>
+    <li class="navelem"><a class="el" href="send_message_8php.html">sendMessage.php</a></li>
     <li class="footer">Generated on Fri Apr 26 2013 09:06:08 for LLTIC Backend by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
