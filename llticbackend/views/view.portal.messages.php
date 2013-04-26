@@ -40,9 +40,8 @@ function showMessage(id)
 	var table = document.getElementById("inboxtable");
 	table.style.display='none';
 
-	var button = document.getElementById("buttonlink");
-	button.innerHTML = "<- Back";
-	button.onclick = hideMessage();
+	var button = document.getElementById("button");
+	button.innerHTML = "<a href='#' onclick='hideMessage()'><- Back</a>";
 
 	openMessage = message;
 	
