@@ -6,7 +6,7 @@ function showCompose()
 	var compose = document.getElementById("compose");
 	compose.style.display = 'inline';
 	compose.style.zIndex ='10';
-	compose.style.float ='left';
+	compose.style.cssFloat ='left';
 
 	var button = document.getElementById("button");
 	button.style.textAlign = 'right';
