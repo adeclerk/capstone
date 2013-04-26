@@ -11,7 +11,7 @@ function minimize(windowID)
 	else
 	{
 		window.style.display = 'none';
-		windowTitle.style.width = "50px";
+		windowTitle.style.width = "250px";
 	}
 }
 </script>
