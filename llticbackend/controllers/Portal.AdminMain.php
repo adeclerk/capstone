@@ -4,6 +4,7 @@ require_once 'classes/class.Session.php';
 require_once 'classes/class.Template.php';
 require 'controllers/Portal.Messages.php';
 require 'controllers/Portal.AdminEmployee.php';
+require 'controllers/Portal.Clients.php';
 
 class AdminMain implements Controller
 {
@@ -35,7 +36,8 @@ class AdminMain implements Controller
 			
 			$inboxWindow = new PortalMessages();
 			$contr = new AdminEmployee();
-			$this->view->content = array($contr->invoke(),$userWindow,$inboxWindow->invoke());
+			$clients = new PortalClients();
+			$this->view->content = array($clients->invoke(),$contr->invoke(),$userWindow,$inboxWindow->invoke());
 	
 			$this->view->render();
 		}
