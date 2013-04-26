@@ -72,29 +72,29 @@ function showclients()
 	print "</form>";
 	foreach($this->clients as $client)
 	{
-		print "<tr id='". $client->id . "'>\n\t";
-		print "<td>" .$client->id . "</td>\n\t";
+		print "<tr id='". $client->userID . "'>\n\t";
+		print "<td>" .$client->userID . "</td>\n\t";
 		print "<td>" . $client->firstName . "</td>\n\t";
 		print "<td>" . $client->lastName . "</td>\n\t";
-		print "<td>" . $client->consult_date . "</td>\n\t";
+		print "<td>" . $client->consultDate . "</td>\n\t";
 		print "<td>" . $client->country .  "</td>\n\t";
 
 		print "<td>" . $client->phone . "</td>\n\t";
-		print "<td><a href='#' onclick='editclient(" . $client->id. ")'>edit</a></td>\n";
+		print "<td><a href='#' onclick='editclient(" . $client->userID. ")'>edit</a></td>\n";
 		print "</tr>";
 		
-		print "<form id='edit_emp_" . $client->id  ."' action='/portal/admin.php' method='post'>\n";
-		print "<input type='hidden' name='eid' value='" . $client->id . "'>";
-		print "<tr id='". $client->id  . "_edit' style='display: none;'>\n\t";
-		print "<td><input type='text'  name='id' size='4' value='" . $client->id  . "'></td>\n\t";
+		print "<form id='edit_client_" . $client->userID  ."' action='/portal/admin.php' method='post'>\n";
+		print "<input type='hidden' name='eid' value='" . $client->userID . "'>";
+		print "<tr id='". $client->userID  . "_edit' style='display: none;'>\n\t";
+		print "<td><input type='text'  name='id' size='4' value='" . $client->userID  . "'></td>\n\t";
 		print "<td><input type='text' name='firstName'  value='" . $client->firstName . "'></td>\n\t";
 		print "<td><input type='text' name='lastName' value='" . $client->lastName . "'></td>\n\t";
-		print "<td><input type='text' name='hireDate' value='" . $client->consult_date . "'></td>\n\t";
+		print "<td><input type='text' name='hireDate' value='" . $client->consultDate . "'></td>\n\t";
 		print "<td><input type='text' name='country' value='" . $client->country . "'></td>\n\t";
 
 		print "<td><input type='text' name='phone' value='" . $client->phone . "'></td>\n\t";
 		print "<input type='hidden' name='uid' value='" . $client->userID . "'>";
-		print "<td><a href='#' onclick='formSubmit(" . $client->id  . ")'>save</a></td>\n";
+		print "<td><a href='#' onclick='formSubmit(" . $client->userID  . ")'>save</a></td>\n";
 		print "</tr>";
 		print "</form>";
 	}
