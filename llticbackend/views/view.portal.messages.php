@@ -33,7 +33,6 @@ function showInbox()
 
 function showMessage(id)
 {
-	alert("CALLED");
 	var message = document.getElementById("msg_"+id);
 	message.style.display = 'inline';
 	message.style.width = '800px';
@@ -42,7 +41,7 @@ function showMessage(id)
 
 	var button = document.getElementById("buttonlink");
 	button.innerHTML = "<- Back";
-	button.onclick = showInbox();
+	button.onclick = showInbox;
 	
 }
 
