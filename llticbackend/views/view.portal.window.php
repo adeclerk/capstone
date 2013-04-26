@@ -6,12 +6,12 @@ function minimize(windowID)
 	if(window.style.display == 'none')
 	{
 		window.style.display = 'inline';
-		windowTitle.style.width = "auto";
+		windowTitle.style.padding = "0px";
 	}
 	else
 	{
 		window.style.display = 'none';
-		windowTitle.style.width = "auto";
+		windowTitle.style.padding = "10px";
 	}
 }
 </script>
