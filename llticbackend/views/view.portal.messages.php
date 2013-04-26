@@ -39,6 +39,11 @@ function showMessage(id)
 	message.style.width = '800px';
 	var table = document.getElementById("inboxtable");
 	table.style.display='none';
+
+	var button = document.getElementById("buttonlink");
+	button.innerHTML = "<- Back";
+	button.onclick = showInbox;
+	
 }
 
 function hideMessage(id)
@@ -51,7 +56,7 @@ function hideMessage(id)
 	
 </script>
 <div style='text-align: right; width: 800x;' id='button'>
-<a href='#' onclick="showCompose()" >Compose</a>
+<a href='#' onclick="showCompose()" id='buttonlink' >Compose</a>
 </div>
 <table id='inboxtable' style='width: 800px;'>
 	<tr>
@@ -80,7 +85,7 @@ function hideMessage(id)
 	foreach($this->messages as $message)
 	{
 		print "<div id='msg_" . $message->id . "' style='display: none; width: 800px;'>";
-		print "<div style='text-align: left;' onclick='hideMessage(" . $message->id . "><- Back</div>";
+		//print "<div style='text-align: left;' onclick='hideMessage(" . $message->id . "><- Back</div>";
 		print "<div style='text-align: left;'>" . $message->sender . " | " . $message->timestamp . "</div>";
 		print "<div style='text-align: left;'>Subject: " . $message->sub . " </div>";
 		print $message->content . "</div>";
