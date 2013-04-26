@@ -24,7 +24,7 @@ class AdminEmployee implements Controller
 	
 	public function invoke()
 	{
-		if($_SERVER['REQUEST_METHOD'] == POST)
+		if($_SERVER['REQUEST_METHOD'] == "POST")
 		{
 			if($_POST['addemployee'])
 			{
