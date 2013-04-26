@@ -2,16 +2,16 @@
 function minimize(windowID)
 {
 	var window = document.getElementById(windowID+"_content");
-	var windowTitle = document.getElementById(windowID);
+	var windowTitle = document.getElementById(windowID+"_title");
 	if(window.style.display == 'none')
 	{
 		window.style.display = 'inline';
-		windowTitle.style.padding = "0px";
+		windowTitle.style.width = "auto";
 	}
 	else
 	{
 		window.style.display = 'none';
-		windowTitle.style.padding = "20px";
+		windowTitle.style.width = "auto";
 	}
 }
 </script>
