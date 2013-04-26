@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['_24_5fsession',['$_SESSION',['../test_user_8php.html#acc23cf06fa22ee369d783d958dee5309',1,'testUser.php']]],
+  ['_24clients',['$clients',['../test_client_8php.html#a3e6b906050bb3d1e3493257491f54f8b',1,'testClient.php']]],
+  ['_24clienttable',['$clientTable',['../test_client_8php.html#abad5ae864c473d7ae4e5ae8701aaa6d8',1,'testClient.php']]],
+  ['_24con',['$con',['../pending_clients_8php.html#a0debe10448ec56a57b5509648408a549',1,'pendingClients.php']]],
+  ['_24connection',['$connection',['../show_employees_8php.html#a0d9c79b9b86b3f5891c6d3892f12c6a0',1,'showEmployees.php']]],
+  ['_24controller',['$controller',['../admin_8php.html#a388ef7b1db5e6f728e63cee704ce6e23',1,'$controller():&#160;admin.php'],['../index_8php.html#a388ef7b1db5e6f728e63cee704ce6e23',1,'$controller():&#160;index.php'],['../login_8php.html#a388ef7b1db5e6f728e63cee704ce6e23',1,'$controller():&#160;login.php'],['../logout_8php.html#a388ef7b1db5e6f728e63cee704ce6e23',1,'$controller():&#160;logout.php']]],
+  ['_24cur',['$cur',['../test_message_8php.html#aedc927da7369af1bbf62a1d3369581cd',1,'testMessage.php']]],
+  ['_24databasee',['$databasee',['../show_users_8php.html#ab3aebd2fe9609a58010f8b36e5d00b4f',1,'showUsers.php']]],
+  ['_24emp',['$emp',['../test_employee_8php.html#a74c97d4d599f4af084a8d97259ad2327',1,'testEmployee.php']]],
+  ['_24msg',['$msg',['../test_message_8php.html#a9e168f4152c267835864153c54449583',1,'$msg():&#160;testMessage.php'],['../testsendmessage_8php.html#a9e168f4152c267835864153c54449583',1,'$msg():&#160;testsendmessage.php']]],
+  ['_24msgtable',['$msgTable',['../messages_8php.html#ad51863b8079f8de2f23392ea851d033b',1,'messages.php']]],
+  ['_24name',['$name',['../test_employee_8php.html#ab2fc40d43824ea3e1ce5d86dee0d763b',1,'$name():&#160;testEmployee.php'],['../test_employee_8php.html#a0d054574ee6cdea504a1f5e19d9be63c',1,'$name():&#160;testEmployee.php']]],
+  ['_24result',['$result',['../pending_clients_8php.html#a38f18aa32959567e79d7b4f144d8529c',1,'$result():&#160;pendingClients.php'],['../show_employees_8php.html#a112ef069ddc0454086e3d1e6d8d55d07',1,'$result():&#160;showEmployees.php'],['../show_users_8php.html#a38f18aa32959567e79d7b4f144d8529c',1,'$result():&#160;showUsers.php']]],
+  ['_24ret',['$ret',['../messages_8php.html#affd9e3eb0aad0a7ca42912cd925f148c',1,'messages.php']]],
+  ['_24row',['$row',['../show_employees_8php.html#aa1d731aa570613e5bcff831bb10e9b87',1,'$row():&#160;showEmployees.php'],['../show_employees_8php.html#a2af17a9eca43c79142be989f83ee7f24',1,'$row():&#160;showEmployees.php']]],
+  ['_24session',['$session',['../login_8php.html#abefb3c26429d514777313e9a63d7cbac',1,'$session():&#160;login.php'],['../logoutuser_8php.html#abefb3c26429d514777313e9a63d7cbac',1,'$session():&#160;logoutuser.php'],['../messages_8php.html#abefb3c26429d514777313e9a63d7cbac',1,'$session():&#160;messages.php'],['../send_message_8php.html#abefb3c26429d514777313e9a63d7cbac',1,'$session():&#160;sendMessage.php'],['../test_user_8php.html#abefb3c26429d514777313e9a63d7cbac',1,'$session():&#160;testUser.php']]],
+  ['_24sql',['$sql',['../pending_clients_8php.html#ad4a01194017f7d07bf3e64965ead5836',1,'pendingClients.php']]],
+  ['_24temp',['$tEmp',['../test_employee_8php.html#aa29eb57c84e851cecc7f2171ebed4607',1,'testEmployee.php']]]
+];

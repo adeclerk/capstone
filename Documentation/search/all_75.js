@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['userrecord',['UserRecord',['../class_user_record.html',1,'']]],
-  ['usersession',['UserSession',['../class_user_session.html',1,'']]],
-  ['usersession_2einc_2ephp',['UserSession.inc.php',['../_user_session_8inc_8php.html',1,'']]],
-  ['usertable',['userTable',['../classuser_table.html',1,'']]]
+  ['userin_2ephp',['userin.php',['../userin_8php.html',1,'']]],
+  ['userloggedin',['userLoggedIn',['../userin_8php.html#a32b31d1e84ec1e2bfa20224aca9dcd41',1,'userin.php']]]
 ];
