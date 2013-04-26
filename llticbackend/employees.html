@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link href="views/view.portal.main.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+var lastTab = NULL;
+function tabInit()
+{
+	var inbox = document.getElementById("inboxtab");
+	inbox.style.backgroundColor = 'white';
+	lastTab = inbox;
+	
+	var messages = document.getElementById("wincontent");
+	var request = new XMLHttpRequest();
+	request.open("GET",)
+}
+
+function selectTab(id)
+{
+	lastTab.style.backgroundColor = '#E6E6E6';
+	var currentTab = id;
+	currentTab.style.backgroundColor = 'white';
+	lastTab = currentTab;
+}
+
+function hoverTab(id)
+{
+	if(id != lastTab)
+		id.style.backgroundColor='#CCCCFF';	
+}
+
+function unhoverTab(id)
+{
+	if(id != lastTab)
+		id.style.backgroundColor = '#E6E6E6';	
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="tabInit()">
+	<div class="window" style="width: 800px;">
+		<div class="windowtitle">
+		Portal Main
+		</div>
+		<div class="windowcontent">
+			<div id="tabs" style="width: 800px;">
+				<div class="tab" id="inboxtab"  onmouseover="hoverTab(this)" onmouseout="unhoverTab(this)" onclick="selectTab(this)">
+				Inbox
+				</div>
+				<div class="tab" id="employeetab" onclick="selectTab(this)" onmouseover="hoverTab(this)" onmouseout="unhoverTab(this)">
+				Employees
+				</div>
+				<div class="tab" id="clienttab" onclick="selectTab(this)" onmouseover="hoverTab(this)" onmouseout="unhoverTab(this)">
+				Clients
+				</div>
+				<div class="tab" id="filetab" onclick="selectTab(this)" onmouseover="hoverTab(this)" onmouseout="unhoverTab(this)">
+				Files
+				</div>
+				<div class="tab" id="payrolltab" onclick="selectTab(this)" onmouseover="hoverTab(this)" onmouseout="unhoverTab(this)">
+				Payroll
+				</div>
+			</div>
+		<div id="wincontent">
+		
+		</div>
+		</div>
+	</div>
+</body>
+</html>
