@@ -78,7 +78,7 @@ function hideMessage(id)
 <?php 
 	foreach($this->messages as $message)
 	{
-		print "<div id='msg_" . $message->id . "' style='display: none'>";
+		print "<div id='msg_" . $message->id . "' style='display: none; width: 800px;'>";
 		print "<div style='text-align: left;'>" . $message->sender . " | " . $message->timestamp . "</div>";
 		print "<div style='text-align: left;'>Subject: " . $message->sub . " </div>";
 		print $message->content . "</div>";
