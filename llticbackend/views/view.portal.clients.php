@@ -57,6 +57,7 @@ function showclients()
 		<th></th>
 	</tr>
 	<?php 
+	/*
 	print "<form id='add_client' action='/portal/admin.php' method='post'>\n";
 	print "<input type='hidden' name='addclient' value='addclient'>\n";
 	print "<tr id='add_emp' style='display: none;'>\n\t";
@@ -70,9 +71,10 @@ function showclients()
 	print "<td><a href='#' onclick='addclientSubmit()'>save</a></td>\n";
 	print "</tr>";
 	print "</form>";
+	*/
 	foreach($this->clients as $client)
 	{
-		print "<tr id='". $client->userID . "'>\n\t";
+/*		print "<tr id='". $client->userID . "'>\n\t";
 		print "<td>" .$client->userID . "</td>\n\t";
 		print "<td>" . $client->firstName . "</td>\n\t";
 		print "<td>" . $client->lastName . "</td>\n\t";
@@ -97,6 +99,7 @@ function showclients()
 		print "<td><a href='#' onclick='formSubmit(" . $client->userID  . ")'>save</a></td>\n";
 		print "</tr>";
 		print "</form>";
+		*/
 	}
 	?>
 </table>
